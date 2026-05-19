@@ -17,11 +17,18 @@
   `validate_all.py` opérationnels (contrat solution-verte/starter-rouge,
   timeout filet-de-sécurité, logs flushés). Cible de calibration : Python
   fluent pour ML Inference Engineer (NVIDIA/Google/Mistral/Apple) + OSS vLLM/SGLang.
-- **Phase 3 (webapp MVP) : à faire.** Track active : `python-pure` (ch01-02
-  peuplés, ch03-24 scaffold vide). Autres tracks : `locked`.
-- Prochaine action : soit Phase 3 (webapp MVP, cf. `INIT_PROMPT.md` §6), soit
-  étoffer le seed (plus d'exos ch1-2, ou démarrer ch3) — au choix utilisateur.
-- Validation (pas d'`uv` ici) : `python tools/validate_all.py`.
+- **Phase 3 (webapp MVP) : faite (build vert, 40 pages SSG).** `web/` :
+  `lib/{exercises,pyodide,progress}.ts` + composants (Monaco, TestResults,
+  HintsPanel, DiffSolution, ExerciseWorkbench, Progress) + routes home →
+  track → chapitre → exo. Pyodide+pytest côté client, run/submit, hints
+  progressifs, solution gated (réussite ou 3 échecs), progression
+  localStorage. ⚠️ runtime Pyodide navigateur non testé end-to-end ici
+  (build/typecheck/lint OK ; à fumer-tester via `pnpm dev`).
+- **Phase 4 (polish) : à faire** (confetti, reset, mobile, README captures).
+- Track active : `python-pure` (ch01-02 peuplés = 32 exos, ch03-24 scaffold).
+- Prochaine action : étoffer le seed (ch3 dicts/sets — socle `__hash__`/`__eq__`)
+  et/ou polish webapp. Lancer en local : `cd web && pnpm dev`.
+- Validation exos (pas d'`uv` ici) : `python tools/validate_all.py`.
 
 ## 1. Mission
 
