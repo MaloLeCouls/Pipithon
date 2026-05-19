@@ -1,0 +1,21 @@
+id: ch01-001-furniture-chair-repr
+chapter: 1
+chapter_slug: data-model
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - __init__
+  - __repr__
+theme: furniture
+title: "Une chaise qui se présente bien"
+short_description: "Donne à la classe Chair un __repr__ sans ambiguïté."
+hints:
+  - "Que veux-tu voir quand tu tapes une Chair dans un REPL ou un log ?"
+  - "Le format attendu : Chair(ref='A1', price=99) — note les guillemets."
+  - "__repr__ retourne une str ; il ne fait pas print."
+reference_book: "Data model — protocole __repr__ (angle : objets lisibles en code review OSS)"
+pymistral_link: null
+tags:
+  - dunder
+  - oop-basics

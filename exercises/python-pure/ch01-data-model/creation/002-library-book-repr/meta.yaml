@@ -1,0 +1,21 @@
+id: ch01-002-library-book-repr
+chapter: 1
+chapter_slug: data-model
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - __init__
+  - __repr__
+theme: library
+title: "Un livre identifiable"
+short_description: "Donne à la classe Book un __repr__ non ambigu."
+hints:
+  - "Même réflexe que pour n'importe quel objet-valeur : un __repr__ qui dit tout."
+  - "Format attendu : Book(isbn='978-2', title='Dune')."
+  - "Les deux champs sont des str : ils prennent des guillemets."
+reference_book: "Data model — protocole __repr__ (exo frère de Chair, thème différent)"
+pymistral_link: null
+tags:
+  - dunder
+  - oop-basics

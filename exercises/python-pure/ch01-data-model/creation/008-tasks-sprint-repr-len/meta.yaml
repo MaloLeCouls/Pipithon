@@ -1,0 +1,22 @@
+id: ch01-008-tasks-sprint-repr-len
+chapter: 1
+chapter_slug: data-model
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - __init__
+  - __repr__
+  - __len__
+theme: tasks
+title: "Un sprint qui se résume"
+short_description: "Combine __repr__ et __len__ sur un sprint de tickets."
+hints:
+  - "len(sprint) = nombre de tickets ; __repr__ doit refléter ce compte."
+  - "Piège signalé : un sprint vide ne doit pas casser le __repr__ (0 task, pas d'erreur)."
+  - "Fais pointer le __repr__ sur len(self) plutôt que recompter à la main."
+reference_book: "Data model — composition __repr__/__len__ (cohérence d'un objet conteneur)"
+pymistral_link: null
+tags:
+  - dunder
+  - container

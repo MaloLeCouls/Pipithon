@@ -1,0 +1,21 @@
+id: ch01-003-ecommerce-cart-len
+chapter: 1
+chapter_slug: data-model
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - __init__
+  - __len__
+theme: ecommerce
+title: "Un panier qui sait sa taille"
+short_description: "Rends len(cart) idiomatique via __len__."
+hints:
+  - "len(obj) délègue à une méthode spéciale — laquelle ?"
+  - "Le panier garde ses articles dans une liste interne."
+  - "__len__ doit renvoyer un int >= 0, pas la liste."
+reference_book: "Data model — protocole __len__ (pourquoi len(x) et pas x.len())"
+pymistral_link: null
+tags:
+  - dunder
+  - container

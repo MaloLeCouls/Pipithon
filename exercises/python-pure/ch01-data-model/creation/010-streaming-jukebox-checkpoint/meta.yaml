@@ -1,0 +1,24 @@
+id: ch01-010-streaming-jukebox-checkpoint
+chapter: 1
+chapter_slug: data-model
+type: creation
+difficulty: 5
+estimated_minutes: 25
+concepts:
+  - __len__
+  - __getitem__
+  - data-model-protocol
+theme: streaming
+title: "Checkpoint ch.1 — le Jukebox"
+short_description: "Le test 'j'ai compris le data model' : __len__ + __getitem__ et tout vient gratuitement."
+hints:
+  - "Track est un simple enregistrement immuable : pense à collections.namedtuple."
+  - "Avec seulement __len__ et __getitem__ (indexé depuis 0), itération, `in`, reversed, random.choice et sorted marchent SANS code en plus."
+  - "Ne définis NI __iter__ NI __contains__ : c'est tout l'enjeu du chapitre."
+reference_book: "Data model — checkpoint : collection pythonique façon FrenchDeck"
+pymistral_link: null
+tags:
+  - dunder
+  - container
+  - sequence
+  - checkpoint
