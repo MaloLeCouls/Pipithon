@@ -1,0 +1,22 @@
+id: ch02-005-delivery-route-star-unpack
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - tuple-unpacking
+  - star-unpacking
+theme: delivery
+title: "Premier arrêt, derniers arrêts"
+short_description: "Capture du milieu avec *middle dans un unpacking."
+hints:
+  - "first, *middle, last = route capture le début, la fin, et tout le reste."
+  - "*middle est toujours une list (éventuellement vide)."
+  - "Réfléchis au cas où la route a moins de 2 arrêts."
+reference_book: "Sequences — unpacking avec * (capture du reste)"
+pymistral_link: null
+tags:
+  - unpacking
+  - star
+  - edge-case

@@ -1,0 +1,20 @@
+id: ch02-002-delivery-unpack-shipment
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - tuple-unpacking
+theme: delivery
+title: "Déballer un colis"
+short_description: "Tuple unpacking au lieu d'indexer [0][1][2]."
+hints:
+  - "tracking, weight, eta = shipment se lit mieux que shipment[0], shipment[1]..."
+  - "Le tuple est un record : nomme ses champs en les déballant."
+  - "Renvoie une str formatée à partir des noms déballés."
+reference_book: "Sequences — tuple comme record + unpacking"
+pymistral_link: null
+tags:
+  - unpacking
+  - tuple

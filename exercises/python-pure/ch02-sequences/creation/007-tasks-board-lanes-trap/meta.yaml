@@ -1,0 +1,22 @@
+id: ch02-007-tasks-board-lanes-trap
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - list-comprehension
+  - sequence-multiplication
+theme: tasks
+title: "Un board sans voies fantômes"
+short_description: "Crée N voies indépendantes, puis assigne — sans piège de référence partagée."
+hints:
+  - "new_board doit produire N listes RÉELLEMENT distinctes."
+  - "Réfléchis à ce que `[[]] * n` crée exactement avant de t'en servir."
+  - "assign() ajoute une tâche dans une voie ; vérifie qu'elle n'apparaît que là."
+reference_book: "Sequences — piège de la multiplication de séquence ([[]]*n)"
+pymistral_link: null
+tags:
+  - sequences
+  - aliasing
+  - modeling

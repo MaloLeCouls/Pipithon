@@ -1,0 +1,20 @@
+id: ch02-003-library-total-pages-genexp
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - generator-expression
+theme: library
+title: "Total de pages sans liste intermédiaire"
+short_description: "sum() avec une generator expression, pas une list comprehension."
+hints:
+  - "sum([...]) construit une liste inutile en mémoire ; sum(...) sans crochets non."
+  - "Generator expression : sum(b['pages'] for b in books)."
+  - "Renvoie 0 pour une bibliothèque vide."
+reference_book: "Sequences — generator expression vs list comprehension (mémoire)"
+pymistral_link: null
+tags:
+  - comprehension
+  - generator

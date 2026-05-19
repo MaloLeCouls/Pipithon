@@ -1,0 +1,20 @@
+id: ch02-001-ecommerce-prices-listcomp
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - list-comprehension
+theme: ecommerce
+title: "Filtrer des prix proprement"
+short_description: "Une list comprehension à la place d'une boucle + append."
+hints:
+  - "Une boucle for + append qui construit une liste = candidat list comprehension."
+  - "Syntaxe : [expr for x in iterable if condition]."
+  - "Renvoie une nouvelle liste, ne mute pas l'entrée."
+reference_book: "Sequences — list comprehension idiomatique"
+pymistral_link: null
+tags:
+  - comprehension
+  - sequences

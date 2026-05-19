@@ -1,0 +1,21 @@
+id: ch02-004-furniture-slice-showroom
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - slicing
+  - negative-step
+theme: furniture
+title: "Vitrine en zigzag"
+short_description: "Slicing avec pas : un meuble sur deux, puis l'ordre inversé."
+hints:
+  - "catalog[::2] prend un élément sur deux."
+  - "catalog[::-1] renverse ; on peut combiner pas et sens."
+  - "Une liste vide doit donner une liste vide, sans erreur."
+reference_book: "Sequences — slicing avancé (pas, pas négatif)"
+pymistral_link: null
+tags:
+  - slicing
+  - sequences

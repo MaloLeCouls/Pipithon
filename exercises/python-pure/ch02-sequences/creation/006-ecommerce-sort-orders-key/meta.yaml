@@ -1,0 +1,23 @@
+id: ch02-006-ecommerce-sort-orders-key
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - sorted
+  - sort-key
+  - list-comprehension
+theme: ecommerce
+title: "Trier les commandes urgentes d'abord"
+short_description: "sorted() + key composite, sans muter l'entrée."
+hints:
+  - "Piège signalé : list.sort() trie en place et renvoie None ; ici on veut une NOUVELLE liste -> sorted()."
+  - "Une key qui renvoie un tuple trie sur plusieurs critères : (priorité, -total)."
+  - "Pour inverser un seul critère numérique, la key peut le négativer."
+reference_book: "Sequences — sorted vs sort, paramètre key composite"
+pymistral_link: null
+tags:
+  - sorting
+  - key
+  - sequences

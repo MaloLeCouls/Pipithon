@@ -1,0 +1,23 @@
+id: ch02-008-gym-leaderboard-bisect-checkpoint
+chapter: 2
+chapter_slug: sequences
+type: creation
+difficulty: 5
+estimated_minutes: 25
+concepts:
+  - bisect
+  - sorted-insertion
+  - sequences
+theme: gym
+title: "Checkpoint ch.2 — le classement par bisect"
+short_description: "Le test 'j'ai compris les séquences' : ordre maintenu + lookup en O(log n) via bisect."
+hints:
+  - "bisect.insort insère en gardant la liste triée, sans la re-trier."
+  - "bisect.bisect trouve où une valeur s'insérerait : c'est ton rang / ta note."
+  - "grade(score) : une table de seuils + bisect, pas une cascade de if/elif."
+reference_book: "Sequences — checkpoint : bisect (recherche & insertion ordonnée)"
+pymistral_link: null
+tags:
+  - bisect
+  - sequences
+  - checkpoint
