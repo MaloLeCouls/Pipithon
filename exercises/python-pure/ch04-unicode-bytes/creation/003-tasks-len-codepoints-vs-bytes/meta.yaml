@@ -1,0 +1,21 @@
+id: ch04-003-tasks-len-codepoints-vs-bytes
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - str-vs-bytes
+  - str-encode
+theme: tasks
+title: "Caractères vs octets"
+short_description: "len(str) compte les code points ; len(bytes) compte les octets."
+hints:
+  - "len(s) = nombre de caractères Unicode."
+  - "len(s.encode('utf-8')) = nombre d'octets (un accent en pèse plusieurs)."
+  - "Renvoie un tuple (n_chars, n_bytes)."
+reference_book: "Unicode — distinction caractères / octets"
+pymistral_link: null
+tags:
+  - unicode
+  - bytes

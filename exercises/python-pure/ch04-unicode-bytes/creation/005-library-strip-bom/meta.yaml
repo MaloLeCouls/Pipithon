@@ -1,0 +1,21 @@
+id: ch04-005-library-strip-bom
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - bom
+  - bytes-decode
+theme: library
+title: "Le fichier qui commence par un BOM"
+short_description: "Décoder en gérant un éventuel byte order mark UTF-8."
+hints:
+  - "Un fichier Windows commence parfois par les octets EF BB BF (BOM UTF-8)."
+  - "Le codec 'utf-8-sig' consomme le BOM s'il est là, et marche aussi sans."
+  - "Le résultat ne doit jamais contenir le caractère U+FEFF en tête."
+reference_book: "Unicode — BOM, codec utf-8-sig"
+pymistral_link: null
+tags:
+  - unicode
+  - bom

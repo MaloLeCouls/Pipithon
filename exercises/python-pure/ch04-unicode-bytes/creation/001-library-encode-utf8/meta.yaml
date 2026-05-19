@@ -1,0 +1,20 @@
+id: ch04-001-library-encode-utf8
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - str-encode
+theme: library
+title: "Encoder un titre en UTF-8"
+short_description: "str -> bytes via .encode(), proprement."
+hints:
+  - "Une str se transforme en bytes avec .encode(encodage)."
+  - "L'encodage par défaut recommandé est 'utf-8'."
+  - "Le résultat est de type bytes, pas str."
+reference_book: "Unicode — frontière str/bytes, .encode()"
+pymistral_link: null
+tags:
+  - unicode
+  - bytes

@@ -1,0 +1,20 @@
+id: ch04-002-streaming-decode-bytes
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - bytes-decode
+theme: streaming
+title: "Décoder un titre reçu"
+short_description: "bytes -> str via .decode() avec l'encodage donné."
+hints:
+  - "bytes.decode(encodage) reconstruit la str."
+  - "L'encodage doit correspondre à celui de l'émetteur."
+  - "Le retour est une str."
+reference_book: "Unicode — .decode(), encodage explicite"
+pymistral_link: null
+tags:
+  - unicode
+  - bytes

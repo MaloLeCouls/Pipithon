@@ -1,0 +1,22 @@
+id: ch04-008-streaming-dual-mode-title
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 3
+estimated_minutes: 13
+concepts:
+  - dual-mode-api
+  - bytes-decode
+theme: streaming
+title: "Une API qui accepte str OU bytes"
+short_description: "Fonction dual-mode : normalise l'entrée en str quel que soit le type."
+hints:
+  - "Teste le type : isinstance(x, bytes) -> .decode('utf-8') ; sinon c'est déjà une str."
+  - "Le reste du traitement (strip) doit être commun aux deux chemins."
+  - "Sortie toujours str ; un type inattendu doit lever TypeError."
+reference_book: "Unicode — dual-mode API (accepter str ou bytes)"
+pymistral_link: null
+tags:
+  - unicode
+  - bytes
+  - dual-mode

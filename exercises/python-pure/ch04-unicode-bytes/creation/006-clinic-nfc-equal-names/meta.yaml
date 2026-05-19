@@ -1,0 +1,20 @@
+id: ch04-006-clinic-nfc-equal-names
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - unicode-normalization
+theme: clinic
+title: "Deux 'é' qui ne sont pas égaux"
+short_description: "Comparer des noms après normalisation NFC."
+hints:
+  - "'é' peut être un seul code point (U+00E9) ou 'e' + accent combinant (U+0065 U+0301)."
+  - "unicodedata.normalize('NFC', s) ramène les deux à la même forme."
+  - "Compare les deux noms APRÈS normalisation."
+reference_book: "Unicode — normalisation NFC, égalité canonique"
+pymistral_link: null
+tags:
+  - unicode
+  - normalization

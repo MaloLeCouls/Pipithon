@@ -1,0 +1,22 @@
+id: ch04-009-library-dedupe-titles-index
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - unicode-normalization
+  - case-folding
+theme: library
+title: "Dédupliquer un catalogue multilingue"
+short_description: "Index de titres dédupliqués, robuste casse + formes Unicode."
+hints:
+  - "Deux titres 'visuellement identiques' peuvent différer en octets."
+  - "Une clé de regroupement stable = forme normalisée ET casefoldée."
+  - "Garde la PREMIÈRE graphie rencontrée comme représentant."
+reference_book: "Unicode — clé canonique pour déduplication"
+pymistral_link: null
+tags:
+  - unicode
+  - normalization
+  - modeling

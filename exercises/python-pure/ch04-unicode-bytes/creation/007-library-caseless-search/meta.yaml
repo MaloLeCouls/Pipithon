@@ -1,0 +1,21 @@
+id: ch04-007-library-caseless-search
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - case-folding
+  - unicode-normalization
+theme: library
+title: "Recherche insensible à la casse (vraiment)"
+short_description: "casefold + NFC pour matcher 'Straße' avec 'STRASSE'."
+hints:
+  - "str.lower() ne suffit pas : 'ß'.lower() == 'ß', mais 'ß'.casefold() == 'ss'."
+  - "Piège signalé : normalise EN PLUS en NFC, sinon 'é' composé/décomposé ne matche pas."
+  - "Renvoie les titres dont la version normalisée+casefoldée contient la requête normalisée+casefoldée."
+reference_book: "Unicode — casefold vs lower, + normalisation"
+pymistral_link: null
+tags:
+  - unicode
+  - case-folding

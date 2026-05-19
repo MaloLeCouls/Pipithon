@@ -1,0 +1,23 @@
+id: ch04-010-clinic-nfc-fold-equal-checkpoint
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 5
+estimated_minutes: 22
+concepts:
+  - unicode-normalization
+  - case-folding
+  - canonical-equality
+theme: clinic
+title: "Checkpoint ch.4 — nfc_equal & fold_equal"
+short_description: "Le test 'j'ai compris Unicode' : égalité canonique, et égalité canonique insensible à la casse."
+hints:
+  - "nfc_equal : normalise NFC les deux, puis ==."
+  - "fold_equal : normalise NFC, applique casefold(), puis == (la casse ne compte plus)."
+  - "fold_equal est strictement plus permissif que nfc_equal."
+reference_book: "Unicode — checkpoint : nfc_equal / fold_equal (égalité robuste)"
+pymistral_link: null
+tags:
+  - unicode
+  - normalization
+  - checkpoint

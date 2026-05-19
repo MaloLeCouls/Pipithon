@@ -1,0 +1,22 @@
+id: ch04-004-delivery-safe-decode-replace
+chapter: 4
+chapter_slug: unicode-bytes
+type: creation
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - bytes-decode
+  - decode-errors
+theme: delivery
+title: "Décoder sans planter"
+short_description: "errors='replace' pour survivre à des octets corrompus."
+hints:
+  - ".decode() accepte un paramètre errors ('strict' par défaut, qui lève)."
+  - "'replace' substitue le caractère de remplacement U+FFFD aux octets invalides."
+  - "La fonction ne doit jamais lever UnicodeDecodeError."
+reference_book: "Unicode — gestion des erreurs de décodage (errors=)"
+pymistral_link: null
+tags:
+  - unicode
+  - bytes
+  - edge-case
