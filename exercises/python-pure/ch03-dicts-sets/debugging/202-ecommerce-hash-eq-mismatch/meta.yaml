@@ -1,0 +1,22 @@
+id: ch03-202-ecommerce-hash-eq-mismatch
+chapter: 3
+chapter_slug: dicts-sets
+type: debugging
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - __hash__
+  - __eq__
+theme: ecommerce
+title: "Le set ne déduplique pas"
+short_description: "Coupon a __eq__ et __hash__... mais incohérents. Le set garde des doublons."
+hints:
+  - "Deux Coupon égaux finissent-ils dans le même bucket de hash ?"
+  - "Sur quels champs porte __eq__ ? Et __hash__ ?"
+  - "Le contrat : a == b DOIT impliquer hash(a) == hash(b)."
+reference_book: "Dicts/Sets — contrat __hash__/__eq__ rompu"
+pymistral_link: null
+tags:
+  - dunder
+  - hashable
+  - debugging

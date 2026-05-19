@@ -1,0 +1,21 @@
+id: ch03-104-ecommerce-update-to-pipe
+chapter: 3
+chapter_slug: dicts-sets
+type: modification
+difficulty: 3
+estimated_minutes: 9
+concepts:
+  - dict-merge
+theme: ecommerce
+title: "copy + update -> opérateur |"
+short_description: "Fusion non destructive : remplace copy()+update() par |."
+hints:
+  - "base.copy() puis .update(extra) = base | extra (sans muter base)."
+  - "Le résultat et l'absence de mutation doivent être préservés."
+  - "Utilise l'opérateur de fusion | (PEP 584)."
+reference_book: "Dicts — | vs copy()+update()"
+pymistral_link: null
+tags:
+  - dict
+  - merge
+  - refactor

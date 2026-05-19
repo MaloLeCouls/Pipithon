@@ -1,0 +1,20 @@
+id: ch03-101-ecommerce-loop-to-dictcomp
+chapter: 3
+chapter_slug: dicts-sets
+type: modification
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - dict-comprehension
+theme: ecommerce
+title: "Boucle dict -> dict comprehension"
+short_description: "Réécris un remplissage de dict en dict comprehension."
+hints:
+  - "`d = {}; for ...: d[k] = v` est une dict comprehension."
+  - "Comportement strictement identique."
+  - "Pas de boucle for explicite dans la version finale."
+reference_book: "Dicts — dict comprehension vs boucle"
+pymistral_link: null
+tags:
+  - comprehension
+  - refactor

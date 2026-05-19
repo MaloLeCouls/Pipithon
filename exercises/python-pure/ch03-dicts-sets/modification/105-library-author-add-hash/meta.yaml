@@ -1,0 +1,23 @@
+id: ch03-105-library-author-add-hash
+chapter: 3
+chapter_slug: dicts-sets
+type: modification
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - __hash__
+  - __eq__
+  - set
+theme: library
+title: "Rendre Author hashable"
+short_description: "Author a __eq__ mais pas __hash__ : ajoute le contrat, déduplique via set."
+hints:
+  - "Sans __hash__ cohérent, Author est inutilisable en set/dict (le dedup O(n²) en liste est le symptôme)."
+  - "hash basé sur les MÊMES champs que __eq__ (contrat a==b => hash(a)==hash(b))."
+  - "Une fois hashable, déduplique avec un set tout en préservant l'ordre de première apparition."
+reference_book: "Dicts/Sets — contrat __hash__/__eq__, dedup set"
+pymistral_link: null
+tags:
+  - dunder
+  - hashable
+  - refactor

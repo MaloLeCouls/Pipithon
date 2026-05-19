@@ -1,0 +1,21 @@
+id: ch03-203-library-mutate-during-iter
+chapter: 3
+chapter_slug: dicts-sets
+type: debugging
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - dict-iteration
+  - dict-comprehension
+theme: library
+title: "Purger un index sans le faire exploser"
+short_description: "purge_unavailable plante en pleine itération. Corrige proprement."
+hints:
+  - "Lance les tests : quelle exception, et à quelle ligne ?"
+  - "Modifier la taille d'un dict pendant qu'on itère dessus est interdit."
+  - "Itère sur une copie des clés/items, ou reconstruis le dict."
+reference_book: "Dicts — mutation pendant itération (RuntimeError)"
+pymistral_link: null
+tags:
+  - dict
+  - debugging

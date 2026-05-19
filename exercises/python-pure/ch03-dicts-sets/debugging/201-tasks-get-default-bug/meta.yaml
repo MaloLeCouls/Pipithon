@@ -1,0 +1,21 @@
+id: ch03-201-tasks-get-default-bug
+chapter: 3
+chapter_slug: dicts-sets
+type: debugging
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - defaultdict
+  - dict-methods
+theme: tasks
+title: "Le groupement ne garde rien"
+short_description: "group_by_assignee renvoie toujours vide. Trouve pourquoi."
+hints:
+  - "Que retourne d.get(k, []) et qu'arrive-t-il à la liste qu'on .append() dessus ?"
+  - "La liste créée par get(k, []) est-elle stockée dans le dict ?"
+  - "Une seule ligne est en cause."
+reference_book: "Dicts — piège get(k, default) qui ne stocke pas"
+pymistral_link: null
+tags:
+  - dict
+  - debugging
