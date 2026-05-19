@@ -1,0 +1,22 @@
+id: ch02-201-tasks-shared-row-bug
+chapter: 2
+chapter_slug: sequences
+type: debugging
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - sequence-multiplication
+  - aliasing
+theme: tasks
+title: "Toutes les voies se remplissent en même temps"
+short_description: "Assigner une tâche à une voie les pollue toutes. Trouve pourquoi."
+hints:
+  - "Assigne à la voie 0, puis regarde les voies 1 et 2."
+  - "Comment new_board fabrique-t-il ses voies, exactement ?"
+  - "`[[]] * n` crée n fois la MÊME liste, pas n listes."
+reference_book: "Sequences — piège [[]]*n (référence partagée)"
+pymistral_link: null
+tags:
+  - sequences
+  - aliasing
+  - debugging

@@ -1,0 +1,20 @@
+id: ch02-101-ecommerce-loop-to-listcomp
+chapter: 2
+chapter_slug: sequences
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - list-comprehension
+theme: ecommerce
+title: "Boucle + append -> comprehension"
+short_description: "Réécris une accumulation manuelle en list comprehension."
+hints:
+  - "Le motif `acc = []; for ...: acc.append(...)` est exactement une list comprehension."
+  - "Le comportement (sortie identique) doit être strictement préservé."
+  - "Pas de boucle for explicite dans la version finale."
+reference_book: "Sequences — comprehension idiomatique vs boucle accumulateur"
+pymistral_link: null
+tags:
+  - comprehension
+  - refactor

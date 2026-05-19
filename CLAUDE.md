@@ -12,10 +12,16 @@
   `learning-journal/python-deep/fluent_python_inventory.md`. Calibré sur la TOC
   publique Fluent Python 2e × `mapping-mistral.md`. `pymistral_link: null` partout
   (framework PyMistral non fourni — cf. `docs/context/pymistral-link.md`).
-- **Phase 2 (exos seed ch1-2) : à faire.** Track active : `python-pure`
-  (scaffold ch01-ch24, **0 exo**). Autres tracks : `locked`.
-- Prochaine action : Phase 2 — générer les ~32 exos seed ch1-2 + écrire
-  `tools/validate_exercise.py` (cf. `INIT_PROMPT.md` §6, `generation-recipes.md`).
+- **Phase 2 (exos seed ch1-2) : faite.** 32 exos validés 100 % (ch1 : 18 —
+  10c/5m/3d ; ch2 : 14 — 8c/4m/2d). `tools/validate_exercise.py` +
+  `validate_all.py` opérationnels (contrat solution-verte/starter-rouge,
+  timeout filet-de-sécurité, logs flushés). Cible de calibration : Python
+  fluent pour ML Inference Engineer (NVIDIA/Google/Mistral/Apple) + OSS vLLM/SGLang.
+- **Phase 3 (webapp MVP) : à faire.** Track active : `python-pure` (ch01-02
+  peuplés, ch03-24 scaffold vide). Autres tracks : `locked`.
+- Prochaine action : soit Phase 3 (webapp MVP, cf. `INIT_PROMPT.md` §6), soit
+  étoffer le seed (plus d'exos ch1-2, ou démarrer ch3) — au choix utilisateur.
+- Validation (pas d'`uv` ici) : `python tools/validate_all.py`.
 
 ## 1. Mission
 

@@ -1,0 +1,22 @@
+id: ch02-104-tasks-range-len-to-enumerate
+chapter: 2
+chapter_slug: sequences
+type: modification
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - list-comprehension
+  - enumerate
+theme: tasks
+title: "for i in range(len(...)) -> enumerate"
+short_description: "Tue l'anti-pattern range(len()) au profit d'enumerate + comprehension."
+hints:
+  - "`for i in range(len(x))` puis x[i] = signal d'alarme : tu veux enumerate."
+  - "enumerate(x, start=1) donne (indice, élément) directement."
+  - "Version finale : une list comprehension, ni range() ni indexation."
+reference_book: "Sequences — enumerate vs range(len()), comprehension"
+pymistral_link: null
+tags:
+  - comprehension
+  - enumerate
+  - refactor

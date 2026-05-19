@@ -1,0 +1,20 @@
+id: ch02-103-delivery-index-to-unpack
+chapter: 2
+chapter_slug: sequences
+type: modification
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - tuple-unpacking
+theme: delivery
+title: "Indexer un record, c'est moche"
+short_description: "Remplace rec[0]/rec[1]/rec[2] par un unpacking nommé."
+hints:
+  - "rec[0], rec[1], rec[2] cachent le sens : nomme les champs en déballant."
+  - "Une seule ligne d'unpacking remplace les accès indexés."
+  - "Comportement strictement identique."
+reference_book: "Sequences — tuple comme record, unpacking lisible"
+pymistral_link: null
+tags:
+  - unpacking
+  - refactor

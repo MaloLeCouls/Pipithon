@@ -1,0 +1,23 @@
+id: ch02-202-ecommerce-topn-sort-bug
+chapter: 2
+chapter_slug: sequences
+type: debugging
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - sorted
+  - sort-key
+  - sequence-mutation
+theme: ecommerce
+title: "Le top 3 renvoie les pires"
+short_description: "best_sellers renvoie les flops ET saccage la liste d'entrée. Deux bugs."
+hints:
+  - "Dans quel sens trie-t-on ? Le top, ce sont les ventes les PLUS hautes."
+  - "Après un appel, la liste passée en argument est-elle intacte ?"
+  - "list.sort() mute en place ; sorted() rend une nouvelle liste."
+reference_book: "Sequences — sort vs sorted, sens du tri, mutation d'entrée"
+pymistral_link: null
+tags:
+  - sorting
+  - debugging
+  - sequences

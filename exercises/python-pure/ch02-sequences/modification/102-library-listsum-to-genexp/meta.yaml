@@ -1,0 +1,20 @@
+id: ch02-102-library-listsum-to-genexp
+chapter: 2
+chapter_slug: sequences
+type: modification
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - generator-expression
+theme: library
+title: "sum([...]) -> sum(...)"
+short_description: "Supprime la liste intermédiaire : generator expression dans sum()."
+hints:
+  - "sum([x for ...]) matérialise une liste inutile ; retire les crochets."
+  - "Le résultat numérique doit être identique."
+  - "Pas de list comprehension dans la version finale."
+reference_book: "Sequences — generator expression vs list comprehension (mémoire)"
+pymistral_link: null
+tags:
+  - generator
+  - refactor
