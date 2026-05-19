@@ -1,0 +1,22 @@
+id: ch04-103-streaming-manual-bom-to-sig
+chapter: 4
+chapter_slug: unicode-bytes
+type: modification
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - bom
+  - bytes-decode
+theme: streaming
+title: "Strip de BOM manuel -> utf-8-sig"
+short_description: "Remplace le découpage d'octets BOM à la main par le bon codec."
+hints:
+  - "raw[3:] si startswith EF BB BF : fragile, et faux si pas de BOM mais 3 octets utiles."
+  - "Le codec 'utf-8-sig' fait exactement ça, correctement, des deux côtés."
+  - "Comportement identique (avec et sans BOM)."
+reference_book: "Unicode — utf-8-sig vs strip manuel du BOM"
+pymistral_link: null
+tags:
+  - unicode
+  - bom
+  - refactor

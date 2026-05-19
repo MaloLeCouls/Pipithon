@@ -1,0 +1,20 @@
+id: ch04-101-library-ordloop-to-encode
+chapter: 4
+chapter_slug: unicode-bytes
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - str-encode
+theme: library
+title: "bytes([ord(c)...]) -> .encode()"
+short_description: "Remplace une fabrication d'octets à la main par .encode('utf-8')."
+hints:
+  - "bytes([ord(c) for c in s]) casse dès qu'un caractère dépasse 127."
+  - ".encode('utf-8') est l'idiome correct ET multioctet."
+  - "Le comportement sur ASCII reste identique ; il devient correct sur l'accentué."
+reference_book: "Unicode — .encode() vs bricolage ord()"
+pymistral_link: null
+tags:
+  - unicode
+  - refactor

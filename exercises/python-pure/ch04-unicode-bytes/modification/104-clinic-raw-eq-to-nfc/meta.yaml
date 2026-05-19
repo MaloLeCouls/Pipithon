@@ -1,0 +1,21 @@
+id: ch04-104-clinic-raw-eq-to-nfc
+chapter: 4
+chapter_slug: unicode-bytes
+type: modification
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - unicode-normalization
+theme: clinic
+title: "== brut -> égalité canonique"
+short_description: "Le rapprochement de dossiers rate les é composés/décomposés."
+hints:
+  - "a == b sur des str non normalisées donne des faux négatifs invisibles."
+  - "Normalise les deux en NFC avant de comparer."
+  - "Comportement préservé quand les formes sont déjà identiques."
+reference_book: "Unicode — normalisation NFC avant comparaison"
+pymistral_link: null
+tags:
+  - unicode
+  - normalization
+  - refactor

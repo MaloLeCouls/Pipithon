@@ -1,0 +1,21 @@
+id: ch04-202-delivery-wrong-encoding-decode
+chapter: 4
+chapter_slug: unicode-bytes
+type: debugging
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - bytes-decode
+  - decode-errors
+theme: delivery
+title: "UnicodeDecodeError sur les étiquettes"
+short_description: "Les étiquettes legacy sont en latin-1, décodées en utf-8. Ça plante."
+hints:
+  - "Lis la trace : UnicodeDecodeError, quel codec, quel octet ?"
+  - "Les étiquettes historiques sont encodées en latin-1, pas en utf-8."
+  - "Décoder avec le bon codec règle le problème (pas besoin de errors=)."
+reference_book: "Unicode — décoder avec le bon encodage"
+pymistral_link: null
+tags:
+  - unicode
+  - debugging

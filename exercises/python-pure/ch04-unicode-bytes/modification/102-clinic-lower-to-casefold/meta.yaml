@@ -1,0 +1,20 @@
+id: ch04-102-clinic-lower-to-casefold
+chapter: 4
+chapter_slug: unicode-bytes
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - case-folding
+theme: clinic
+title: ".lower() -> .casefold()"
+short_description: "Comparaison insensible à la casse correcte (ß, etc.)."
+hints:
+  - "'ß'.lower() vaut 'ß' ; .casefold() vaut 'ss'."
+  - "Pour comparer sans tenir compte de la casse, casefold() est l'idiome."
+  - "Comportement ASCII inchangé, devient correct sur les cas durs."
+reference_book: "Unicode — casefold vs lower"
+pymistral_link: null
+tags:
+  - unicode
+  - refactor

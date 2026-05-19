@@ -1,0 +1,21 @@
+id: ch04-201-streaming-str-bytes-compare
+chapter: 4
+chapter_slug: unicode-bytes
+type: debugging
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - str-vs-bytes
+  - bytes-decode
+theme: streaming
+title: "La comparaison est toujours fausse"
+short_description: "is_expected renvoie toujours False. str vs bytes ne s'égalent jamais."
+hints:
+  - "Quels types compare-t-on exactement ? print(type(...)) si besoin."
+  - "b'OK' == 'OK' vaut False en Python 3, sans erreur."
+  - "Décode (ou encode) pour comparer le même type."
+reference_book: "Unicode — str != bytes (frontière stricte)"
+pymistral_link: null
+tags:
+  - unicode
+  - debugging

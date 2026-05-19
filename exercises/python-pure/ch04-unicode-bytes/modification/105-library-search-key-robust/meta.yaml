@@ -1,0 +1,22 @@
+id: ch04-105-library-search-key-robust
+chapter: 4
+chapter_slug: unicode-bytes
+type: modification
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - unicode-normalization
+  - case-folding
+theme: library
+title: "Une clé de recherche qui tient debout"
+short_description: "Remplace lower()+table d'accents bricolée par NFKD + suppression des diacritiques + casefold."
+hints:
+  - "La table d'accents est incomplète par construction (ñ, ø, ł... manquent) ; lower() rate les plis durs."
+  - "unicodedata.normalize('NFKD', s) sépare lettre et accent ; on retire les marques combinantes (unicodedata.combining)."
+  - "Puis casefold() pour la casse. Résultat : insensible accents+casse, sans énumérer les cas."
+reference_book: "Unicode — clé de comparaison robuste (NFKD + combining + casefold)"
+pymistral_link: null
+tags:
+  - unicode
+  - normalization
+  - refactor
