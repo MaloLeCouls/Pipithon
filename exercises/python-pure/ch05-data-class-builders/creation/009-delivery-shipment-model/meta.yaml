@@ -1,0 +1,22 @@
+id: ch05-009-delivery-shipment-model
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 4
+estimated_minutes: 20
+concepts:
+  - dataclass
+  - default-factory
+  - post-init
+theme: delivery
+title: "Modéliser un envoi correctement"
+short_description: "Choisir les bons outils dataclass : factory, post-init, normalisation."
+hints:
+  - "Une liste de colis par défaut : surtout pas `= []`."
+  - "Le poids total est dérivé, pas saisi."
+  - "Normalise la zone (strip + majuscule) à la construction."
+reference_book: "Data class builders — composer field/factory/post_init"
+pymistral_link: null
+tags:
+  - dataclass
+  - modeling

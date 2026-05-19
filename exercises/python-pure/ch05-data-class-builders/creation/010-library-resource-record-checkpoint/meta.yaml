@@ -1,0 +1,23 @@
+id: ch05-010-library-resource-record-checkpoint
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 5
+estimated_minutes: 24
+concepts:
+  - dataclass
+  - default-factory
+  - post-init
+  - field-repr
+theme: library
+title: "Checkpoint ch.5 — le record de ressource"
+short_description: "Le test 'j'ai compris les data classes' : champs optionnels, factory, post-init, repr maîtrisé."
+hints:
+  - "Champs obligatoires d'abord ; optionnels avec défaut ensuite."
+  - "authors/subjects sont des listes -> field(default_factory=list)."
+  - "__post_init__ valide identifier non vide ; un champ interne hors repr -> field(repr=False)."
+reference_book: "Data class builders — checkpoint : record type Dublin Core"
+pymistral_link: null
+tags:
+  - dataclass
+  - checkpoint

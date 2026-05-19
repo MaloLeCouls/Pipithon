@@ -1,0 +1,22 @@
+id: ch05-004-ecommerce-cart-default-factory
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - dataclass
+  - default-factory
+theme: ecommerce
+title: "Un panier sans état partagé"
+short_description: "field(default_factory=list) : le piège du défaut mutable."
+hints:
+  - "Un champ liste ne peut PAS avoir `= []` comme défaut dans une dataclass."
+  - "field(default_factory=list) crée une nouvelle liste par instance."
+  - "Deux paniers neufs doivent être indépendants."
+reference_book: "Data class builders — default_factory (défaut mutable)"
+pymistral_link: null
+tags:
+  - dataclass
+  - default-factory
+  - edge-case

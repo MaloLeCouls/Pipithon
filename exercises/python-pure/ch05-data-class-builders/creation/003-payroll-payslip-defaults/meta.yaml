@@ -1,0 +1,21 @@
+id: ch05-003-payroll-payslip-defaults
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - dataclass
+  - field-default
+theme: payroll
+title: "Un bulletin avec valeurs par défaut"
+short_description: "Champs @dataclass avec défauts simples (immuables)."
+hints:
+  - "Un défaut immuable (str, int) se déclare directement : champ: type = valeur."
+  - "Les champs sans défaut viennent AVANT ceux avec défaut."
+  - "Construire sans préciser le défaut doit marcher."
+reference_book: "Data class builders — valeurs par défaut de champs"
+pymistral_link: null
+tags:
+  - dataclass
+  - defaults

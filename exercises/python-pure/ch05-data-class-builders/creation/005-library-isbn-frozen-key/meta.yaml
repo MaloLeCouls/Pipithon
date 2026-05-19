@@ -1,0 +1,22 @@
+id: ch05-005-library-isbn-frozen-key
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - dataclass
+  - frozen
+theme: library
+title: "Un identifiant gelé et hashable"
+short_description: "@dataclass(frozen=True) : immuable -> hashable, utilisable en clé."
+hints:
+  - "@dataclass(frozen=True) interdit la mutation et génère __hash__."
+  - "Un BookId gelé peut servir de clé de dict / élément de set."
+  - "Tenter de réassigner un champ doit lever FrozenInstanceError."
+reference_book: "Data class builders — frozen=True, hashabilité"
+pymistral_link: null
+tags:
+  - dataclass
+  - frozen
+  - hashable

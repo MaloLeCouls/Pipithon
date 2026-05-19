@@ -1,0 +1,20 @@
+id: ch05-002-delivery-address-namedtuple
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - typing-namedtuple
+theme: delivery
+title: "Une adresse immuable nommée"
+short_description: "typing.NamedTuple : champs nommés, immuable, repr gratuit."
+hints:
+  - "Hérite de typing.NamedTuple et déclare les champs annotés."
+  - "Un NamedTuple est immuable (pas d'affectation d'attribut)."
+  - "Il reste un tuple : indexable et déballable."
+reference_book: "Data class builders — typing.NamedTuple"
+pymistral_link: null
+tags:
+  - namedtuple
+  - immutable

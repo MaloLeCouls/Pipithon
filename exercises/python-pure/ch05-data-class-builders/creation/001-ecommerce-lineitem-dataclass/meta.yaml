@@ -1,0 +1,20 @@
+id: ch05-001-ecommerce-lineitem-dataclass
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - dataclass
+theme: ecommerce
+title: "Une ligne de commande en @dataclass"
+short_description: "@dataclass génère __init__, __repr__, __eq__ pour toi."
+hints:
+  - "Décore la classe avec @dataclass et déclare les champs annotés."
+  - "Pas besoin d'écrire __init__ ni __repr__ : c'est généré."
+  - "__eq__ généré compare champ à champ."
+reference_book: "Data class builders — @dataclass de base"
+pymistral_link: null
+tags:
+  - dataclass
+  - oop

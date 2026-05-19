@@ -1,0 +1,22 @@
+id: ch05-007-ecommerce-invoice-computed-field
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - dataclass
+  - post-init
+  - field-init-false
+theme: ecommerce
+title: "Une facture au total calculé"
+short_description: "Champ dérivé via __post_init__ + field(init=False)."
+hints:
+  - "Le total ne se passe pas au constructeur : field(init=False) le marque comme dérivé."
+  - "Piège signalé : sans init=False, le total apparaîtrait dans __init__ et le repr de façon incohérente."
+  - "__post_init__ calcule total = somme(quantité * prix) des lignes."
+reference_book: "Data class builders — champ dérivé (init=False) + __post_init__"
+pymistral_link: null
+tags:
+  - dataclass
+  - post-init

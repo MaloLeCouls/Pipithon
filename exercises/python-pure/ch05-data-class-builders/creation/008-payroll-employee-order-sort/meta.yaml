@@ -1,0 +1,23 @@
+id: ch05-008-payroll-employee-order-sort
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 3
+estimated_minutes: 13
+concepts:
+  - dataclass
+  - order
+  - sort-key
+theme: payroll
+title: "Trier des employés sans écrire __lt__"
+short_description: "@dataclass(order=True) génère les comparaisons ; field(compare=...) les pilote."
+hints:
+  - "order=True génère __lt__/__le__/__gt__/__ge__ basés sur l'ordre des champs."
+  - "Piège signalé : l'ordre de comparaison = l'ordre de DÉCLARATION des champs."
+  - "Mets le champ de tri voulu en premier, ou exclus les autres via field(compare=False)."
+reference_book: "Data class builders — order=True, field(compare=)"
+pymistral_link: null
+tags:
+  - dataclass
+  - order
+  - sorting

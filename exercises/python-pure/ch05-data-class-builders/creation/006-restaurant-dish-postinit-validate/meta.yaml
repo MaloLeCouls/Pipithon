@@ -1,0 +1,22 @@
+id: ch05-006-restaurant-dish-postinit-validate
+chapter: 5
+chapter_slug: data-class-builders
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - dataclass
+  - post-init
+theme: restaurant
+title: "Un plat dont le prix est validé"
+short_description: "__post_init__ pour rejeter un état invalide à la construction."
+hints:
+  - "__post_init__ est appelé juste après l'__init__ généré."
+  - "Lève ValueError si price <= 0 ou si name est vide."
+  - "Un plat valide se construit normalement."
+reference_book: "Data class builders — __post_init__ (validation)"
+pymistral_link: null
+tags:
+  - dataclass
+  - post-init
+  - validation
