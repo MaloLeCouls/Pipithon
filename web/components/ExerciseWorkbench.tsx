@@ -94,9 +94,9 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
   const ready = phase === "ready";
 
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
       {/* Header */}
-      <header className="flex items-center gap-3 border-b border-border bg-surface px-4 py-2 text-sm">
+      <header className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-border bg-surface px-4 py-2 text-sm">
         <Link
           href={`/tracks/${exo.track}/${exo.chapterDir}`}
           className="text-muted hover:text-foreground"
@@ -107,14 +107,18 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
         <Badge>{exo.type}</Badge>
         <Badge>diff {exo.difficulty}/5</Badge>
         <Badge>{exo.theme}</Badge>
-        <span className="text-muted">{exo.concepts.join(" · ")}</span>
+        <span className="hidden text-muted sm:inline">
+          {exo.concepts.join(" · ")}
+        </span>
         {done && <span className="ml-auto text-ok">✓ complété</span>}
-        {!done && <span className="ml-auto text-muted">{PHASE_LABEL[phase]}</span>}
+        {!done && (
+          <span className="ml-auto text-muted">{PHASE_LABEL[phase]}</span>
+        )}
       </header>
 
-      <div className="grid flex-1 grid-cols-2 overflow-hidden">
+      <div className="flex flex-1 flex-col lg:grid lg:grid-cols-2 lg:overflow-hidden">
         {/* Panneau gauche : énoncé + indices + (solution) */}
-        <section className="overflow-y-auto border-r border-border p-5 space-y-4">
+        <section className="space-y-4 border-b border-border p-5 lg:overflow-y-auto lg:border-r lg:border-b-0">
           <div>
             <h1 className="mb-1 text-lg font-semibold">{exo.title}</h1>
             <p className="text-sm text-muted">{exo.short_description}</p>
@@ -152,8 +156,8 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
         </section>
 
         {/* Panneau droit : éditeur + actions + résultats */}
-        <section className="flex flex-col overflow-hidden">
-          <div className="min-h-0 flex-1">
+        <section className="flex flex-col lg:overflow-hidden">
+          <div className="h-[55vh] lg:h-auto lg:min-h-0 lg:flex-1">
             <MonacoEditor value={code} onChange={onChange} />
           </div>
           <div className="flex items-center gap-2 border-t border-border bg-surface px-3 py-2">
@@ -182,7 +186,7 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
               Reset starter
             </button>
           </div>
-          <div className="h-2/5 overflow-y-auto border-t border-border bg-background p-3">
+          <div className="min-h-[30vh] overflow-y-auto border-t border-border bg-background p-3 lg:h-2/5 lg:min-h-0">
             {busy && <p className="text-sm text-muted">Exécution…</p>}
             {!busy && report && <TestResults report={report} />}
             {!busy && runOut != null && (
