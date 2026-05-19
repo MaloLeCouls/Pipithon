@@ -1,0 +1,23 @@
+id: ch03-009-ecommerce-sku-hashable-key
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - __hash__
+  - __eq__
+  - set
+theme: ecommerce
+title: "Un SKU utilisable comme clé"
+short_description: "Objet-valeur correct comme clé de dict/set : __eq__ ET __hash__ cohérents."
+hints:
+  - "Deux Sku égaux par leurs champs doivent l'être aussi pour un set/dict."
+  - "Le contrat : si a == b alors hash(a) == hash(b). hash basé sur les mêmes champs que __eq__."
+  - "Un objet destiné à être clé doit être immuable côté champs identifiants."
+reference_book: "Dicts/Sets — contrat __hash__/__eq__ (lecture de PRs vLLM/transformers)"
+pymistral_link: null
+tags:
+  - dunder
+  - hashable
+  - modeling

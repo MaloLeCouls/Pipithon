@@ -1,0 +1,20 @@
+id: ch03-004-delivery-group-by-zone-defaultdict
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - defaultdict
+theme: delivery
+title: "Grouper les colis par zone"
+short_description: "collections.defaultdict(list) au lieu de if-key-in-dict."
+hints:
+  - "defaultdict(list) crée automatiquement une liste vide à la première clé vue."
+  - "Plus besoin de `if zone not in d: d[zone] = []`."
+  - "Renvoie un dict ordinaire OU un defaultdict — l'égalité dict suffit."
+reference_book: "Dicts — collections.defaultdict"
+pymistral_link: null
+tags:
+  - defaultdict
+  - grouping

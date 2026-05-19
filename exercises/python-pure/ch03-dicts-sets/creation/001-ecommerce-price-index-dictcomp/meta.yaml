@@ -1,0 +1,20 @@
+id: ch03-001-ecommerce-price-index-dictcomp
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - dict-comprehension
+theme: ecommerce
+title: "Index prix par SKU"
+short_description: "Construis un dict {sku: price} via une dict comprehension."
+hints:
+  - "Une boucle qui remplit un dict = dict comprehension {k: v for ...}."
+  - "Chaque produit est un dict avec 'sku' et 'price'."
+  - "Renvoie un nouveau dict, n'en mute aucun en entrée."
+reference_book: "Dicts — dict comprehension idiomatique"
+pymistral_link: null
+tags:
+  - comprehension
+  - dict

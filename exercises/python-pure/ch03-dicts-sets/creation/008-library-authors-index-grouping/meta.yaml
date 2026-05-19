@@ -1,0 +1,22 @@
+id: ch03-008-library-authors-index-grouping
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - defaultdict
+  - set
+theme: library
+title: "Index auteur -> titres uniques"
+short_description: "defaultdict(set) : grouper sans doublon, en une passe."
+hints:
+  - "Un auteur peut avoir le même titre listé deux fois : tu veux un set par auteur."
+  - "defaultdict(set) + .add() évite le boilerplate et déduplique."
+  - "Renvoie un dict ordinaire {auteur: set(titres)}."
+reference_book: "Dicts — defaultdict(set), grouping dédupliqué"
+pymistral_link: null
+tags:
+  - defaultdict
+  - set
+  - grouping

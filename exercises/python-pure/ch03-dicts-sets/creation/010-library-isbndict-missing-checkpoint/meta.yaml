@@ -1,0 +1,23 @@
+id: ch03-010-library-isbndict-missing-checkpoint
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 5
+estimated_minutes: 25
+concepts:
+  - __missing__
+  - dict-subclass
+  - dict-views
+theme: library
+title: "Checkpoint ch.3 — IsbnDict tolérant"
+short_description: "Le test 'j'ai compris dicts' : __missing__ + get + __contains__ cohérents."
+hints:
+  - "__missing__ n'est appelé QUE par d[k] quand k est absent — pas par get ni par `in`."
+  - "Stocke en str ; à la lecture, tente str(key) si l'accès direct échoue."
+  - "get() et __contains__ doivent rester cohérents avec __getitem__ (ne pas réintroduire le bug)."
+reference_book: "Dicts — checkpoint __missing__ (mapping tolérant aux clés)"
+pymistral_link: null
+tags:
+  - dunder
+  - dict
+  - checkpoint

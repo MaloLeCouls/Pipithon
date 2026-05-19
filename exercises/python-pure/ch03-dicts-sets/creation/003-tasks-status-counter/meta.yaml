@@ -1,0 +1,20 @@
+id: ch03-003-tasks-status-counter
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - Counter
+theme: tasks
+title: "Compter les statuts"
+short_description: "collections.Counter au lieu d'un dict de comptage à la main."
+hints:
+  - "collections.Counter compte un itérable en une ligne."
+  - "Counter(...) se compare comme un dict."
+  - "Un statut absent doit valoir 0 (propriété de Counter)."
+reference_book: "Dicts — collections.Counter"
+pymistral_link: null
+tags:
+  - counter
+  - dict

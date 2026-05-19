@@ -1,0 +1,21 @@
+id: ch03-007-ecommerce-merge-pricing-pipe
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - dict-merge
+  - dict-comprehension
+theme: ecommerce
+title: "Appliquer une grille promo"
+short_description: "Fusion de dicts avec | et sémantique d'écrasement maîtrisée."
+hints:
+  - "base | override : l'opérande de DROITE gagne en cas de clé commune."
+  - "Piège signalé : l'ordre compte — {**a, **b} et a | b écrasent avec b."
+  - "Ne mute ni base ni promo : produis un nouveau dict."
+reference_book: "Dicts — fusion via | (PEP 584), sémantique d'écrasement"
+pymistral_link: null
+tags:
+  - dict
+  - merge

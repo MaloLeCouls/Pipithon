@@ -1,0 +1,20 @@
+id: ch03-006-gym-unique-tiers-setcomp
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - set-comprehension
+theme: gym
+title: "Les formules d'abonnement distinctes"
+short_description: "Set comprehension pour dédupliquer en une expression."
+hints:
+  - "{expr for x in iterable} construit un set (déduplication gratuite)."
+  - "On veut les tiers normalisés en minuscules, sans doublon."
+  - "Renvoie un set, pas une liste."
+reference_book: "Sets — set comprehension"
+pymistral_link: null
+tags:
+  - comprehension
+  - set

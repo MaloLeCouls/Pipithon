@@ -1,0 +1,20 @@
+id: ch03-002-library-invert-isbn-dictcomp
+chapter: 3
+chapter_slug: dicts-sets
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - dict-comprehension
+theme: library
+title: "Inverser un index"
+short_description: "De {isbn: title} vers {title: isbn} en une dict comprehension."
+hints:
+  - "dict.items() te donne (clé, valeur) ; inverse-les dans la comprehension."
+  - "{v: k for k, v in d.items()}."
+  - "L'entrée ne doit pas être modifiée."
+reference_book: "Dicts — dict comprehension + items()"
+pymistral_link: null
+tags:
+  - comprehension
+  - dict
