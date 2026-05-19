@@ -1,0 +1,52 @@
+# ---- Node / Next.js (web/) ----
+node_modules/
+.pnp
+.pnp.*
+.next/
+out/
+build/
+dist/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+.turbo/
+
+# ---- Python tooling (tools/) ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+# NB: uv.lock IS committed for reproducibility — do not ignore it.
+
+# ---- Pyodide local cache (assets are heavy; .gitkeep only) ----
+public/pyodide/*
+!public/pyodide/.gitkeep
+web/public/pyodide/*
+!web/public/pyodide/.gitkeep
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ---- Claude local settings (personal, not shared) ----
+.claude/settings.local.json
+
+# ---- Logs / env ----
+*.log
+npm-debug.log*
+pnpm-debug.log*
+.env*.local

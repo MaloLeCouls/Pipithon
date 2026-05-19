@@ -1,0 +1,37 @@
+[project]
+name = "pipithon-tooling"
+version = "0.1.0"
+description = "Python tooling for the pipithon exercise dojo (exercise validators, index builder)."
+requires-python = ">=3.11"
+dependencies = [
+  "pyyaml>=6.0",
+  "pytest>=8.0",
+]
+
+[dependency-groups]
+dev = [
+  "ruff>=0.6",
+]
+
+# This is a tooling workspace, not an installable package.
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+# Starters are intentionally non-idiomatic/broken (modification & debugging types):
+# never lint them, it's by design.
+extend-exclude = ["exercises/**/starter.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# tests.py may use long assert messages and ast/inspect plumbing.
+"exercises/**/tests.py" = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["exercises"]
+python_files = ["tests.py"]
