@@ -1,0 +1,22 @@
+id: ch01-104-restaurant-get-to-getitem
+chapter: 1
+chapter_slug: data-model
+type: modification
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - __getitem__
+  - __len__
+theme: restaurant
+title: "get(i) devient menu[i]"
+short_description: "Transforme une méthode get() en __getitem__ et débloque l'itération gratuite."
+hints:
+  - "Avec __getitem__ + __len__, `for dish in menu` marche sans __iter__."
+  - "Délègue à la liste interne : index négatif et IndexError corrects gratuitement."
+  - "get(i) doit disparaître ; menu[i] le remplace partout."
+reference_book: "Data model — __getitem__ et le protocole séquence implicite"
+pymistral_link: null
+tags:
+  - dunder
+  - refactor
+  - container

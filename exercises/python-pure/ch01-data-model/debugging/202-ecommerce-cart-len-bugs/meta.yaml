@@ -1,0 +1,22 @@
+id: ch01-202-ecommerce-cart-len-bugs
+chapter: 1
+chapter_slug: data-model
+type: debugging
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - __len__
+  - __init__
+theme: ecommerce
+title: "Un panier qui compte faux"
+short_description: "len(cart) est faux et add() écrase. Deux bugs, corrige en chirurgie."
+hints:
+  - "Ajoute deux articles, regarde ce que vaut len(cart) vs ce qui est attendu."
+  - "Le second article fait-il disparaître le premier ? Regarde add() de près."
+  - "Un des bugs est un off-by-one ; l'autre est une mauvaise opération de liste."
+reference_book: "Data model — bugs classiques __len__ (off-by-one) et mutation"
+pymistral_link: null
+tags:
+  - dunder
+  - debugging
+  - container

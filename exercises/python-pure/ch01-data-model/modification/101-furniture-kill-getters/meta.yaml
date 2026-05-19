@@ -1,0 +1,22 @@
+id: ch01-101-furniture-kill-getters
+chapter: 1
+chapter_slug: data-model
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - __repr__
+  - pythonic-attributes
+theme: furniture
+title: "Tuer les getters Java-esques"
+short_description: "Vire get_ref/get_price, expose les attributs, ajoute un __repr__."
+hints:
+  - "En Python on accède aux attributs directement ; les getters triviaux sont du bruit."
+  - "Le comportement (les valeurs) doit rester identique, seule l'interface change."
+  - "Ajoute un __repr__ : Chair(ref='A1', price=99)."
+reference_book: "Data model — pythonisme : attributs publics + __repr__ vs getters"
+pymistral_link: null
+tags:
+  - dunder
+  - refactor
+  - idiomatic

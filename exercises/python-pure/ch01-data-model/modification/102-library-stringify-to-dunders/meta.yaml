@@ -1,0 +1,22 @@
+id: ch01-102-library-stringify-to-dunders
+chapter: 1
+chapter_slug: data-model
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - __repr__
+  - __str__
+theme: library
+title: "to_string() n'existe pas en Python"
+short_description: "Remplace une méthode to_string par __repr__ et __str__."
+hints:
+  - "Python a deux représentations : __repr__ (debug, non ambigu) et __str__ (humain)."
+  - "to_string() doit disparaître ; print(book) et repr(book) doivent suffire."
+  - "__repr__ : Book(isbn='1', title='Dune') | __str__ : Dune (1)."
+reference_book: "Data model — __repr__ vs __str__ (qui sert à quoi)"
+pymistral_link: null
+tags:
+  - dunder
+  - refactor
+  - idiomatic

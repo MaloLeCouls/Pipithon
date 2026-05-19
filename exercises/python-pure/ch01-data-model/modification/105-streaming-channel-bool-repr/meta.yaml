@@ -1,0 +1,22 @@
+id: ch01-105-streaming-channel-bool-repr
+chapter: 1
+chapter_slug: data-model
+type: modification
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - __bool__
+  - __repr__
+theme: streaming
+title: "Une chaîne qui se teste avec `if`"
+short_description: "Remplace is_live()/describe() par __bool__ et __repr__ cohérents."
+hints:
+  - "`if channel:` doit dire 'des spectateurs regardent' — quelle méthode spéciale ?"
+  - "Un __repr__ non ambigu remplace describe() ; il doit refléter l'état (live/offline)."
+  - "Garde le comportement : viewers reste accessible, le seuil reste > 0."
+reference_book: "Data model — __bool__ + __repr__ combinés (objet à état)"
+pymistral_link: null
+tags:
+  - dunder
+  - refactor
+  - idiomatic

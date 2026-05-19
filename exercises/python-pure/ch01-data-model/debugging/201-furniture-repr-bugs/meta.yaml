@@ -1,0 +1,21 @@
+id: ch01-201-furniture-repr-bugs
+chapter: 1
+chapter_slug: data-model
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - __repr__
+  - __init__
+theme: furniture
+title: "Deux bugs dans une chaise"
+short_description: "Le __repr__ est faux et un attribut manque. Corrige sans réécrire."
+hints:
+  - "Lance les tests : le message d'assertion te montre le format exact attendu."
+  - "Compare caractère par caractère le repr produit et le repr attendu."
+  - "Un des deux attributs n'est jamais stocké dans __init__."
+reference_book: "Data model — bugs classiques de __repr__ (quoting) et d'init"
+pymistral_link: null
+tags:
+  - dunder
+  - debugging
