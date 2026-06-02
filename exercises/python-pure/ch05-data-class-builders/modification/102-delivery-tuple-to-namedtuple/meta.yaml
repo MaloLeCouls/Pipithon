@@ -1,0 +1,20 @@
+id: ch05-102-delivery-tuple-to-namedtuple
+chapter: 5
+chapter_slug: data-class-builders
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - typing-namedtuple
+theme: delivery
+title: "Tuple positionnel -> NamedTuple"
+short_description: "Donne des noms à un record tuple sans casser le code tuple existant."
+hints:
+  - "rec[0]/rec[1] illisibles : typing.NamedTuple nomme les champs."
+  - "Un NamedTuple RESTE un tuple : l'indexation existante continue de marcher."
+  - "Mêmes valeurs, même ordre."
+reference_book: "Data class builders — typing.NamedTuple vs tuple nu"
+pymistral_link: null
+tags:
+  - namedtuple
+  - refactor

@@ -1,0 +1,22 @@
+id: ch05-104-restaurant-validate-to-postinit
+chapter: 5
+chapter_slug: data-class-builders
+type: modification
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - dataclass
+  - post-init
+theme: restaurant
+title: "Validation externe -> __post_init__"
+short_description: "Déplace une validation appelée à la main dans __post_init__."
+hints:
+  - "Toute construction d'un Dish exige aujourd'hui d'appeler une fonction externe."
+  - "@dataclass appelle automatiquement __post_init__ juste après __init__."
+  - "La validation devient impossible à oublier — c'est le point."
+reference_book: "Data class builders — __post_init__ pour invariants"
+pymistral_link: null
+tags:
+  - dataclass
+  - post-init
+  - refactor

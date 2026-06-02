@@ -1,0 +1,20 @@
+id: ch05-101-ecommerce-boilerplate-to-dataclass
+chapter: 5
+chapter_slug: data-class-builders
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - dataclass
+theme: ecommerce
+title: "Boilerplate -> @dataclass"
+short_description: "Remplace __init__/__repr__/__eq__ manuels par @dataclass."
+hints:
+  - "Trois dunders écrits à la main = un @dataclass."
+  - "Comportement identique (mêmes champs, même repr, même égalité)."
+  - "Déclare les champs annotés, laisse @dataclass générer le reste."
+reference_book: "Data class builders — @dataclass vs boilerplate"
+pymistral_link: null
+tags:
+  - dataclass
+  - refactor

@@ -1,0 +1,22 @@
+id: ch05-103-payroll-mutable-default-to-factory
+chapter: 5
+chapter_slug: data-class-builders
+type: modification
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - dataclass
+  - default-factory
+theme: payroll
+title: "Pattern None-guard -> default_factory"
+short_description: "Remplace le None-guard manuel d'une liste par un @dataclass + default_factory."
+hints:
+  - "items=None puis if items is None: items = []. C'est la version manuelle de quoi ?"
+  - "Une liste par défaut DOIT être créée à chaque instance, jamais partagée."
+  - "field(default_factory=list) fait exactement ça, en une ligne."
+reference_book: "Data class builders — default_factory pour défauts mutables"
+pymistral_link: null
+tags:
+  - dataclass
+  - default-factory
+  - refactor

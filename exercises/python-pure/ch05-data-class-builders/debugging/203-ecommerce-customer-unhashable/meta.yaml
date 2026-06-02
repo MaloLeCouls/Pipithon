@@ -1,0 +1,24 @@
+id: ch05-203-ecommerce-customer-unhashable
+chapter: 5
+chapter_slug: data-class-builders
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - dataclass
+  - dataclass-frozen
+  - hashable
+theme: ecommerce
+title: "unhashable type: 'Customer'"
+short_description: "@dataclass redefinit __eq__ -> __hash__ devient None. Plus utilisable comme cle."
+hints:
+  - "Lis l'erreur : unhashable type. Pourquoi un objet devient-il non hashable ?"
+  - "Quand @dataclass genere __eq__, il met __hash__=None (sauf si tu le dis autrement)."
+  - "Un identifiant client est conceptuellement immutable : frozen=True regle eq ET hash."
+reference_book: "Data class builders — eq, hash, frozen"
+pymistral_link: null
+tags:
+  - dataclass
+  - frozen
+  - hash
+  - debugging

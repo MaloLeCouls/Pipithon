@@ -1,0 +1,24 @@
+id: ch05-202-library-frozen-postinit-write
+chapter: 5
+chapter_slug: data-class-builders
+type: debugging
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - dataclass
+  - dataclass-frozen
+  - post-init
+theme: library
+title: "FrozenInstanceError dans __post_init__"
+short_description: "frozen=True interdit l'ecriture meme dans __post_init__."
+hints:
+  - "Lis l'erreur : FrozenInstanceError. Une dataclass frozen interdit l'affectation normale."
+  - "self.x = ... declenche __setattr__, qui leve sur frozen."
+  - "Pour contourner DANS __post_init__, object.__setattr__(self, 'x', valeur)."
+reference_book: "Data class builders — frozen + __post_init__"
+pymistral_link: null
+tags:
+  - dataclass
+  - frozen
+  - post-init
+  - debugging

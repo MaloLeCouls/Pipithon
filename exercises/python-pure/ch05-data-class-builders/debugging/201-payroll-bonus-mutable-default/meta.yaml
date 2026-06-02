@@ -1,0 +1,22 @@
+id: ch05-201-payroll-bonus-mutable-default
+chapter: 5
+chapter_slug: data-class-builders
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - dataclass
+  - default-factory
+theme: payroll
+title: "Le @dataclass refuse de se charger"
+short_description: "ValueError au chargement : bonuses=[] interdit par @dataclass."
+hints:
+  - "Le module ne s'importe meme pas : lis le message ValueError."
+  - "@dataclass refuse les defauts mutables passes directement (= [], = {}, = set())."
+  - "field(default_factory=...) construit un objet frais a chaque instance."
+reference_book: "Data class builders — defauts mutables interdits"
+pymistral_link: null
+tags:
+  - dataclass
+  - default-factory
+  - debugging

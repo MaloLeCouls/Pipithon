@@ -1,0 +1,22 @@
+id: ch05-105-payroll-manual-lt-to-order
+chapter: 5
+chapter_slug: data-class-builders
+type: modification
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - dataclass
+  - dataclass-order
+theme: payroll
+title: "__lt__ manuel -> @dataclass(order=True)"
+short_description: "Trie des employés par (salary, name) sans coder __lt__."
+hints:
+  - "@dataclass(order=True) génère __lt__/__le__/__gt__/__ge__ par tuple des champs."
+  - "L'ordre des champs DETERMINE l'ordre de tri."
+  - "Salary doit dominer name : déclare salary AVANT name."
+reference_book: "Data class builders — order=True"
+pymistral_link: null
+tags:
+  - dataclass
+  - order
+  - refactor
