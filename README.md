@@ -6,6 +6,20 @@ Python idiomatique (puis maths ML, algos, PyTorch, code-reading) via des exercic
 **dans le navigateur** avec Pyodide + pytest (zéro backend). Finalité : préparer un
 profil *ML Inference Engineer* (cf. `docs/context/mapping-mistral.md`).
 
+## Aperçu
+
+| Home — tracks | Track — chapitres | Chapitre — exos | Workbench — Monaco + pytest |
+|---|---|---|---|
+| ![home](docs/screenshots/home.png) | ![track](docs/screenshots/track.png) | ![chapter](docs/screenshots/chapter.png) | ![workbench](docs/screenshots/workbench.png) |
+
+## Stack en bref
+
+- **Frontend** : Next.js 15 (App Router) + TypeScript, Tailwind v4, Monaco.
+- **Exécution** : Pyodide (CPython WASM) + pytest, 100 % client-side.
+- **Persistance** : `localStorage` (progression + brouillons). Pas de backend.
+- **Exos** : YAML + 3 fichiers `.py` versionnés Git, scannés au build.
+- **Déploiement** : Vercel, Root Directory = `web/`.
+
 ## Lancer en dev
 
 `pnpm` doit être sur le PATH (`npm install -g pnpm` si besoin) :
@@ -16,10 +30,10 @@ pnpm install      # première fois
 pnpm dev          # http://localhost:3000
 ```
 
-Tooling Python (validation des exercices, dès la phase 2) :
+Tooling Python (validation des exercices) :
 
 ```bash
-uv run python tools/validate_all.py
+python tools/validate_all.py
 ```
 
 ## Où regarder pour comprendre
