@@ -90,7 +90,15 @@ function loadChapterFrontmatter(slug: string, n: number) {
   };
 }
 
+// Cache mémoire au niveau module. Hit à chaque request server (dev + build).
+// Côté SSG/prod : appelé une fois au build, le cache n'a pas d'effet. Côté
+// dev : évite ~344 lectures FS par navigation. Trade-off : si tu édites un
+// fichier d'exo (meta/starter/tests/solution), il faut relancer `next dev`.
+const _allExercisesCache = new Map<string, Exercise[]>();
+
 export function getAllExercises(track = "python-pure"): Exercise[] {
+  const cached = _allExercisesCache.get(track);
+  if (cached) return cached;
   const root = join(EXOS, track);
   const out: Exercise[] = [];
   for (const chapterDir of safeReaddir(root)) {
@@ -115,7 +123,9 @@ export function getAllExercises(track = "python-pure"): Exercise[] {
       }
     }
   }
-  return out.sort((a, b) => a.chapter - b.chapter || a.dir.localeCompare(b.dir));
+  const sorted = out.sort((a, b) => a.chapter - b.chapter || a.dir.localeCompare(b.dir));
+  _allExercisesCache.set(track, sorted);
+  return sorted;
 }
 
 export function listTracks(): TrackInfo[] {
