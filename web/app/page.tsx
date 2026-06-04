@@ -1,11 +1,15 @@
 import Link from "next/link";
+import ResetAllButton from "../components/ResetAllButton";
 import { listTracks } from "../lib/exercises";
 
 export default function Home() {
   const tracks = listTracks();
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
-      <h1 className="text-2xl font-semibold">pipithon</h1>
+      <div className="flex items-start justify-between gap-4">
+        <h1 className="text-2xl font-semibold">pipithon</h1>
+        <ResetAllButton />
+      </div>
       <p className="mt-1 text-sm text-muted">
         Dojo de Python idiomatique — cap ML Inference Engineer. Drill par répétition, tests pytest
         dans le navigateur (Pyodide).

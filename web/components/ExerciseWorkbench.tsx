@@ -1,14 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useState } from "react";
 import type { Exercise } from "../lib/exercises";
-import { clearDraft, isCompleted, loadDraft, markCompleted, saveDraft } from "../lib/progress";
+import { isCompleted, loadDraft, markCompleted, resetExercise, saveDraft } from "../lib/progress";
 import { getPyodide, type LoadPhase, type RunReport, runCode, runTests } from "../lib/pyodide";
+import Confetti from "./Confetti";
 import DiffSolution from "./DiffSolution";
 import HintsPanel from "./HintsPanel";
-import MonacoEditor from "./MonacoEditor";
 import TestResults from "./TestResults";
+
+// Monaco pèse ~5 Mo : on le sort du chunk de la route pour que la transition
+// vers un exo peigne immédiatement, puis l'éditeur s'hydrate.
+const MonacoEditor = dynamic(() => import("./MonacoEditor"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-full items-center justify-center p-4 text-muted text-sm">
+      Chargement de l'éditeur…
+    </div>
+  ),
+});
 
 const PHASE_LABEL: Record<LoadPhase, string> = {
   idle: "",
@@ -27,6 +39,7 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
   const [fails, setFails] = useState(0);
   const [done, setDone] = useState(false);
   const [showSol, setShowSol] = useState(false);
+  const [burst, setBurst] = useState(0);
 
   // Hydratation : brouillon localStorage > starter ; statut complété.
   useEffect(() => {
@@ -67,6 +80,8 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
       const r = await runTests(code, exo.files.tests);
       setReport(r);
       if (r.ok) {
+        // Confetti uniquement à la première réussite (pas si on re-soumet un exo déjà vert).
+        if (!done) setBurst((b) => b + 1);
         markCompleted(exo.id);
         setDone(true);
       } else {
@@ -83,11 +98,18 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
     }
   };
 
-  const resetStarter = () => {
+  const doReset = () => {
+    // Si l'exo est déjà vert, on confirme — sinon c'est juste un reset du code.
+    if (done && !confirm("Réinitialiser cet exercice et le marquer comme non complété ?")) {
+      return;
+    }
+    resetExercise(exo.id);
     setCode(exo.files.starter);
-    clearDraft(exo.id);
     setReport(null);
     setRunOut(null);
+    setFails(0);
+    setDone(false);
+    setShowSol(false);
   };
 
   const canSeeSolution = done || fails >= 3;
@@ -95,6 +117,7 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
 
   return (
     <div className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
+      <Confetti burstKey={burst} />
       {/* Header */}
       <header className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-border bg-surface px-4 py-2 text-sm">
         <Link
@@ -107,13 +130,9 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
         <Badge>{exo.type}</Badge>
         <Badge>diff {exo.difficulty}/5</Badge>
         <Badge>{exo.theme}</Badge>
-        <span className="hidden text-muted sm:inline">
-          {exo.concepts.join(" · ")}
-        </span>
+        <span className="hidden text-muted sm:inline">{exo.concepts.join(" · ")}</span>
         {done && <span className="ml-auto text-ok">✓ complété</span>}
-        {!done && (
-          <span className="ml-auto text-muted">{PHASE_LABEL[phase]}</span>
-        )}
+        {!done && <span className="ml-auto text-muted">{PHASE_LABEL[phase]}</span>}
       </header>
 
       <div className="flex flex-1 flex-col lg:grid lg:grid-cols-2 lg:overflow-hidden">
@@ -135,7 +154,7 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
                 type="button"
                 disabled={!canSeeSolution}
                 onClick={() => setShowSol((s) => !s)}
-                className="rounded border border-border px-2 py-1 text-xs enabled:hover:border-accent disabled:opacity-40"
+                className="rounded border border-border px-3 py-1.5 text-xs enabled:hover:border-accent disabled:opacity-40 touch-manipulation sm:px-2 sm:py-1"
                 title={canSeeSolution ? "" : "Disponible après réussite ou 3 tentatives échouées"}
               >
                 {showSol ? "Masquer" : "Voir la solution"}
@@ -160,12 +179,12 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
           <div className="h-[55vh] lg:h-auto lg:min-h-0 lg:flex-1">
             <MonacoEditor value={code} onChange={onChange} />
           </div>
-          <div className="flex items-center gap-2 border-t border-border bg-surface px-3 py-2">
+          <div className="flex items-center gap-2 border-t border-border bg-surface px-3 py-2 touch-manipulation">
             <button
               type="button"
               onClick={doRun}
               disabled={busy || !ready}
-              className="rounded bg-surface-2 px-3 py-1.5 text-sm enabled:hover:bg-border disabled:opacity-40"
+              className="rounded bg-surface-2 px-3 py-2 text-sm enabled:hover:bg-border disabled:opacity-40 sm:py-1.5"
             >
               ▶ Run
             </button>
@@ -173,17 +192,18 @@ export default function ExerciseWorkbench({ exo }: { exo: Exercise }) {
               type="button"
               onClick={doSubmit}
               disabled={busy || !ready}
-              className="rounded bg-accent px-3 py-1.5 text-sm font-medium text-background enabled:hover:opacity-90 disabled:opacity-40"
+              className="rounded bg-accent px-3 py-2 text-sm font-medium text-background enabled:hover:opacity-90 disabled:opacity-40 sm:py-1.5"
             >
               ✓ Submit
             </button>
             <button
               type="button"
-              onClick={resetStarter}
+              onClick={doReset}
               disabled={busy}
-              className="ml-auto rounded border border-border px-2 py-1.5 text-xs text-muted hover:text-foreground"
+              className="ml-auto rounded border border-border px-3 py-2 text-xs text-muted hover:text-foreground sm:px-2 sm:py-1.5"
+              title={done ? "Reset code + statut" : "Reset code"}
             >
-              Reset starter
+              Reset
             </button>
           </div>
           <div className="min-h-[30vh] overflow-y-auto border-t border-border bg-background p-3 lg:h-2/5 lg:min-h-0">

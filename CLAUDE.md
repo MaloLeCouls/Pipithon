@@ -12,23 +12,35 @@
   `learning-journal/python-deep/fluent_python_inventory.md`. Calibré sur la TOC
   publique Fluent Python 2e × `mapping-mistral.md`. `pymistral_link: null` partout
   (framework PyMistral non fourni — cf. `docs/context/pymistral-link.md`).
-- **Phase 2 + seed étoffé : faite.** 50 exos validés 100 % : ch1 18
-  (10c/5m/3d), ch2 14 (8c/4m/2d), ch3 18 (10c/5m/3d). `validate_exercise.py`
-  + `validate_all.py` opérationnels (solution-verte/starter-rouge, timeout
-  filet, logs flushés). Cible de calibration : Python fluent pour ML
-  Inference Engineer (NVIDIA/Google/Mistral/Apple) + OSS vLLM/SGLang.
-- **Phase 3 (webapp MVP) : faite (build vert, 40 pages SSG).** `web/` :
+- **Phase 2 + seed étoffé : faite.** Seed ch1-ch5 (cf. ligne « track active »
+  ci-dessous). `validate_exercise.py` + `validate_all.py` opérationnels
+  (solution-verte/starter-rouge, timeout filet, logs flushés). Cible de
+  calibration : Python fluent pour ML Inference Engineer
+  (NVIDIA/Google/Mistral/Apple) + OSS vLLM/SGLang.
+- **Phase 3 (webapp MVP) : faite (build vert, 97 pages SSG).** `web/` :
   `lib/{exercises,pyodide,progress}.ts` + composants (Monaco, TestResults,
   HintsPanel, DiffSolution, ExerciseWorkbench, Progress) + routes home →
   track → chapitre → exo. Pyodide+pytest côté client, run/submit, hints
   progressifs, solution gated (réussite ou 3 échecs), progression
   localStorage. ⚠️ runtime Pyodide navigateur non testé end-to-end ici
   (build/typecheck/lint OK ; à fumer-tester via `pnpm dev`).
-- **Phase 4 (polish) : à faire** (confetti, reset, mobile, README captures).
-- Track active : `python-pure` (ch01-03 peuplés = 50 exos, ch04-24 scaffold).
-- Prochaine action : continuer le seed (ch4 unicode/bytes ou ch5 dataclasses
-  — socle ; bascule thèmes ML autorisée dès ch8) et/ou Phase 4 polish.
-  Lancer en local : `cd web && pnpm dev`.
+- **Phase 4 (polish) : faite.** Confetti maison sur Submit vert (canvas,
+  zéro dep, burst uniquement à la première réussite), reset par exo
+  (statut + brouillon, confirm si déjà vert) + reset global sur la home,
+  tap-targets mobile élargis (Run/Submit/Reset + boutons indices/solution),
+  section « Aperçu » + « Stack en bref » au README + 4 captures live
+  (home / track / chapter / workbench).
+- **Perf nav (suivi UX) : passe 1.** Latence perçue sur les transitions
+  signalée 2026-06-04 → lazy-load Monaco sur le workbench + mémo cache de
+  `getAllExercises` côté server. À revérifier sur build prod si la sensation
+  persiste (cf. memory `webapp-nav-latency`).
+- Track active : `python-pure` (86 exos validés ; ch1 18, ch2 14, ch3 18,
+  ch4 18, ch5 18 ; ch6-ch24 scaffold).
+- Prochaine action : continuer le seed (ch6 references/mutability — socle ;
+  bascule thèmes ML autorisée dès ch8).
+  Lancer en local : `cd web && pnpm dev` (si bloqué par `sharp@0.34.5`
+  ignoré, lancer `node node_modules/next/dist/bin/next dev` en attendant
+  de débloquer l'allowlist pnpm).
 - Validation exos (pas d'`uv` ici) : `python tools/validate_all.py`.
 
 ## 1. Mission

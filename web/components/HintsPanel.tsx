@@ -15,7 +15,7 @@ export default function HintsPanel({ hints }: { hints: string[] }) {
           <button
             type="button"
             onClick={() => setShown((s) => s + 1)}
-            className="rounded border border-border px-2 py-1 text-xs hover:border-accent"
+            className="rounded border border-border px-3 py-1.5 text-xs hover:border-accent touch-manipulation sm:px-2 sm:py-1"
           >
             Révéler un indice
           </button>

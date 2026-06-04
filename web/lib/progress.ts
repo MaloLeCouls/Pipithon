@@ -39,3 +39,21 @@ export function saveDraft(id: string, code: string): void {
 export function clearDraft(id: string): void {
   localStorage.removeItem(DRAFT_PREFIX + id);
 }
+
+// Reset complet d'un exo : statut + brouillon. Utilisé par le bouton workbench.
+export function resetExercise(id: string): void {
+  const s = readSet();
+  s.delete(id);
+  localStorage.setItem(DONE_KEY, JSON.stringify([...s]));
+  localStorage.removeItem(DRAFT_PREFIX + id);
+}
+
+// Reset global : tous les statuts + tous les brouillons. Bouton "tout reset" sur la home.
+export function resetAll(): void {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem(DONE_KEY);
+  for (let i = localStorage.length - 1; i >= 0; i--) {
+    const k = localStorage.key(i);
+    if (k?.startsWith(DRAFT_PREFIX)) localStorage.removeItem(k);
+  }
+}
