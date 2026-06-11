@@ -45,14 +45,29 @@
   signalée 2026-06-04 → lazy-load Monaco sur le workbench + mémo cache de
   `getAllExercises` côté server. À revérifier sur build prod si la sensation
   persiste (cf. memory `webapp-nav-latency`).
-- Track active : `python-pure` (86 exos validés ; ch1 18, ch2 14, ch3 18,
-  ch4 18, ch5 18 ; ch6-ch24 scaffold).
-- Prochaine action : continuer le seed (ch6 references/mutability — socle ;
-  bascule thèmes ML autorisée dès ch8).
+- **Atelier A (M1 ch6-9 + M2 + M3) : fait (2026-06-11).** 72 nouveaux exos
+  Fluent Python chapitres 6 à 9 (mutability / functions first-class /
+  type hints / decorators+closures), tous ratios 50/30/20 respectés,
+  checkpoints niveau 5 reproduits (HauntedBus, BingoCage, show_count, clock).
+  Premiers exos qui importent `pymistral` à partir du ch.8 (pont thématique
+  ML ouvert par la règle d'or `themes.md`). 4 exos avec `tests_form_kind:
+  mypy` actif. Cf. `docs/sessions/2026-06-11-upgrade-request.md` pour la
+  roadmap restante (ateliers B, C, D).
+- Track active : `python-pure` (**158 exos validés** ; ch1 18, ch2 14,
+  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18 ; ch10-ch24
+  scaffold). **Couverture du contrat : ~38 %.**
+- Prochaine action (atelier A reliquat) : C2 ch17 generators (streaming
+  tokens *via* pymistral), C3 ch18 context managers (`@inference_context`),
+  C4 ch21 asyncio (Scheduler async, vérifier `asyncio.run` Pyodide), C5
+  ch13 Protocol/ABC plein, M5 mode « refaire de mémoire » côté webapp.
+  Ensuite ateliers B (type `review` + tracks code-reading/oss-onboarding /
+  testing-discipline / métrique PR scopée) puis C (modes chrono +
+  closed-book) puis D (concours bot-programming, parallèle).
   Lancer en local : `cd web && pnpm dev` (si bloqué par `sharp@0.34.5`
   ignoré, lancer `node node_modules/next/dist/bin/next dev` en attendant
-  de débloquer l'allowlist pnpm).
-- Validation exos (pas d'`uv` ici) : `python tools/validate_all.py`.
+  de débloquer l'allowlist pnpm — l'allowlist est déjà dans `pnpm-workspace.yaml`).
+- Validation exos (pas d'`uv` ici) : `python tools/validate_all.py`
+  (158/158 verts au 2026-06-11).
 
 ## 1. Mission
 

@@ -1,0 +1,30 @@
+Tu as accès au code complet de ma webapp "Pipithon" : un entraîneur d'exercices Python basés sur le livre Fluent Python, avec des exercices de CRÉATION, de MODIFICATION et de CORRECTION DE BUGS. Je veux deux choses dans un seul fichier markdown téléchargeable nommé `audit_pipithon.md` : (A) un AUDIT EXHAUSTIF de l'état actuel, puis (B) une AUTO-CRITIQUE avec PROPOSITIONS D'AMÉLIORATION.
+
+=== PARTIE A — AUDIT DE L'EXISTANT (tu décris, tu ne juges pas encore) ===
+
+1. IDENTITÉ & STACK : framework/techno, fichiers, dépendances, mécanisme de persistance exact.
+2. ARCHITECTURE & NAVIGATION : pages/vues/onglets, routing, parcours utilisateur.
+3. LE MOTEUR D'EXERCICES (critique) :
+   - Comment un exercice est DÉFINI (structure de données complète, tous les champs, avec exemples réels du code).
+   - Les trois types (création / modification / correction de bug) : comment chacun fonctionne concrètement.
+   - Comment le code de l'utilisateur est exécuté et/ou VÉRIFIÉ (test runner ? Pyodide ? appel API dans l'artefact ? solutions en dur ? auto-évaluation ?), et comment le feedback est rendu.
+4. COUVERTURE FLUENT PYTHON : quels chapitres/concepts sont couverts aujourd'hui, dans quel ordre, avec quelle progression de difficulté. Indique si des "jalons PyMistral" (mini-framework d'inférence LLM construit chapitre par chapitre) existent déjà ou non.
+5. INVENTAIRE EXHAUSTIF DES EXERCICES : liste chaque exercice (titre, type, concept Fluent Python visé, difficulté), verbatim du contenu clé.
+6. UX/VISUEL : design system, ressenti, responsive.
+
+=== PARTIE B — AUTO-CRITIQUE & PROPOSITIONS D'AMÉLIORATION (la boucle d'amélioration) ===
+
+Évalue Pipithon contre TROIS objectifs, et pour chacun liste les MANQUES précis puis des AMÉLIORATIONS (à la fois MAJEURES/structurelles ET ciblées/contenus) :
+
+OBJECTIF 1 — Python expert idiomatique (niveau exigé par Mistral & NVIDIA) :
+   dunders complets, comprehensions, decorators (avec/sans args, factories), context managers, generators/iterators/lazy, type hints + mypy strict, protocols/ABC, asyncio, descriptors/metaclasses (survol). Manque-t-il une TRACK structurée façon "build-along PyMistral" (chaque chapitre = un jalon concret du mini-framework d'inférence) ?
+
+OBJECTIF 2 — Compétences de contribution OSS (le format de Pipithon est idéal pour ça) :
+   lire/comprendre du VRAI code réaliste, corriger des bugs non triviaux, ajouter des type hints, écrire des tests (pytest), refactorer héritage→composition, lire des tracebacks, raisonner sur la mutabilité/les copies, workflow type "PR" (lire un diff, comprendre l'intention). Quels exercices/features ajouter pour entraîner ça ?
+
+OBJECTIF 3 — Compétences pour le concours de bot programming (algo + simulation, closed-book, vitesse) :
+   implémenter un minimax + alpha-bêta, écrire un simulateur de règles de jeu, concevoir des fonctions d'évaluation, recherche bornée en temps, algos de graphes (cycles, flood-fill, plus courts chemins), debugging rapide sous contrainte, mode "chrono / sans aide". Quels exercices/features ajouter ?
+
+Pour CHAQUE proposition : un titre, le pourquoi (lien avec l'objectif), une estimation grossière d'effort (S/M/L), et un classement par priorité. Termine par un TOP 5 des améliorations à plus fort impact, tous objectifs confondus.
+
+Format : un seul .md, Partie A puis Partie B, citations verbatim du contenu clé, tableaux pour le modèle de données et l'inventaire des exercices.
