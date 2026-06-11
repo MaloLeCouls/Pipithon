@@ -1,0 +1,21 @@
+id: ch07-004-tasks-filter-pending
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - higher-order
+  - comprehension
+theme: tasks
+title: "Filtrer les tâches non terminées"
+short_description: "Comprehension préférée à filter() pour la lisibilité."
+hints:
+  - "Une comprehension `[t for t in tasks if condition]` est plus lisible que filter()."
+  - "Ne mute pas l'entrée. Renvoie une nouvelle liste."
+  - "Status 'done' = à exclure."
+reference_book: "Fluent Python ch 7 — Comprehensions over filter"
+pymistral_link: null
+tags:
+  - comprehension
+  - higher-order

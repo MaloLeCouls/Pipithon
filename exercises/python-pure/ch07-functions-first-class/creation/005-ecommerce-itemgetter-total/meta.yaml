@@ -1,0 +1,21 @@
+id: ch07-005-ecommerce-itemgetter-total
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - operator-itemgetter
+  - sorted-key
+theme: ecommerce
+title: "operator.itemgetter au lieu d'un lambda"
+short_description: "Trie une liste de dicts par 'total' avec operator.itemgetter."
+hints:
+  - "from operator import itemgetter ; itemgetter('total') est une fonction qui renvoie x['total']."
+  - "Plus rapide et plus déclaratif que lambda x: x['total']."
+  - "Ordre décroissant : reverse=True."
+reference_book: "Fluent Python ch 7 — operator module"
+pymistral_link: null
+tags:
+  - operator
+  - higher-order

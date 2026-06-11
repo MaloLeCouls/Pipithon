@@ -1,0 +1,21 @@
+id: ch07-008-ecommerce-callable-discount
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - __call__
+  - callable-class
+theme: ecommerce
+title: "Une classe qui s'utilise comme une fonction"
+short_description: "Implémente __call__ : un objet devient appelable."
+hints:
+  - "Une classe avec __call__(self, ...) est une callable comme une fonction."
+  - "Stocke le taux à __init__, applique-le à __call__."
+  - "callable(instance) doit retourner True."
+reference_book: "Fluent Python ch 7 — Callable objects (__call__)"
+pymistral_link: null
+tags:
+  - callable
+  - dunder

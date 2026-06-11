@@ -1,0 +1,21 @@
+id: ch07-003-delivery-callbacks-list
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - function-in-data
+  - higher-order
+theme: delivery
+title: "Une liste de callbacks à appeler en chaîne"
+short_description: "Stocke des fonctions comme tu stockerais des nombres."
+hints:
+  - "On peut mettre des fonctions dans une liste."
+  - "Boucle, appelle chacune avec le même argument, accumule les retours."
+  - "Renvoie la liste des retours dans l'ordre."
+reference_book: "Fluent Python ch 7 — Functions in data structures"
+pymistral_link: null
+tags:
+  - first-class
+  - callbacks

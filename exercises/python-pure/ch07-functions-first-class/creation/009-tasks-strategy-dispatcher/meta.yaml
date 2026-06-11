@@ -1,0 +1,22 @@
+id: ch07-009-tasks-strategy-dispatcher
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - dispatch-table
+  - higher-order
+  - function-in-data
+theme: tasks
+title: "Un dispatcher de stratégies indexé par nom"
+short_description: "Dict de stratégies : un nom -> une fonction. Le pattern \"registre\"."
+hints:
+  - "Un dict[str, Callable] est un registre de stratégies, indexé par nom."
+  - "make_dispatcher renvoie une fonction qui prend (name, task) et dispatch."
+  - "Si la stratégie est inconnue, lève KeyError."
+reference_book: "Fluent Python ch 7 — Functions as data (preview of strategy pattern, ch10)"
+pymistral_link: null
+tags:
+  - higher-order
+  - strategy

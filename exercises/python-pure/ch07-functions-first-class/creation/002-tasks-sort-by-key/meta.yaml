@@ -1,0 +1,21 @@
+id: ch07-002-tasks-sort-by-key
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - sorted-key
+  - lambda
+theme: tasks
+title: "Trier par priorité — sans toucher l'entrée"
+short_description: "sorted(tasks, key=...) — la clé est une fonction."
+hints:
+  - "sorted() ne mute pas, contrairement à .sort()."
+  - "key= attend une fonction qui prend un élément et renvoie ce sur quoi on trie."
+  - "Ordre croissant attendu : priorité 1 d'abord."
+reference_book: "Fluent Python ch 7 — sorted with key"
+pymistral_link: null
+tags:
+  - higher-order
+  - sorted

@@ -1,0 +1,21 @@
+id: ch07-006-streaming-recommend-by-criteria
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - higher-order
+  - predicate
+theme: streaming
+title: "Recommander selon un prédicat"
+short_description: "Passe le critère en argument : la fonction décide, l'algo applique."
+hints:
+  - "criteria est une fonction Movie -> bool : un prédicat."
+  - "Renvoie les films qui satisfont le critère, dans l'ordre d'entrée."
+  - "Comprehension préférée à filter()."
+reference_book: "Fluent Python ch 7 — Higher-order with predicates"
+pymistral_link: null
+tags:
+  - higher-order
+  - predicate

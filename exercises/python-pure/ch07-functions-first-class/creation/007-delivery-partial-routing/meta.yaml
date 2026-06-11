@@ -1,0 +1,21 @@
+id: ch07-007-delivery-partial-routing
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - functools-partial
+  - higher-order
+theme: delivery
+title: "Fige le dépôt source avec functools.partial"
+short_description: "Dérive une fonction spécialisée depuis une fonction générique."
+hints:
+  - "functools.partial(route_from, depot=...) renvoie une fonction qui fige `depot`."
+  - "L'API extérieure n'a plus qu'à passer `destination`."
+  - "Ne renomme pas `route_from`."
+reference_book: "Fluent Python ch 7 — functools.partial"
+pymistral_link: null
+tags:
+  - partial
+  - higher-order

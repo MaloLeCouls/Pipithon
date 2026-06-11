@@ -1,0 +1,23 @@
+id: ch07-010-ecommerce-bingo-cage-checkpoint
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 5
+estimated_minutes: 24
+concepts:
+  - __call__
+  - callable-class
+  - introspection
+theme: ecommerce
+title: "Checkpoint ch.7 — la roue promo (BingoCage)"
+short_description: "Reproduis BingoCage : instance callable + introspection."
+hints:
+  - "BingoCage stocke une liste, pop UN élément à chaque appel (déterministe via random.Random(seed))."
+  - "__call__(self) -> str ; lève LookupError si vide (sémantique pop)."
+  - "Pour les tests d'introspection : isinstance(cage, type) doit être False, callable(cage) doit être True."
+reference_book: "Fluent Python ch 7 — BingoCage canonical example"
+pymistral_link: null
+tags:
+  - checkpoint
+  - callable
+  - introspection

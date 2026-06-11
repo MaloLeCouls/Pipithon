@@ -1,0 +1,21 @@
+id: ch07-001-ecommerce-discount-as-function
+chapter: 7
+chapter_slug: functions-first-class
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - function-as-argument
+  - higher-order
+theme: ecommerce
+title: "Une remise est une fonction comme une autre"
+short_description: "Passe la stratégie de remise en argument, exactement comme un nombre."
+hints:
+  - "En Python une fonction est un objet : tu peux l'assigner à une variable, la passer en argument, la mettre dans une liste."
+  - "Signature attendue : apply_discount(price, discount_fn) — appelle discount_fn(price)."
+  - "Renvoie un float (prix après remise)."
+reference_book: "Fluent Python ch 7 — Functions are objects"
+pymistral_link: null
+tags:
+  - higher-order
+  - first-class
