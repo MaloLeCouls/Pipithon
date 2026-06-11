@@ -1,0 +1,21 @@
+id: ch09-202-llm-serving-lru-cache-on-method
+chapter: 9
+chapter_slug: decorators-closures
+type: debugging
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - functools-cache
+  - lru-cache-method-trap
+theme: llm-serving
+title: "lru_cache sur méthode : fuite mémoire silencieuse"
+short_description: "lru_cache d'une méthode mémorise `self` -> instances jamais libérées."
+hints:
+  - "Le piège : `self` fait partie de la clé de cache, donc le cache retient chaque instance."
+  - "Refactor : sortir le calcul en fonction libre (cachée), ou utiliser un cache par instance."
+  - "Ici : extrais une fonction libre `_tokenize_len(text)` cachée, et appelle-la depuis la méthode."
+reference_book: "Fluent Python ch 9 — lru_cache method pitfall"
+pymistral_link: pymistral.tokenizer
+tags:
+  - lru-cache
+  - debugging

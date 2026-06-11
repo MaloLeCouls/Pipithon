@@ -1,0 +1,20 @@
+id: ch09-101-monitoring-add-wraps
+chapter: 9
+chapter_slug: decorators-closures
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - functools-wraps
+theme: monitoring
+title: "Ajoute @functools.wraps à un décorateur existant"
+short_description: "Sans @wraps, instrument.__name__ vaut 'wrapper'. Corrige."
+hints:
+  - "from functools import wraps."
+  - "Pose @wraps(fn) sur le def wrapper interne."
+  - "Le test de forme vérifie que __name__ et __doc__ de la fn d'origine sont préservés."
+reference_book: "Fluent Python ch 9 — Always use @wraps"
+pymistral_link: null
+tags:
+  - functools
+  - refactor

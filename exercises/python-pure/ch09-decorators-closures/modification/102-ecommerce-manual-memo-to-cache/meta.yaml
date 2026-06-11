@@ -1,0 +1,21 @@
+id: ch09-102-ecommerce-manual-memo-to-cache
+chapter: 9
+chapter_slug: decorators-closures
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - functools-cache
+  - memoization
+theme: ecommerce
+title: "Mémoïsation manuelle -> @functools.cache"
+short_description: "Un dict gardé à la main : remplace-le par une ligne."
+hints:
+  - "from functools import cache. Une seule ligne au-dessus de def fait tout le travail."
+  - "Le test de forme exige : plus de dict de cache visible dans le source."
+  - "cache_clear et cache_info sont attendus."
+reference_book: "Fluent Python ch 9 — @cache over manual memoization"
+pymistral_link: null
+tags:
+  - memoization
+  - refactor

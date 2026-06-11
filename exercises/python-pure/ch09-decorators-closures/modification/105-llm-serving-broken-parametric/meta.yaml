@@ -1,0 +1,21 @@
+id: ch09-105-llm-serving-broken-parametric
+chapter: 9
+chapter_slug: decorators-closures
+type: modification
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - parametric-decorator
+  - decorator-factory
+theme: llm-serving
+title: "Un niveau de fonction manquant dans le décorateur paramétré"
+short_description: "Le 3-niveaux n'est qu'à 2 — corrige la factory."
+hints:
+  - "Un décorateur paramétré a TROIS niveaux : factory(args) -> decorator(fn) -> wrapper(*a, **kw)."
+  - "Ici il en manque un. La factory accepte fn ET args en même temps : ne marche pas."
+  - "Refactor : factory ne prend QUE les args et renvoie decorator(fn)."
+reference_book: "Fluent Python ch 9 — 3-level parametric decorator"
+pymistral_link: pymistral.sampling
+tags:
+  - parametric
+  - refactor

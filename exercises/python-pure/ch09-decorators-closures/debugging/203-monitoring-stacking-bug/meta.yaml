@@ -1,0 +1,21 @@
+id: ch09-203-monitoring-stacking-bug
+chapter: 9
+chapter_slug: decorators-closures
+type: debugging
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - decorator-stacking
+  - application-order
+theme: monitoring
+title: "Le décorateur paramétré n'est pas appliqué"
+short_description: "@timed sans (...) : on PASSE timed comme décorateur, pas timed('label')."
+hints:
+  - "`@timed` (sans parenthèses) : timed est appelée comme décorateur avec fn en argument."
+  - "`@timed('label')` : timed('label') renvoie un décorateur, qui est ensuite appliqué."
+  - "Le bug : la fonction est wrappée par timed (qui attend un label, pas une fn)."
+reference_book: "Fluent Python ch 9 — Parametric decorator misuse"
+pymistral_link: null
+tags:
+  - parametric
+  - debugging

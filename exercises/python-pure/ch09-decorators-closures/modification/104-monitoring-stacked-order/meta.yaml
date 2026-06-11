@@ -1,0 +1,21 @@
+id: ch09-104-monitoring-stacked-order
+chapter: 9
+chapter_slug: decorators-closures
+type: modification
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - decorator-stacking
+  - application-order
+theme: monitoring
+title: "Décorateurs empilés dans le mauvais ordre"
+short_description: "@audit puis @cache = on audite les MISS ET les HIT. Veut-on ça ?"
+hints:
+  - "Décorateurs empilés s'appliquent de BAS en HAUT : `@a` puis `@b` -> a(b(fn))."
+  - "Ici on veut auditer SEULEMENT les miss (calculs réels), pas les hit du cache."
+  - "Inverse l'ordre : @cache au-dessus de @audit (cache est appliqué EN DERNIER -> le plus externe)."
+reference_book: "Fluent Python ch 9 — Stacked decorator ordering"
+pymistral_link: null
+tags:
+  - decorator-stacking
+  - refactor

@@ -1,0 +1,22 @@
+id: ch09-201-ecommerce-missing-nonlocal
+chapter: 9
+chapter_slug: decorators-closures
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - closure
+  - nonlocal
+  - unbound-local
+theme: ecommerce
+title: "UnboundLocalError: local variable 'count'"
+short_description: "Sans `nonlocal`, l'incrément crée une variable locale qui n'a pas encore de valeur."
+hints:
+  - "Quand tu écris `count += 1` dans une fonction interne, Python en fait une variable LOCALE."
+  - "Locale + lecture avant écriture = UnboundLocalError."
+  - "Une ligne à ajouter : `nonlocal count`."
+reference_book: "Fluent Python ch 9 — Closure nonlocal trap"
+pymistral_link: null
+tags:
+  - closure
+  - debugging
