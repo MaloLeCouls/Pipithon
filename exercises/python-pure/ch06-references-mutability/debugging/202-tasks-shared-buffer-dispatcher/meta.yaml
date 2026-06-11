@@ -1,0 +1,21 @@
+id: ch06-202-tasks-shared-buffer-dispatcher
+chapter: 6
+chapter_slug: references-mutability
+type: debugging
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - aliasing
+  - mutable-default
+theme: tasks
+title: "Dispatcher : tous les workers voient les mêmes tickets"
+short_description: "N workers sont créés avec le même buffer. Chacun croit travailler seul. Trouve pourquoi."
+hints:
+  - "Le bug n'est pas dans `enqueue` mais dans la construction des workers."
+  - "Ils reçoivent tous le même `pending=[]` -> même objet."
+  - "La correction : isole le buffer par worker (factory ou copie)."
+reference_book: "Fluent Python ch 6 — Shared mutable state"
+pymistral_link: null
+tags:
+  - aliasing
+  - debugging

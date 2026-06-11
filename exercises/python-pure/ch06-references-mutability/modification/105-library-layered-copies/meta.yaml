@@ -1,0 +1,22 @@
+id: ch06-105-library-layered-copies
+chapter: 6
+chapter_slug: references-mutability
+type: modification
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - deepcopy
+  - shallow-copy
+  - design
+theme: library
+title: "Trois étages de copies — un seul qui marche"
+short_description: "Catalogue à trois niveaux : refactor stratégique pour isoler quand il faut."
+hints:
+  - "La structure : `{author: [book_dict]}`. Chaque book_dict a une liste `reviews` mutable."
+  - "Une simple copy.copy() laisse fuiter les listes internes et les dicts internes."
+  - "deepcopy résout, mais réfléchis : peux-tu te contenter d'isoler ce qui mute, et partager le reste ?"
+reference_book: "Fluent Python ch 6 — Strategic copy depth"
+pymistral_link: null
+tags:
+  - deepcopy
+  - design

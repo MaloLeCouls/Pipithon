@@ -1,0 +1,21 @@
+id: ch06-203-furniture-shallow-clone-bug
+chapter: 6
+chapter_slug: references-mutability
+type: debugging
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - shallow-copy
+  - deepcopy
+theme: furniture
+title: "Le clone qui pollue l'original"
+short_description: "On clone un catalogue, on mute le clone, l'original change. Pourquoi ?"
+hints:
+  - "Lis attentivement quel `copy` est utilisé. Compare-le à copy.deepcopy."
+  - "Le dict racine est-il copié ? Et les listes internes ?"
+  - "Un seul caractère à changer (presque)."
+reference_book: "Fluent Python ch 6 — copy vs deepcopy bug"
+pymistral_link: null
+tags:
+  - deepcopy
+  - debugging

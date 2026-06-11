@@ -1,0 +1,22 @@
+id: ch06-104-gym-kill-shared-members
+chapter: 6
+chapter_slug: references-mutability
+type: modification
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - aliasing
+  - deepcopy
+  - shallow-copy
+theme: gym
+title: "Plusieurs sessions, un seul roster"
+short_description: "Refactor : isole les rosters des sessions partagées par erreur."
+hints:
+  - "Aujourd'hui chaque session reçoit le MÊME objet `roster` -> ajouts visibles partout."
+  - "Soit on copy.copy(roster) pour chaque session, soit on accepte une factory."
+  - "Garde la signature ; modifie l'intérieur."
+reference_book: "Fluent Python ch 6 — Avoiding shared aliases"
+pymistral_link: null
+tags:
+  - aliasing
+  - refactor

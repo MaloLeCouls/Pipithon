@@ -1,0 +1,21 @@
+id: ch06-103-tasks-iterate-over-copy
+chapter: 6
+chapter_slug: references-mutability
+type: modification
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - aliasing
+  - mutation-during-iteration
+theme: tasks
+title: "Itérer ET muter la même liste"
+short_description: "Refactor : sépare la collection itérée et la collection mutée."
+hints:
+  - "Si tu append dans la liste pendant que tu l'itères, tu bouclesque infiniment ou tu vois des éléments deux fois."
+  - "Itère sur une snapshot : `list(tasks)`, ou `tasks[:]`."
+  - "Le comportement attendu : doubler les urgents sans toucher aux non-urgents."
+reference_book: "Fluent Python ch 6 — Mutating during iteration"
+pymistral_link: null
+tags:
+  - iteration
+  - aliasing

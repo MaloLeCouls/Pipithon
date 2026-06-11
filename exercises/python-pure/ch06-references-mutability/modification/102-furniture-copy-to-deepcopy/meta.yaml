@@ -1,0 +1,21 @@
+id: ch06-102-furniture-copy-to-deepcopy
+chapter: 6
+chapter_slug: references-mutability
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - shallow-copy
+  - deepcopy
+theme: furniture
+title: "copy.copy ne suffit pas"
+short_description: "Remplace une copie superficielle par deepcopy quand le contenu est mutable."
+hints:
+  - "copy.copy duplique le dict mais pas les listes internes."
+  - "copy.deepcopy descend partout. C'est ce qu'il faut ici."
+  - "Garde le nom et la signature de la fonction."
+reference_book: "Fluent Python ch 6 — When deepcopy is required"
+pymistral_link: null
+tags:
+  - deepcopy
+  - refactor

@@ -1,0 +1,21 @@
+id: ch06-101-delivery-mutable-default-to-sentinel
+chapter: 6
+chapter_slug: references-mutability
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - mutable-default
+  - sentinel-pattern
+theme: delivery
+title: "Le défaut mutable doit mourir"
+short_description: "Refactor : remplace `acc=[]` par le pattern sentinelle None."
+hints:
+  - "Default = None ; à l'intérieur, if acc is None: acc = []."
+  - "Garde la signature : seul le mécanisme change."
+  - "Les tests vérifient la forme : plus de [] dans la signature de dispatch."
+reference_book: "Fluent Python ch 6 — Mutable default refactor"
+pymistral_link: null
+tags:
+  - mutable-default
+  - refactor

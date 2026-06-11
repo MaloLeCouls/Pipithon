@@ -1,0 +1,20 @@
+id: ch06-201-delivery-log-accumulator-bug
+chapter: 6
+chapter_slug: references-mutability
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - mutable-default
+theme: delivery
+title: "Le journal qui n'oublie jamais"
+short_description: "Deux trajets, même journal. Trouve le bug en une ligne."
+hints:
+  - "L'erreur n'est pas dans le corps de la fonction, c'est dans la SIGNATURE."
+  - "Le défaut mutable est évalué une fois pour toutes."
+  - "Corrige en chirurgie."
+reference_book: "Fluent Python ch 6 — Mutable default argument"
+pymistral_link: null
+tags:
+  - mutable-default
+  - debugging
