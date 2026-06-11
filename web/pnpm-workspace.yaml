@@ -1,7 +1,6 @@
 allowBuilds:
   sharp: set this to true or false
 # pnpm 11 reads build-script allowlist from here (not package.json#pnpm).
-# create-next-app generated an invalid `allowBuilds` stub; this is the correct key.
 onlyBuiltDependencies:
   - sharp
   - "@biomejs/biome"
