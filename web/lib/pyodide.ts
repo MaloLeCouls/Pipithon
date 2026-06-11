@@ -2,6 +2,8 @@
 // Pyodide + pytest sont chargés une seule fois et réutilisés (cf. INIT §1).
 "use client";
 
+import { PYMISTRAL_BUNDLE } from "./_pymistral-bundle";
+
 const PYODIDE_VERSION = "0.29.4";
 const CDN = `https://cdn.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`;
 
@@ -27,6 +29,18 @@ function injectScript(src: string): Promise<void> {
   });
 }
 
+// Écrit le paquet pymistral/ dans la FS Pyodide sous /exo/pymistral/.
+// Fait une seule fois à l'init : le framework est statique entre exos.
+function writePymistralBundle(py: Pyodide): void {
+  py.FS.mkdirTree("/exo/pymistral");
+  for (const [rel, src] of Object.entries(PYMISTRAL_BUNDLE)) {
+    const path = `/exo/pymistral/${rel}`;
+    const dir = path.substring(0, path.lastIndexOf("/"));
+    py.FS.mkdirTree(dir);
+    py.FS.writeFile(path, src);
+  }
+}
+
 export type LoadPhase = "idle" | "pyodide" | "pytest" | "ready" | "error";
 
 export function getPyodide(onPhase?: (p: LoadPhase) => void): Promise<Pyodide> {
@@ -40,6 +54,8 @@ export function getPyodide(onPhase?: (p: LoadPhase) => void): Promise<Pyodide> {
     await py.loadPackage("micropip");
     const micropip = py.pyimport("micropip");
     await micropip.install("pytest");
+    py.FS.mkdirTree("/exo");
+    writePymistralBundle(py);
     onPhase?.("ready");
     return py;
   })();

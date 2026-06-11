@@ -99,6 +99,23 @@ Le code Monaco de l'utilisateur est écrit dans Pyodide sous le module
 `solution_user`. `tests.py` importe **toujours** depuis `solution_user`.
 Le validator charge tour à tour `solution.py` puis `starter.py` sous ce nom.
 
+### 7.bis Importer le framework `pymistral`
+
+Le paquet `pymistral` (mini-framework d'inférence jouet, cf.
+`docs/context/pymistral-link.md` et `exercises/_pymistral/README.md`) est
+**toujours disponible** dans `tests.py` / `solution.py` / `starter.py` :
+
+```python
+from pymistral import Token, GenerationConfig, top_k_sampler
+```
+
+Mécanique : monté dans la FS Pyodide à l'init (`web/lib/pyodide.ts` +
+`web/lib/_pymistral-bundle.ts`), et copié dans le tmpdir du validateur
+(`tools/validate_exercise.py`). Pas d'installation, pas de réseau.
+
+Convention : `pymistral_link` dans `meta.yaml` pointe le module/symbole utilisé
+quand c'est pertinent (chap. ≥ 8 typiquement), `null` sinon.
+
 ## 8. Contrat du validator (phase 2)
 
 `tools/validate_exercise.py` par exo :

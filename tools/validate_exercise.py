@@ -94,9 +94,11 @@ def validate_meta(meta: dict, exo_dir: Path, errors: list[str]) -> None:
     if not isinstance(hints, list) or not 1 <= len(hints) <= 3:
         _fail(errors, "meta.yaml: `hints` doit etre une liste de 1 a 3 elements")
 
-    if meta["pymistral_link"] is not None:
-        _fail(errors, "meta.yaml: `pymistral_link` doit etre null "
-                      "(framework PyMistral non fourni - cf. pymistral-link.md)")
+    pml = meta["pymistral_link"]
+    if pml is not None and not isinstance(pml, str):
+        _fail(errors, "meta.yaml: `pymistral_link` doit etre null ou une "
+                      "string (dotted-path, ex. 'pymistral.sampling') - "
+                      "cf. docs/context/pymistral-link.md")
 
     if not isinstance(meta["tags"], list) or not meta["tags"]:
         _fail(errors, "meta.yaml: `tags` doit etre une liste non vide")
@@ -119,6 +121,12 @@ def validate_meta(meta: dict, exo_dir: Path, errors: list[str]) -> None:
 RUN_TIMEOUT_S = 20  # un starter buggé peut boucler (itération via __getitem__) :
                     # le timeout le traite comme "echoue", ce qui est l'attendu.
 
+# Racine du framework pymistral (paquet Python pur, fil rouge ch1-21).
+# Copié dans le tmpdir pour que `from pymistral import ...` marche dans les
+# tests, sans installer le paquet.
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+_PYMISTRAL_PKG = _REPO_ROOT / "exercises" / "_pymistral" / "pymistral"
+
 
 def run_pytest(exo_dir: Path, impl: str) -> tuple[bool, str]:
     """Lance tests.py avec `impl` (solution.py|starter.py) monte comme
@@ -130,6 +138,8 @@ def run_pytest(exo_dir: Path, impl: str) -> tuple[bool, str]:
         tmp_path = Path(tmp)
         shutil.copy(exo_dir / "tests.py", tmp_path / "tests.py")
         shutil.copy(exo_dir / impl, tmp_path / "solution_user.py")
+        if _PYMISTRAL_PKG.is_dir():
+            shutil.copytree(_PYMISTRAL_PKG, tmp_path / "pymistral")
         try:
             proc = subprocess.run(
                 [sys.executable, "-m", "pytest", "tests.py", "-q",

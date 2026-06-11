@@ -10,8 +10,14 @@
 - **Phase 1 (curriculum) : faite (option B, 2026-05-19).** 24 `chapter-XX.md` +
   `docs/{pedagogy,exercise-format,themes,generation-recipes}.md` +
   `learning-journal/python-deep/fluent_python_inventory.md`. Calibré sur la TOC
-  publique Fluent Python 2e × `mapping-mistral.md`. `pymistral_link: null` partout
-  (framework PyMistral non fourni — cf. `docs/context/pymistral-link.md`).
+  publique Fluent Python 2e × `mapping-mistral.md`.
+- **M3 (framework PyMistral interne) : fait (2026-06-11).** Paquet jouet
+  `exercises/_pymistral/pymistral/` (10 modules, ~300 lignes, `mypy --strict`
+  vert, 21 tests de fumée). Embarqué côté webapp via
+  `web/scripts/build-pymistral.mjs` → `web/lib/_pymistral-bundle.ts`, écrit
+  dans la FS Pyodide sous `/exo/pymistral/`. Côté validateur : copié dans le
+  tmpdir avant pytest. `meta.yaml: pymistral_link` accepte désormais `null` OU
+  une string dotted-path (ex. `pymistral.sampling`). Détail : `docs/context/pymistral-link.md`.
 - **Phase 2 + seed étoffé : faite.** Seed ch1-ch5 (cf. ligne « track active »
   ci-dessous). `validate_exercise.py` + `validate_all.py` opérationnels
   (solution-verte/starter-rouge, timeout filet, logs flushés). Cible de
