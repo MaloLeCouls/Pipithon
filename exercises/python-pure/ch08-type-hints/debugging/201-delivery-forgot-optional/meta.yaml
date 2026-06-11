@@ -1,0 +1,21 @@
+id: ch08-201-delivery-forgot-optional
+chapter: 8
+chapter_slug: type-hints
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - optional
+  - none-handling
+theme: delivery
+title: "AttributeError: 'NoneType' object has no attribute 'upper'"
+short_description: "L'annotation oublie None, le code crashe quand None arrive."
+hints:
+  - "L'annotation prétend que driver est str, mais l'appelant peut passer None."
+  - "Annonce le vrai type (`str | None`) ET ajoute un guard."
+  - "Le guard renvoie 'unassigned' si driver is None."
+reference_book: "Fluent Python ch 8 — Optional forgotten trap"
+pymistral_link: null
+tags:
+  - optional
+  - debugging

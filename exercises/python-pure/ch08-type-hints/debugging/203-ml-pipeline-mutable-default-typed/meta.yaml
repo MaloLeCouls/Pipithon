@@ -1,0 +1,21 @@
+id: ch08-203-ml-pipeline-mutable-default-typed
+chapter: 8
+chapter_slug: type-hints
+type: debugging
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - mutable-default
+  - type-hints
+theme: ml-pipeline
+title: "L'annotation ne sauve pas du défaut mutable"
+short_description: "Annoter `list[int]` n'empêche pas le partage du `[]` par défaut."
+hints:
+  - "L'annotation est un commentaire pour mypy. Elle n'a aucun effet runtime."
+  - "Le bug = défaut mutable partagé. La solution = pattern sentinelle (None)."
+  - "Annonce `list[int] | None = None` et instancie dans le corps."
+reference_book: "Fluent Python ch 8 — Hints don't fix runtime bugs"
+pymistral_link: null
+tags:
+  - mutable-default
+  - debugging

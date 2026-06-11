@@ -1,0 +1,23 @@
+id: ch08-105-llm-serving-extract-protocol
+chapter: 8
+chapter_slug: type-hints
+type: modification
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - protocol
+  - mypy-strict
+  - structural-typing
+theme: llm-serving
+title: "Extraire un Protocol depuis une dépendance concrète"
+short_description: "Le code dépend de BPETokenizer ; libère-le via un Protocol."
+hints:
+  - "Définis `class Encoder(Protocol): def encode(self, text: str) -> list[Token]: ..."
+  - "Annote le paramètre `encoder` avec `Encoder` au lieu de `BPETokenizer`."
+  - "Le validateur lance mypy --strict ; ta solution doit passer."
+reference_book: "Fluent Python ch 8 — Protocol over concrete class"
+pymistral_link: pymistral.tokenizer
+tests_form_kind: mypy
+tags:
+  - protocol
+  - mypy-strict

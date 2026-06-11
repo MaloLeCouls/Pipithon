@@ -1,0 +1,21 @@
+id: ch08-102-ecommerce-add-optional
+chapter: 8
+chapter_slug: type-hints
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - optional
+  - none-handling
+theme: ecommerce
+title: "Quand le default est None, l'annotation doit le dire"
+short_description: "Refactor : passe de `coupon: str` à `coupon: str | None`."
+hints:
+  - "L'annotation actuelle prétend que coupon est toujours str alors qu'il peut être None par défaut."
+  - "Refactor en `coupon: str | None = None` (PEP 604)."
+  - "Le test de signature vérifie que None est dans l'annotation du paramètre."
+reference_book: "Fluent Python ch 8 — Optional / X | None"
+pymistral_link: null
+tags:
+  - optional
+  - refactor

@@ -1,0 +1,22 @@
+id: ch08-104-ml-pipeline-callable-tightening
+chapter: 8
+chapter_slug: type-hints
+type: modification
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - callable
+  - mypy-strict
+theme: ml-pipeline
+title: "Callable nu -> Callable[[Sample], None]"
+short_description: "Annonce la vraie signature de ton callback ; mypy strict réveille les bugs."
+hints:
+  - "`Callable` nu (sans [...]) accepte n'importe quoi : mypy strict s'en plaint."
+  - "Refactor en `Callable[[Sample], None]` : un Sample en entrée, rien en sortie."
+  - "Le validateur lance mypy --strict ; ta solution doit passer, le starter doit échouer."
+reference_book: "Fluent Python ch 8 — Precise Callable signatures"
+pymistral_link: null
+tests_form_kind: mypy
+tags:
+  - callable
+  - mypy-strict

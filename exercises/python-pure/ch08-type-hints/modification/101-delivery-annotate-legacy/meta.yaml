@@ -1,0 +1,22 @@
+id: ch08-101-delivery-annotate-legacy
+chapter: 8
+chapter_slug: type-hints
+type: modification
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - type-hints
+  - mypy-strict
+theme: delivery
+title: "Annoter un module legacy (mypy --strict)"
+short_description: "Ajoute des type hints partout pour passer mypy --strict."
+hints:
+  - "Toutes les signatures (params + retour). Pas de Any."
+  - "Le test de forme exige une signature complète."
+  - "Le validateur lance mypy --strict ; il doit passer sur ta solution et échouer sur le starter."
+reference_book: "Fluent Python ch 8 — Strict typing of legacy code"
+pymistral_link: null
+tests_form_kind: mypy
+tags:
+  - mypy-strict
+  - refactor

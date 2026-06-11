@@ -1,0 +1,21 @@
+id: ch08-202-ecommerce-tuple-fixed-vs-variable
+chapter: 8
+chapter_slug: type-hints
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - tuple-types
+  - generics
+theme: ecommerce
+title: "tuple[int] vs tuple[int, ...]"
+short_description: "tuple[int] = un seul int. tuple[int, ...] = n entiers. Confusion classique."
+hints:
+  - "tuple[int] décrit un 1-uple. tuple[int, ...] décrit un tuple de longueur variable d'ints."
+  - "Si tu veux une suite de prix, c'est tuple[int, ...]."
+  - "Le test vérifie qu'on peut passer (10, 20, 30)."
+reference_book: "Fluent Python ch 8 — tuple[T] vs tuple[T, ...]"
+pymistral_link: null
+tags:
+  - generics
+  - tuple

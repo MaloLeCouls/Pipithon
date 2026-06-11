@@ -1,0 +1,21 @@
+id: ch08-103-tasks-list-to-iterable
+chapter: 8
+chapter_slug: type-hints
+type: modification
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - iterable
+  - liskov
+theme: tasks
+title: "list[T] -> Iterable[T] (Liskov)"
+short_description: "Le code n'a besoin que d'itérer : exige le type le plus large."
+hints:
+  - "Si tu remplaces list[dict] par Iterable[dict], la fonction accepte aussi tuple/set/generator."
+  - "from collections.abc import Iterable."
+  - "Le test vérifie qu'un generator passe."
+reference_book: "Fluent Python ch 8 — Liskov substitution in annotations"
+pymistral_link: null
+tags:
+  - iterable
+  - refactor
