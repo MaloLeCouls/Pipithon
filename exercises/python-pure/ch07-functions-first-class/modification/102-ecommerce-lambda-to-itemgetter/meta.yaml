@@ -1,0 +1,20 @@
+id: ch07-102-ecommerce-lambda-to-itemgetter
+chapter: 7
+chapter_slug: functions-first-class
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - operator-itemgetter
+theme: ecommerce
+title: "lambda x: x['total'] -> itemgetter('total')"
+short_description: "Refactor : la version stdlib est plus rapide et plus déclarative."
+hints:
+  - "from operator import itemgetter : itemgetter('total') est strictement équivalent au lambda."
+  - "Le test de forme exige : plus de Lambda dans le code."
+  - "Garde l'ordre décroissant (reverse=True)."
+reference_book: "Fluent Python ch 7 — operator over lambda"
+pymistral_link: null
+tags:
+  - operator
+  - refactor

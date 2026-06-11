@@ -1,0 +1,21 @@
+id: ch07-203-ecommerce-itemgetter-vs-attrgetter
+chapter: 7
+chapter_slug: functions-first-class
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - operator-itemgetter
+  - operator-attrgetter
+theme: ecommerce
+title: "TypeError : 'Order' object is not subscriptable"
+short_description: "itemgetter attend [...]; attrgetter attend .attr. Choisis le bon."
+hints:
+  - "itemgetter('total') fait x['total']. attrgetter('total') fait x.total."
+  - "Ici Order est un dataclass : pas de __getitem__."
+  - "Un import à corriger, un nom à changer."
+reference_book: "Fluent Python ch 7 — operator module overview"
+pymistral_link: null
+tags:
+  - operator
+  - debugging

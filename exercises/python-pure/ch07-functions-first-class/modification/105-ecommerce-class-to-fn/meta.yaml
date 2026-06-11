@@ -1,0 +1,21 @@
+id: ch07-105-ecommerce-class-to-fn
+chapter: 7
+chapter_slug: functions-first-class
+type: modification
+difficulty: 4
+estimated_minutes: 14
+concepts:
+  - functools-partial
+  - higher-order
+theme: ecommerce
+title: "Classe à méthode unique -> fonction + partial"
+short_description: "Une classe stateless avec une seule méthode = une fonction déguisée."
+hints:
+  - "Quand __init__ stocke juste des paramètres consommés par UNE méthode, c'est une closure ou un partial."
+  - "Refactor : `def discount(price, rate)` + `functools.partial(discount, rate=0.2)`."
+  - "Les tests de comportement passent ; les tests de forme exigent l'absence de la classe."
+reference_book: "Fluent Python ch 7 — Class vs partial"
+pymistral_link: null
+tags:
+  - partial
+  - refactor

@@ -1,0 +1,21 @@
+id: ch07-101-tasks-loop-to-comprehension
+chapter: 7
+chapter_slug: functions-first-class
+type: modification
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - higher-order
+  - comprehension
+theme: tasks
+title: "Boucle + append -> comprehension"
+short_description: "Refactor : remplace l'accumulation manuelle par une comprehension."
+hints:
+  - "[t for t in tasks if condition] est l'équivalent direct de l'accumulation."
+  - "Le test de forme exige : plus de `append` dans le corps de la fonction."
+  - "Le comportement doit être identique."
+reference_book: "Fluent Python ch 7 — Comprehensions vs map/filter"
+pymistral_link: null
+tags:
+  - comprehension
+  - refactor

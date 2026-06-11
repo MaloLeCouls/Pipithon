@@ -1,0 +1,21 @@
+id: ch07-202-delivery-partial-mutable-freeze
+chapter: 7
+chapter_slug: functions-first-class
+type: debugging
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - functools-partial
+  - mutable-default
+theme: delivery
+title: "Le partial qui s'incruste"
+short_description: "Figer un argument mutable avec partial = partager l'état entre appels."
+hints:
+  - "partial(f, extras=[]) fige la MÊME liste pour tous les appels — comme le piège du défaut mutable."
+  - "Soit on passe le param par mot-clé à chaque appel, soit on figue une copie en l'absence."
+  - "Refais l'API : extras n'est plus dans le partial."
+reference_book: "Fluent Python ch 7 — partial + mutable default trap"
+pymistral_link: null
+tags:
+  - partial
+  - mutable-default

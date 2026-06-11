@@ -1,0 +1,22 @@
+id: ch07-201-tasks-late-binding-closure
+chapter: 7
+chapter_slug: functions-first-class
+type: debugging
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - closure
+  - late-binding
+  - lambda
+theme: tasks
+title: "Toutes les fonctions renvoient le dernier id"
+short_description: "Late binding : le lambda capture la VARIABLE, pas sa valeur."
+hints:
+  - "Une closure capture le scope, pas l'instant. Au moment de l'appel, i vaut sa dernière valeur."
+  - "Le fix canonique : passer i en default arg. `lambda i=i: ...`"
+  - "Le fix alternatif : définir une factory séparée qui fige la valeur."
+reference_book: "Fluent Python ch 7 — Late binding closure trap"
+pymistral_link: null
+tags:
+  - closure
+  - debugging

@@ -1,0 +1,21 @@
+id: ch07-104-tasks-ifchain-to-dispatch
+chapter: 7
+chapter_slug: functions-first-class
+type: modification
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - dispatch-table
+  - function-in-data
+theme: tasks
+title: "if-elif-elif -> dict de fonctions"
+short_description: "Remplace un long if-chain par un registre de stratégies."
+hints:
+  - "Un dict {clé: fonction} remplace un if/elif/elif/else."
+  - "Lookup O(1), extension = nouvelle entrée (open/closed)."
+  - "Le test de forme exige : plus de if/elif sur `action`."
+reference_book: "Fluent Python ch 7 — Dispatch table over if-chain"
+pymistral_link: null
+tags:
+  - dispatch
+  - refactor

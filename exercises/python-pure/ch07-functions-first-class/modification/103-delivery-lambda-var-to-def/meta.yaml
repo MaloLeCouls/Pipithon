@@ -1,0 +1,21 @@
+id: ch07-103-delivery-lambda-var-to-def
+chapter: 7
+chapter_slug: functions-first-class
+type: modification
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - lambda-vs-def
+  - introspection
+theme: delivery
+title: "lambda assigné à une variable -> def"
+short_description: "PEP 8 : si tu nommes un lambda, c'est qu'il faut un def."
+hints:
+  - "Un lambda assigné à un nom (ex. next_hop = lambda r: ...) perd ses métadonnées et viole PEP 8."
+  - "Refactor en def : __name__ deviendra 'next_hop' au lieu de '<lambda>'."
+  - "Le comportement doit être identique."
+reference_book: "Fluent Python ch 7 — Lambda vs def naming"
+pymistral_link: null
+tags:
+  - lambda
+  - refactor
