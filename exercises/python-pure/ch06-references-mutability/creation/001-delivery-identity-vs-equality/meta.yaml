@@ -1,0 +1,21 @@
+id: ch06-001-delivery-identity-vs-equality
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - is-vs-eq
+  - identity
+theme: delivery
+title: "is ou == ?"
+short_description: "Distingue identité (même objet) et égalité (mêmes données)."
+hints:
+  - "is teste l'identité (même cellule mémoire), == teste l'égalité (mêmes valeurs)."
+  - "Deux Package(tracking='X1') sont == mais pas is (sauf si tu les as aliasés)."
+  - "Renvoie booléens, pas des chaînes 'True'."
+reference_book: "Fluent Python ch 6 — Object identity vs equality"
+pymistral_link: null
+tags:
+  - identity
+  - references

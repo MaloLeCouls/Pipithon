@@ -1,0 +1,21 @@
+id: ch06-002-furniture-alias-basics
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - aliasing
+  - assignment
+theme: furniture
+title: "Une étiquette, pas une boîte"
+short_description: "Affecter une variable = poser une étiquette ; deux étiquettes, un objet."
+hints:
+  - "En Python, x = y ne copie rien : x devient une seconde étiquette sur l'objet de y."
+  - "Modifier via l'une est visible via l'autre. Mais réassigner une étiquette ne touche pas l'autre."
+  - "Retourne True/False, pas une description."
+reference_book: "Fluent Python ch 6 — Variables are labels"
+pymistral_link: null
+tags:
+  - aliasing
+  - references

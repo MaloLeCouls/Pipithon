@@ -1,0 +1,22 @@
+id: ch06-009-gym-fork-session
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - deepcopy
+  - shallow-copy
+  - aliasing
+theme: gym
+title: "Une session sans pollution"
+short_description: "Forke une session de réservation : isole les membres, partage le coach."
+hints:
+  - "Que copies-tu en profondeur et que partages-tu ? Le coach est externe, les membres sont propres à la session."
+  - "copy.deepcopy(session.members) sur la liste, le trainer juste passé par référence."
+  - "Vérifie : fork.trainer is orig.trainer, mais fork.members[0] is not orig.members[0]."
+reference_book: "Fluent Python ch 6 — Copy strategies"
+pymistral_link: null
+tags:
+  - deepcopy
+  - design

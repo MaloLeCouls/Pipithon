@@ -1,0 +1,21 @@
+id: ch06-003-tasks-mutable-default-sentinel
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 1
+estimated_minutes: 7
+concepts:
+  - mutable-default
+  - sentinel-pattern
+theme: tasks
+title: "Le None-guard salvateur"
+short_description: "Évite le piège du défaut mutable en utilisant None comme sentinelle."
+hints:
+  - "def f(x, acc=[]) — le `[]` est évalué UNE fois, à la définition. Tous les appels partagent la même liste."
+  - "Astuce : default à None ; à l'intérieur, if acc is None: acc = []."
+  - "Vérifie que deux appels successifs sans `tags` donnent des tâches sans tags partagés."
+reference_book: "Fluent Python ch 6 — Mutable default arguments"
+pymistral_link: null
+tags:
+  - mutable-default
+  - sentinel

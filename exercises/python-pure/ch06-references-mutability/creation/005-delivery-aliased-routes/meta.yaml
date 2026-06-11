@@ -1,0 +1,22 @@
+id: ch06-005-delivery-aliased-routes
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - identity
+  - aliasing
+  - is-vs-eq
+theme: delivery
+title: "Quelles routes sont vraiment alias ?"
+short_description: "Détecte les paires (i, j) qui partagent le même objet sous-jacent."
+hints:
+  - "Utilise `is`, pas `==` : deux routes peuvent être égales sans être le même objet."
+  - "Boucle imbriquée O(n²) acceptée pour cet exo ; n est petit en pratique."
+  - "Renvoie une liste de tuples (i, j) triés par (i, j) croissants, i < j."
+reference_book: "Fluent Python ch 6 — `is` operator"
+pymistral_link: null
+tags:
+  - identity
+  - aliasing

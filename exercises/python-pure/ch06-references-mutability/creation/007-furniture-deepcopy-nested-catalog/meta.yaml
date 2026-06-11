@@ -1,0 +1,21 @@
+id: ch06-007-furniture-deepcopy-nested-catalog
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - deepcopy
+  - shallow-copy
+theme: furniture
+title: "Cloner un catalogue à plusieurs étages"
+short_description: "Une copie superficielle ne suffit pas quand le contenu est mutable. Piège classique signalé."
+hints:
+  - "copy.copy(d) renvoie un nouveau dict, mais les listes internes restent partagées."
+  - "copy.deepcopy(d) descend récursivement : tout est dupliqué."
+  - "Vérifie que muter cat_clone['CHAIRS'] ne touche pas cat['CHAIRS']."
+reference_book: "Fluent Python ch 6 — copy vs deepcopy"
+pymistral_link: null
+tags:
+  - deepcopy
+  - mutation

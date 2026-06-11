@@ -1,0 +1,21 @@
+id: ch06-008-tasks-tuple-list-paradox
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - tuple-immutability
+  - aliasing
+theme: tasks
+title: "Tuple paradoxal : muter sans muter"
+short_description: "t[1] += items mute la liste interne ET lève. Renvoie un tuple neuf à la place."
+hints:
+  - "Un tuple est `relativement` immutable : ses éléments mutables le restent."
+  - "t[1] += [3] est en réalité t.__setitem__(1, t[1].__iadd__([3])) : il mute puis lève TypeError."
+  - "La solution propre : reconstruire un tuple, sans toucher au précédent."
+reference_book: "Fluent Python ch 6 — Tuples are immutable, contents may not be"
+pymistral_link: null
+tags:
+  - tuple
+  - immutability

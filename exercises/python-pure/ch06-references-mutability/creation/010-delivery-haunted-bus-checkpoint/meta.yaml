@@ -1,0 +1,24 @@
+id: ch06-010-delivery-haunted-bus-checkpoint
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 5
+estimated_minutes: 28
+concepts:
+  - mutable-default
+  - shallow-copy
+  - deepcopy
+  - aliasing
+theme: delivery
+title: "Checkpoint ch.6 — la flotte hantée"
+short_description: "Reproduis HauntedBus + Bus : montre le piège du défaut mutable, et la dualité copy/deepcopy."
+hints:
+  - "HauntedBus = le bug volontaire. Bus = la version saine avec sentinelle None."
+  - "make_fleet doit renvoyer (copy.copy(proto), copy.deepcopy(proto)) — c'est l'opposition centrale du chapitre."
+  - "Pour HauntedBus, vérifie que deux instances sans argument PARTAGENT la liste par défaut (c'est le bug, c'est attendu)."
+reference_book: "Fluent Python ch 6 — HauntedBus / Bus / TwilightBus"
+pymistral_link: null
+tags:
+  - checkpoint
+  - mutable-default
+  - deepcopy

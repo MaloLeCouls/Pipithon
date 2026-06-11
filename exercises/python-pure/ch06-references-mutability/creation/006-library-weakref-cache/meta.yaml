@@ -1,0 +1,21 @@
+id: ch06-006-library-weakref-cache
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - weakref
+  - garbage-collection
+theme: library
+title: "Un index qui se vide quand le livre disparaît"
+short_description: "Construis un index ISBN -> Book qui n'empêche pas le GC."
+hints:
+  - "weakref.WeakValueDictionary : les valeurs sont des weakref ; quand la dernière ref forte disparaît, l'entrée tombe."
+  - "Indexe par ISBN (str). Les Book sont les valeurs."
+  - "Pour tester : crée des Book dans une liste, indexe, libère la liste, vérifie que l'index s'est vidé."
+reference_book: "Fluent Python ch 6 — WeakValueDictionary"
+pymistral_link: null
+tags:
+  - weakref
+  - gc

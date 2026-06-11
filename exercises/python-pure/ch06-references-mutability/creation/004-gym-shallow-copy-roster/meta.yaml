@@ -1,0 +1,21 @@
+id: ch06-004-gym-shallow-copy-roster
+chapter: 6
+chapter_slug: references-mutability
+type: creation
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - shallow-copy
+  - copy-module
+theme: gym
+title: "Cloner la liste des membres sans cloner les membres"
+short_description: "Copie superficielle d'un roster : nouvelle liste, mêmes objets."
+hints:
+  - "list(x), x[:], ou copy.copy(x) : trois façons de faire une copie superficielle d'une liste."
+  - "Une copie superficielle = nouveau contenant, mêmes contenus. Ici c'est ce qu'on veut."
+  - "Vérifie : roster_copy is not roster, mais roster_copy[0] is roster[0]."
+reference_book: "Fluent Python ch 6 — copy.copy vs deepcopy"
+pymistral_link: null
+tags:
+  - shallow-copy
+  - references
