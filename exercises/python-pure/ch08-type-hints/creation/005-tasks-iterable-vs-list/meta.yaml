@@ -1,0 +1,22 @@
+id: ch08-005-tasks-iterable-vs-list
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - iterable
+  - liskov
+  - protocol
+theme: tasks
+title: "Accepte large, retourne précis"
+short_description: "Iterable[T] en paramètre : accepte list/tuple/generator/set."
+hints:
+  - "Si tu n'as besoin que d'itérer, demande Iterable[T] — pas list[T]."
+  - "Tu peux retourner un type plus précis (ex. int) si tu peux le garantir."
+  - "from collections.abc import Iterable."
+reference_book: "Fluent Python ch 8 — Iterable vs list (Liskov)"
+pymistral_link: null
+tags:
+  - iterable
+  - liskov

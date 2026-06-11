@@ -1,0 +1,22 @@
+id: ch08-009-llm-serving-protocol-encoder
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - protocol
+  - structural-typing
+  - runtime-checkable
+theme: llm-serving
+title: "Protocol : typer ce qui a une .encode()"
+short_description: "Définis un Protocol Encoder et vérifie qu'un BPETokenizer le satisfait."
+hints:
+  - "from typing import Protocol, runtime_checkable."
+  - "Encoder : une méthode encode(str) -> list[Token]."
+  - "BPETokenizer (pymistral) a déjà encode() : il satisfera ton Protocol par structure."
+reference_book: "Fluent Python ch 8 — Protocol (structural typing)"
+pymistral_link: pymistral.tokenizer
+tags:
+  - protocol
+  - structural-typing

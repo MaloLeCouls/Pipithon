@@ -1,0 +1,22 @@
+id: ch08-004-llm-serving-sampler-callable
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - callable
+  - higher-order
+  - type-hints
+theme: llm-serving
+title: "Applique un sampler typé"
+short_description: "Premier exo qui importe pymistral : applique un Sampler sur des Logits."
+hints:
+  - "from pymistral import Logits, GenerationConfig, Sampler"
+  - "Sampler est un Protocol callable : (Logits, GenerationConfig, Random|None) -> int."
+  - "Tu ne fais qu'appeler sampler(logits, config) — pas de réimplémentation."
+reference_book: "Fluent Python ch 8 — Callable types"
+pymistral_link: pymistral.sampling
+tags:
+  - callable
+  - pymistral

@@ -1,0 +1,21 @@
+id: ch08-008-ecommerce-typevar-generic
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - typevar
+  - generics
+theme: ecommerce
+title: "TypeVar : la fonction qui préserve le type"
+short_description: "Quand entrée et sortie partagent le même T."
+hints:
+  - "from typing import TypeVar ; T = TypeVar('T')."
+  - "Signature : first_or_default(items: Iterable[T], default: T) -> T."
+  - "Le compilateur mypy vérifie que T est cohérent entre args et retour."
+reference_book: "Fluent Python ch 8 — TypeVar"
+pymistral_link: null
+tags:
+  - typevar
+  - generics

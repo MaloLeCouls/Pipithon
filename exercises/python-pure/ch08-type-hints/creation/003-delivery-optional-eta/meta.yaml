@@ -1,0 +1,21 @@
+id: ch08-003-delivery-optional-eta
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - optional
+  - none-handling
+theme: delivery
+title: "Optional[X] = X | None"
+short_description: "Quand un paramètre peut être None, dis-le dans le type."
+hints:
+  - "X | None (PEP 604, 3.10+) est l'écriture moderne d'Optional[X]."
+  - "Signature : (eta: str | None) -> str."
+  - "Retourne 'pending' si eta is None, sinon eta tel quel."
+reference_book: "Fluent Python ch 8 — Optional and X | None"
+pymistral_link: null
+tags:
+  - optional
+  - pep604

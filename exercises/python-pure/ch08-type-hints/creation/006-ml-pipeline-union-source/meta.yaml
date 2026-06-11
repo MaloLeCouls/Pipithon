@@ -1,0 +1,21 @@
+id: ch08-006-ml-pipeline-union-source
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - union
+  - pep604
+theme: ml-pipeline
+title: "Une source de données : path OU bytes"
+short_description: "X | Y (PEP 604) : type union écrit avec |."
+hints:
+  - "str | bytes en paramètre : on accepte un chemin ou des données brutes."
+  - "isinstance(source, str) pour discriminer."
+  - "Renvoie int : le nombre d'octets de la source."
+reference_book: "Fluent Python ch 8 — Union types"
+pymistral_link: null
+tags:
+  - union
+  - pep604

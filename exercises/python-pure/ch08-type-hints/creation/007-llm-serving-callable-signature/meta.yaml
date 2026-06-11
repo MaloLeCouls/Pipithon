@@ -1,0 +1,21 @@
+id: ch08-007-llm-serving-callable-signature
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - callable
+  - generics
+theme: llm-serving
+title: "Callable[[...], ...] avec une signature précise"
+short_description: "Annote une fonction qui prend une callable au profil bien défini."
+hints:
+  - "Callable[[Logits, GenerationConfig], int] décrit une fn qui prend ces 2 args et renvoie un int."
+  - "from collections.abc import Callable."
+  - "L'API : (logits, scorer) -> top_score. scorer renvoie un int (id de token)."
+reference_book: "Fluent Python ch 8 — Callable signatures"
+pymistral_link: pymistral.sampling
+tags:
+  - callable
+  - pymistral

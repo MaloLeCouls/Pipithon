@@ -1,0 +1,21 @@
+id: ch08-002-tasks-generic-list-int
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - generics
+  - type-hints
+theme: tasks
+title: "list[int] : la syntaxe générique moderne"
+short_description: "Python 3.9+ : `list[int]` au lieu de `List[int]`."
+hints:
+  - "Depuis 3.9, list/dict/set/tuple acceptent l'indexation directement (PEP 585)."
+  - "Plus besoin de from typing import List."
+  - "Signature : (priorities: list[int]) -> int."
+reference_book: "Fluent Python ch 8 — Builtin generics (PEP 585)"
+pymistral_link: null
+tags:
+  - generics
+  - pep585

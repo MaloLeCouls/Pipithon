@@ -1,0 +1,21 @@
+id: ch08-001-ecommerce-typed-discount
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - type-hints
+  - basic-annotations
+theme: ecommerce
+title: "Annoter une fonction triviale"
+short_description: "Mets des type hints corrects sur paramètres et retour."
+hints:
+  - "Signature attendue : (price: float, rate: float) -> float."
+  - "Les hints sont déclaratifs, vérifiés par mypy, pas par Python à runtime."
+  - "Le test vérifie inspect.signature : pas de Parameter.empty."
+reference_book: "Fluent Python ch 8 — Basic type hints"
+pymistral_link: null
+tags:
+  - type-hints
+  - annotations

@@ -1,0 +1,23 @@
+id: ch08-010-llm-serving-show-count-checkpoint
+chapter: 8
+chapter_slug: type-hints
+type: creation
+difficulty: 5
+estimated_minutes: 22
+concepts:
+  - type-hints
+  - mypy-strict
+  - protocol
+theme: llm-serving
+title: "Checkpoint ch.8 — show_count, mypy --strict propre"
+short_description: "Reproduis show_count (Fluent Python ch.8), entièrement annoté, propre sous mypy strict."
+hints:
+  - "Signature : show_count(count: int, singular: str, plural: str = '') -> str."
+  - "Règles : 1 -> '1 singular' ; sinon -> '<count> <plural>' (avec plural = singular+'s' si vide)."
+  - "Validateur : mypy --strict sera lancé sur solution.py. Aucun Any, aucune annotation manquante."
+reference_book: "Fluent Python ch 8 — show_count canonical example"
+pymistral_link: null
+tests_form_kind: mypy
+tags:
+  - checkpoint
+  - mypy-strict
