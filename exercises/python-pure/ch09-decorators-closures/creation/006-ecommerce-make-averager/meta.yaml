@@ -1,0 +1,21 @@
+id: ch09-006-ecommerce-make-averager
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - closure
+  - nonlocal
+theme: ecommerce
+title: "make_averager : moyenne courante via closure"
+short_description: "Pattern canonique du chapitre 9 : accumulateur + compteur en nonlocal."
+hints:
+  - "make_averager() renvoie une fn qui prend une nouvelle valeur et renvoie la moyenne courante."
+  - "nonlocal pour total et count."
+  - "averager(10)=10.0, averager(20)=15.0, averager(30)=20.0."
+reference_book: "Fluent Python ch 9 — make_averager canonical"
+pymistral_link: null
+tags:
+  - closure
+  - nonlocal

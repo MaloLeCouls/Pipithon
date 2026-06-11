@@ -1,0 +1,23 @@
+id: ch09-010-llm-serving-clock-checkpoint
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 5
+estimated_minutes: 26
+concepts:
+  - parametric-decorator
+  - functools-wraps
+  - closure
+theme: llm-serving
+title: "Checkpoint ch.9 — clock paramétré + make_averager"
+short_description: "Le pair canonique : clock(fmt) avec @wraps + make_averager nonlocal."
+hints:
+  - "clock(fmt) : factory à 3 niveaux + @functools.wraps."
+  - "Le format reçoit {name}, {elapsed}, {result}. Pour les tests on neutralise time : on injecte un compteur déterministe."
+  - "make_averager : closure (total, count) + nonlocal — reprise du 006 mais imbriqué dans le checkpoint."
+reference_book: "Fluent Python ch 9 — clock + make_averager canonical pair"
+pymistral_link: null
+tags:
+  - checkpoint
+  - parametric
+  - functools-wraps

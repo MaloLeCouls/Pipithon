@@ -1,0 +1,21 @@
+id: ch09-001-tasks-audit-decorator
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 1
+estimated_minutes: 7
+concepts:
+  - decorator
+  - wrapper
+theme: tasks
+title: "Un décorateur d'audit basique"
+short_description: "Le pattern fondamental : wrapper, appel délégué, retour préservé."
+hints:
+  - "Un décorateur est une fonction qui prend une fonction et en renvoie une autre."
+  - "def audit(fn): def wrapper(*a, **kw): AUDIT_LOG.append(fn.__name__) ; return fn(*a, **kw) ; return wrapper"
+  - "La valeur de retour de la fonction décorée doit être préservée."
+reference_book: "Fluent Python ch 9 — Simple decorator"
+pymistral_link: null
+tags:
+  - decorator
+  - wrapper

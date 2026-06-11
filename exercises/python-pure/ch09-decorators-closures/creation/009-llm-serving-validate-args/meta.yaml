@@ -1,0 +1,22 @@
+id: ch09-009-llm-serving-validate-args
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - decorator
+  - introspection
+  - inspect-signature
+theme: llm-serving
+title: "@validate_config sur une fonction d'inférence"
+short_description: "Valide une GenerationConfig avant d'exécuter ; refuse si invalide."
+hints:
+  - "Le décorateur inspecte les positions des arguments via inspect.signature."
+  - "Trouve l'argument typé GenerationConfig dans la signature ; valide-le avant l'appel."
+  - "GenerationConfig est déjà validé à __post_init__ ; ici on valide en plus que temperature > 0.5 (politique métier)."
+reference_book: "Fluent Python ch 9 — Decorator + introspection"
+pymistral_link: pymistral.config
+tags:
+  - decorator
+  - introspection

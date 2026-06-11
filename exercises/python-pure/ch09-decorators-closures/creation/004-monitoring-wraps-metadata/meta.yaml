@@ -1,0 +1,21 @@
+id: ch09-004-monitoring-wraps-metadata
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - functools-wraps
+  - decorator
+theme: monitoring
+title: "Préserver les métadonnées avec functools.wraps"
+short_description: "Sans @wraps, ton wrapper masque __name__/__doc__ de l'original."
+hints:
+  - "from functools import wraps."
+  - "@wraps(fn) sur le def wrapper recopie __name__, __doc__, __wrapped__, etc."
+  - "Sans ça, instrument.__name__ vaut 'wrapper' au lieu du nom réel."
+reference_book: "Fluent Python ch 9 — functools.wraps"
+pymistral_link: null
+tags:
+  - functools
+  - wraps

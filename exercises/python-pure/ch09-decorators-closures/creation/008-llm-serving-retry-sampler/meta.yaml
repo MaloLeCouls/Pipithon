@@ -1,0 +1,22 @@
+id: ch09-008-llm-serving-retry-sampler
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 3
+estimated_minutes: 16
+concepts:
+  - parametric-decorator
+  - decorator-factory
+theme: llm-serving
+title: "@retry(max_attempts=N) sur un sampler"
+short_description: "Pattern resilience : retente N fois avant de laisser tomber."
+hints:
+  - "3 niveaux : retry(max_attempts) -> decorator -> wrapper."
+  - "wrapper boucle ; capture l'exception via try/except ; relève si tous échouent."
+  - "Le compteur d'appels (closure) sert à tester."
+reference_book: "Fluent Python ch 9 — Parameterized decorator + production patterns"
+pymistral_link: pymistral.sampling
+tags:
+  - parametric
+  - decorator
+  - resilience

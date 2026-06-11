@@ -1,0 +1,21 @@
+id: ch09-007-monitoring-parametric-timeit
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - parametric-decorator
+  - decorator-factory
+theme: monitoring
+title: "Décorateur paramétré : 3 niveaux de fonctions"
+short_description: "@timed(label='...') — la factory à 3 étages."
+hints:
+  - "Niveau 1 : timed(label) renvoie un décorateur."
+  - "Niveau 2 : ce décorateur prend fn et renvoie un wrapper."
+  - "Niveau 3 : wrapper exécute, accumule (label, result) dans TIMINGS, renvoie result."
+reference_book: "Fluent Python ch 9 — Parameterized decorator (3-level factory)"
+pymistral_link: null
+tags:
+  - parametric
+  - decorator

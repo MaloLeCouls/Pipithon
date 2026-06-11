@@ -1,0 +1,21 @@
+id: ch09-002-ecommerce-closure-counter
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 1
+estimated_minutes: 7
+concepts:
+  - closure
+  - free-variable
+theme: ecommerce
+title: "Une closure de comptage"
+short_description: "Une fonction interne qui se souvient de l'état du scope extérieur."
+hints:
+  - "make_counter() doit renvoyer une fonction."
+  - "À chaque appel, cette fonction incrémente un compteur et le renvoie."
+  - "Sans nonlocal, l'incrément lèverait UnboundLocalError. Tu en auras besoin."
+reference_book: "Fluent Python ch 9 — Closures (free variables)"
+pymistral_link: null
+tags:
+  - closure
+  - nonlocal

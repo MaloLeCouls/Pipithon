@@ -1,0 +1,21 @@
+id: ch09-005-llm-serving-cache-tokenize
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - functools-cache
+  - memoization
+theme: llm-serving
+title: "Memoize la tokenization avec @cache"
+short_description: "Une seule ligne, @functools.cache, et la fn devient mémoïsée."
+hints:
+  - "from functools import cache."
+  - "@cache mémoïse sans limite de taille. @lru_cache(maxsize=N) plafonne."
+  - "Compte les appels « vrais » via une closure sur un compteur."
+reference_book: "Fluent Python ch 9 — functools.cache"
+pymistral_link: pymistral.tokenizer
+tags:
+  - memoization
+  - functools

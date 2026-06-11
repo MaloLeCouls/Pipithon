@@ -1,0 +1,21 @@
+id: ch09-003-llm-serving-log-sampler
+chapter: 9
+chapter_slug: decorators-closures
+type: creation
+difficulty: 1
+estimated_minutes: 8
+concepts:
+  - decorator
+  - wrapper
+theme: llm-serving
+title: "Un décorateur de log pour les samplers"
+short_description: "Wrap un sampler pymistral : log avant/après, valeur préservée."
+hints:
+  - "Le sampler a la signature (logits, config, rng=None) -> int."
+  - "Ton wrapper accepte *args, **kwargs et délègue."
+  - "Ajoute (token_id, len(logits)) à SAMPLE_LOG après chaque appel."
+reference_book: "Fluent Python ch 9 — Decorator over real interface"
+pymistral_link: pymistral.sampling
+tags:
+  - decorator
+  - pymistral
