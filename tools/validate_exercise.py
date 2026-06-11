@@ -103,6 +103,13 @@ def validate_meta(meta: dict, exo_dir: Path, errors: list[str]) -> None:
     if not isinstance(meta["tags"], list) or not meta["tags"]:
         _fail(errors, "meta.yaml: `tags` doit etre une liste non vide")
 
+    # M2 : champ optionnel `tests_form_kind`. Quand fourni, sa valeur active
+    # un gate supplementaire (mypy --strict sur solution.py).
+    tfk = meta.get("tests_form_kind")
+    if tfk is not None and tfk != "mypy":
+        _fail(errors, f"meta.yaml: `tests_form_kind` = {tfk!r} non supporte "
+                      "(valeurs : null, 'mypy')")
+
     # Coherence id <-> arborescence
     folder = exo_dir.name
     if folder != f"{id_counter:03d}-{id_slug}":
@@ -154,6 +161,34 @@ def run_pytest(exo_dir: Path, impl: str) -> tuple[bool, str]:
         return proc.returncode == 0, proc.stdout + proc.stderr
 
 
+def run_mypy_strict(exo_dir: Path, impl: str) -> tuple[bool, str]:
+    """M2 : verifie que `impl` (solution.py|starter.py) passe `mypy --strict`.
+
+    Utilise le meme tmpdir + copie de pymistral que run_pytest. mypy est lance
+    via le sys.executable host (cf. PROMPT_pipithon_upgrade.md A.3 : fallback
+    side-validator car Pyodide+mypy pas teste ici).
+
+    Retourne (mypy_ok, sortie). Une absence de mypy installe = echec explicite
+    (on veut un signal clair, pas un faux positif)."""
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        shutil.copy(exo_dir / impl, tmp_path / "solution_user.py")
+        if _PYMISTRAL_PKG.is_dir():
+            shutil.copytree(_PYMISTRAL_PKG, tmp_path / "pymistral")
+        try:
+            proc = subprocess.run(
+                [sys.executable, "-m", "mypy", "--strict",
+                 "--no-incremental", "solution_user.py"],
+                cwd=tmp_path, capture_output=True, text=True,
+                timeout=RUN_TIMEOUT_S,
+            )
+        except FileNotFoundError:
+            return False, "mypy non installe (pip install mypy)"
+        except subprocess.TimeoutExpired:
+            return False, f"TIMEOUT > {RUN_TIMEOUT_S}s pendant mypy {impl}"
+        return proc.returncode == 0, proc.stdout + proc.stderr
+
+
 def validate_exercise(exo_dir: Path) -> list[str]:
     errors: list[str] = []
     for fname in ("meta.yaml", "starter.py", "solution.py", "tests.py"):
@@ -184,6 +219,22 @@ def validate_exercise(exo_dir: Path) -> list[str]:
                       f"{meta['type']} -> le starter contient deja la "
                       f"solution / aucun bug / refactor deja fait :\n"
                       + _tail(start_out))
+
+    # M2 : tests_form_kind: mypy -> solution.py doit passer mypy --strict.
+    # Pour modification : starter.py doit ECHOUER mypy --strict (sinon le
+    # refactor d'annotations est deja fait).
+    if meta.get("tests_form_kind") == "mypy":
+        mypy_sol_ok, mypy_sol_out = run_mypy_strict(exo_dir, "solution.py")
+        if not mypy_sol_ok:
+            _fail(errors, "solution.py NE PASSE PAS mypy --strict "
+                          "(tests_form_kind=mypy) :\n" + _tail(mypy_sol_out))
+        if meta["type"] == "modification":
+            mypy_start_ok, mypy_start_out = run_mypy_strict(exo_dir, "starter.py")
+            if mypy_start_ok:
+                _fail(errors, "starter.py PASSE mypy --strict alors que "
+                              "tests_form_kind=mypy sur une modification "
+                              "-> le refactor d'annotations est deja fait :\n"
+                              + _tail(mypy_start_out))
     return errors
 
 

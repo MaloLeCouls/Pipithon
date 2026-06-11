@@ -18,6 +18,11 @@
   dans la FS Pyodide sous `/exo/pymistral/`. Côté validateur : copié dans le
   tmpdir avant pytest. `meta.yaml: pymistral_link` accepte désormais `null` OU
   une string dotted-path (ex. `pymistral.sampling`). Détail : `docs/context/pymistral-link.md`.
+- **M2 (mode mypy strict pour `modification`) : fait (2026-06-11).** Champ
+  optionnel `meta.yaml: tests_form_kind: mypy`. Quand présent, le validateur
+  exige `mypy --strict` vert sur `solution.py` ; pour `modification` il exige
+  en plus que `starter.py` ÉCHOUE mypy (sinon les annotations sont déjà là).
+  Pas de passe mypy côté Pyodide (fallback AST documenté `exercise-format.md` §9).
 - **Phase 2 + seed étoffé : faite.** Seed ch1-ch5 (cf. ligne « track active »
   ci-dessous). `validate_exercise.py` + `validate_all.py` opérationnels
   (solution-verte/starter-rouge, timeout filet, logs flushés). Cible de

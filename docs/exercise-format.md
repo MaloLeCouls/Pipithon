@@ -127,6 +127,53 @@ quand c'est pertinent (chap. ≥ 8 typiquement), `null` sinon.
    `pytest` **doit échouer** (sinon le starter contient la solution / pas de bug).
 4. `modification` : starter passe les tests de comportement mais **échoue** les
    tests de forme (`ast`/mypy) — le refactor reste à faire.
+5. **M2** — si `meta.yaml: tests_form_kind == "mypy"` (cf. §9), `solution.py`
+   doit aussi passer `mypy --strict`. Pour les `modification`, `starter.py`
+   doit en plus **échouer** `mypy --strict` (sinon les annotations sont déjà là).
 
-`tools/validate_all.py` = §1-4 sur tout le repo. Un échec = non commitable.
+`tools/validate_all.py` = §1-5 sur tout le repo. Un échec = non commitable.
 **Pas de « je validerai après ».**
+
+## 9. M2 — Mode `mypy --strict` (champ optionnel `tests_form_kind`)
+
+Champ `meta.yaml` optionnel :
+
+```yaml
+tests_form_kind: mypy   # active la passe `mypy --strict` côté validateur
+```
+
+Valeurs supportées : `null` (défaut, pas de gate mypy) ou `"mypy"`. Tout autre
+valeur fait échouer le validateur.
+
+**Effet côté validateur (`tools/validate_exercise.py`)** : après pytest vert,
+`mypy --strict --no-incremental solution_user.py` est lancé dans le tmpdir
+(qui contient aussi `pymistral/`). Sortie non-zéro → exo invalide.
+
+Pour les exos de **type `modification`** avec `tests_form_kind: mypy`, le
+`starter.py` doit en plus **échouer** mypy — sinon le refactor d'annotations
+est déjà fait. C'est l'équivalent typage du contrat existant
+« solution verte + starter rouge ».
+
+**Effet côté webapp (Pyodide)** : aucune passe mypy automatique (mypy en
+WASM est fragile et lent). Pour donner un feedback intermédiaire à l'élève,
+les `tests.py` qui s'appuient sur `tests_form_kind: mypy` ajoutent typiquement
+un check **AST** d'exhaustivité des annotations (cf. ex.
+`exercises/python-pure/ch08-*/modification/*`) :
+
+```python
+import ast, inspect
+from solution_user import fn_to_check
+
+def test_signature_is_fully_annotated():
+    sig = inspect.signature(fn_to_check)
+    for name, p in sig.parameters.items():
+        assert p.annotation is not inspect.Parameter.empty, f"annotate `{name}`"
+    assert sig.return_annotation is not inspect.Signature.empty
+```
+
+Le contrat strict reste enforcé **au commit** par le validateur. Cf.
+`docs/context/pymistral-link.md` et `PROMPT_pipithon_upgrade.md` §A.3.
+
+> Pré-requis runtime : `mypy` installé (`pip install mypy`). Côté CI/dev local,
+> `python tools/validate_all.py` échoue avec un message explicite si mypy est
+> absent.
