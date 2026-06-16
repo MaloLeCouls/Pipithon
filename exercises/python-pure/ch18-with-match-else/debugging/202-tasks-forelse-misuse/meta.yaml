@@ -1,0 +1,21 @@
+id: ch18-202-tasks-forelse-misuse
+chapter: 18
+chapter_slug: with-match-else
+type: debugging
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - for-else
+  - misread-semantics
+theme: tasks
+title: "for/else : « se déclenche si la liste est vide » — non, faux"
+short_description: "Le else d'un for s'exécute si la boucle NE break PAS — pas si elle est vide."
+hints:
+  - "Tape le test avec une liste *non vide* qui ne match aucun élément : le else passe quand même."
+  - "Ce qui désactive le else : un `break`. Pas l'absence d'éléments."
+  - "Refais le find-or-default proprement (drapeau ou tape return dans le for + return dans le else)."
+reference_book: "Fluent Python ch 18 — for/else semantics"
+pymistral_link: null
+tags:
+  - debugging
+  - for-else

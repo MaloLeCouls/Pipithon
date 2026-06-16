@@ -1,0 +1,23 @@
+id: ch18-203-llm-serving-contextmanager-no-try
+chapter: 18
+chapter_slug: with-match-else
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - contextmanager-decorator
+  - try-finally
+  - cleanup-on-exception
+theme: llm-serving
+title: "Cleanup oublié quand le bloc lève"
+short_description: "Un @contextmanager sans try/finally autour du yield = cleanup volatile."
+hints:
+  - "Quand une exception remonte du bloc `with`, elle est *injectée* au point du `yield`."
+  - "Sans `try/finally`, les lignes après yield ne tournent jamais en cas d'exception."
+  - "Entoure le yield d'un `try: ... finally:` — c'est tout."
+reference_book: "Fluent Python ch 18 — @contextmanager try/finally pitfall"
+pymistral_link: null
+tags:
+  - debugging
+  - contextlib
+  - context-manager

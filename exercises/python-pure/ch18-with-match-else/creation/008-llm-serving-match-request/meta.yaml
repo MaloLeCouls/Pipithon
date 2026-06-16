@@ -1,0 +1,23 @@
+id: ch18-008-llm-serving-match-request
+chapter: 18
+chapter_slug: with-match-else
+type: creation
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - match-case
+  - class-pattern
+  - literal-pattern
+  - wildcard
+theme: llm-serving
+title: "match/case : router les évènements du stream"
+short_description: "Dispatch sur types + valeurs en un seul match, sans if/elif imbriqué."
+hints:
+  - "Les `@dataclass` ont `__match_args__` auto-généré : `case StreamToken(token_id=tid, text=t)`."
+  - "Tu peux mixer pattern littéral (`reason=\"stop\"`) et capture (`reason=other`)."
+  - "Termine par `case _:` pour le wildcard (jamais oublier)."
+reference_book: "Fluent Python ch 18 — Match/case patterns"
+pymistral_link: null
+tags:
+  - match-case
+  - pattern-matching

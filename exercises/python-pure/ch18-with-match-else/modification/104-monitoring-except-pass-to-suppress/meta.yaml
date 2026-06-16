@@ -1,0 +1,22 @@
+id: ch18-104-monitoring-except-pass-to-suppress
+chapter: 18
+chapter_slug: with-match-else
+type: modification
+difficulty: 3
+estimated_minutes: 8
+concepts:
+  - contextlib-suppress
+  - refactor-try-except
+theme: monitoring
+title: "try/except KeyError: pass → suppress"
+short_description: "L'idiome déclaratif remplace 3 lignes silencieuses."
+hints:
+  - "`from contextlib import suppress`."
+  - "Tu peux passer plusieurs exceptions : `suppress(KeyError, ValueError)`."
+  - "Le bloc `with suppress(...)` est strictement borné — pas de risque d'avaler trop large."
+reference_book: "Fluent Python ch 18 — contextlib.suppress refactor"
+pymistral_link: null
+tags:
+  - refactor
+  - contextlib
+  - suppress

@@ -1,0 +1,21 @@
+id: ch18-101-monitoring-manual-tryfinally-to-cm
+chapter: 18
+chapter_slug: with-match-else
+type: modification
+difficulty: 1
+estimated_minutes: 7
+concepts:
+  - contextmanager-decorator
+  - refactor-try-finally
+theme: monitoring
+title: "try/finally inline → @contextmanager"
+short_description: "Le pattern setup/cleanup se factorise en un context manager réutilisable."
+hints:
+  - "Crée une fonction `tracing_window(probe)` décorée `@contextmanager`."
+  - "Avant yield : `probe.active = True`. yield. Cleanup : `probe.active = False`."
+  - "Le test attend que `traced_run` UTILISE ton CM via `with tracing_window(probe):`."
+reference_book: "Fluent Python ch 18 — @contextmanager refactor"
+pymistral_link: null
+tags:
+  - refactor
+  - context-manager

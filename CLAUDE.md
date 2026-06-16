@@ -65,13 +65,24 @@
   infinie), generator épuisé ré-utilisé, coroutine non amorcée. 5 exos
   `llm-serving`/`ml-pipeline` importent `pymistral.Token` — fil rouge
   inférence ouvert.
-- Track active : `python-pure` (**176 exos validés** ; ch1 18, ch2 14,
-  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch17 18 ;
-  ch10-16, ch18-24 scaffold). **Couverture du contrat : ~42 %.**
-- Prochaine action (atelier A reliquat) : C3 ch18 context managers
-  (`@inference_context`), C4 ch21 asyncio (Scheduler async, vérifier
-  `asyncio.run` Pyodide), C5 ch13 Protocol/ABC plein, M5 mode « refaire
-  de mémoire » côté webapp.
+- **C3 — ch18 context managers complet : fait (2026-06-16).** 18 exos
+  (10 creation + 5 mod + 3 debug). Creation drille les CMs classe
+  (`__enter__`/`__exit__`), `@contextmanager` + try/finally,
+  `inference_context` autour de `pymistral.KVCache`, `contextlib.suppress`,
+  `ExitStack` dynamique, `for/else`, `match/case` (class patterns + capture
+  + wildcard), `__exit__` sélectif (avale OOM, propage le reste), et le
+  checkpoint niveau 5 `LogMirror` en 2 formes (classe + `@contextmanager`,
+  reproduction fidèle de `LookingGlass`). Modification : try/finally → CM,
+  classe CM → @contextmanager, if/elif → match/case, except/pass →
+  `suppress`, nesting récursif → `ExitStack`. Debugging : `__exit__`
+  retourne True (avale tout), for/else mal lu (« se déclenche si liste
+  vide » → faux), `@contextmanager` sans try/finally (cleanup volatile).
+- Track active : `python-pure` (**194 exos validés** ; ch1 18, ch2 14,
+  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch17 18, ch18 18 ;
+  ch10-16, ch19-24 scaffold). **Couverture du contrat : ~46 %.**
+- Prochaine action (atelier A reliquat) : C4 ch21 asyncio (Scheduler async,
+  vérifier `asyncio.run` Pyodide), C5 ch13 Protocol/ABC plein, M5 mode
+  « refaire de mémoire » côté webapp.
   Ensuite ateliers B (type `review` + tracks code-reading/oss-onboarding /
   testing-discipline / métrique PR scopée) puis C (modes chrono +
   closed-book) puis D (concours bot-programming, parallèle).

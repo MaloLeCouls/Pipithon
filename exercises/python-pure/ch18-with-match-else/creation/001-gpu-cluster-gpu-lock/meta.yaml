@@ -1,0 +1,22 @@
+id: ch18-001-gpu-cluster-gpu-lock
+chapter: 18
+chapter_slug: with-match-else
+type: creation
+difficulty: 1
+estimated_minutes: 8
+concepts:
+  - context-manager
+  - dunder-enter
+  - dunder-exit
+theme: gpu-cluster
+title: "GPULock : context manager basique"
+short_description: "__enter__ marque, __exit__ libère — même en cas d'exception."
+hints:
+  - "`__enter__(self)` met le GPU en `in_use` et retourne ce qu'on bind via `as`."
+  - "`__exit__(self, exc_type, exc, tb)` remet `free` — toujours, même si exception."
+  - "Retourne `None` (implicite) depuis `__exit__` : ne pas avaler l'exception."
+reference_book: "Fluent Python ch 18 — Class-based context manager"
+pymistral_link: null
+tags:
+  - context-manager
+  - dunder

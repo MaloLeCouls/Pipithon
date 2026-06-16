@@ -1,0 +1,21 @@
+id: ch18-201-gpu-cluster-exit-returns-true
+chapter: 18
+chapter_slug: with-match-else
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - dunder-exit-swallow
+  - context-manager
+theme: gpu-cluster
+title: "Pourquoi mes exceptions disparaissent dans le with ?"
+short_description: "`__exit__` retournant True avale silencieusement TOUTES les exceptions."
+hints:
+  - "Lis la doc de `__exit__` : un retour truthy = exception avalée."
+  - "Une seule ligne à changer dans `__exit__`."
+  - "On veut libérer le GPU MAIS laisser remonter l'exception."
+reference_book: "Fluent Python ch 18 — __exit__ return semantics"
+pymistral_link: null
+tags:
+  - debugging
+  - context-manager

@@ -1,0 +1,23 @@
+id: ch18-004-llm-serving-inference-context
+chapter: 18
+chapter_slug: with-match-else
+type: creation
+difficulty: 2
+estimated_minutes: 11
+concepts:
+  - contextmanager-decorator
+  - try-finally
+  - pymistral-kvcache
+theme: llm-serving
+title: "@inference_context : monter et démonter le KV cache"
+short_description: "Le pattern fondamental pour scoper une ressource d'inférence."
+hints:
+  - "Décore avec `@contextmanager`. La fonction est un générateur à 1 yield."
+  - "Avant yield : `cache.clear()`. Après yield (dans finally) : `cache.clear()` à nouveau."
+  - "Le yield rend le KVCache pour utilisation dans le bloc."
+reference_book: "Fluent Python ch 18 — @contextmanager + try/finally"
+pymistral_link: pymistral.cache
+tags:
+  - context-manager
+  - llm-serving
+  - pymistral

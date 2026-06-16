@@ -1,0 +1,23 @@
+id: ch18-009-gpu-cluster-handled-exit
+chapter: 18
+chapter_slug: with-match-else
+type: creation
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - context-manager
+  - dunder-exit-exception-handling
+  - selective-swallow
+theme: gpu-cluster
+title: "__exit__ qui avale UNE exception, propage les autres"
+short_description: "Retourner True ou False selon le type — la sémantique fine du __exit__."
+hints:
+  - "`__exit__(exc_type, exc, tb)` reçoit l'exception en argument."
+  - "Retourne True UNIQUEMENT si on veut avaler — sinon implicite (None / False)."
+  - "isinstance + check `exc_type is not None` : sois précis sur le type."
+reference_book: "Fluent Python ch 18 — Context manager exception handling"
+pymistral_link: null
+tags:
+  - context-manager
+  - dunder-exit
+  - exception

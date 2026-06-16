@@ -1,0 +1,24 @@
+id: ch18-010-monitoring-logmirror-checkpoint
+chapter: 18
+chapter_slug: with-match-else
+type: creation
+difficulty: 5
+estimated_minutes: 30
+concepts:
+  - context-manager
+  - contextmanager-decorator
+  - dunder-exit-swallow
+  - monkey-patch
+theme: monitoring
+title: "Checkpoint ch.18 — LogMirror en 2 formes"
+short_description: "Reproduire LookingGlass (Fluent Python) : forme classe + forme @contextmanager."
+hints:
+  - "Forme classe : sauve `sys.stdout.write`, monkey-patche-le, restore dans __exit__."
+  - "Pour avaler ZeroDivisionError : `if issubclass(exc_type, ZeroDivisionError): print('RECOVERED'); return True`."
+  - "Forme générateur : @contextmanager + try/except ZeroDivisionError + finally pour le restore."
+reference_book: "Fluent Python ch 18 — LookingGlass canonical example"
+pymistral_link: null
+tags:
+  - checkpoint
+  - context-manager
+  - contextlib
