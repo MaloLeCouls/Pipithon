@@ -1,0 +1,23 @@
+id: ch17-105-llm-serving-manual-stop-to-takewhile
+chapter: 17
+chapter_slug: iterators-generators
+type: modification
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - itertools-takewhile
+  - generator-pipeline
+  - pymistral-token
+theme: llm-serving
+title: "Loop manuelle avec break → itertools.takewhile"
+short_description: "Une condition d'arrêt sur un stream se factorise avec takewhile."
+hints:
+  - "`itertools.takewhile(pred, it)` arrête dès que `pred(elem)` devient faux."
+  - "Le prédicat ici : `lambda t: t.id != eos_id`."
+  - "Plus de `yield` dans ta fonction : tu renvoies directement le `takewhile`."
+reference_book: "Fluent Python ch 17 — itertools.takewhile"
+pymistral_link: pymistral.tokens
+tags:
+  - refactor
+  - itertools
+  - takewhile

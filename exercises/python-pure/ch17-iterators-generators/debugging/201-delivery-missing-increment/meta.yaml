@@ -1,0 +1,22 @@
+id: ch17-201-delivery-missing-increment
+chapter: 17
+chapter_slug: iterators-generators
+type: debugging
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - iter-protocol
+  - dunder-next
+  - infinite-loop
+theme: delivery
+title: "Boucle infinie : __next__ ne fait pas avancer"
+short_description: "`StopIteration` n'est jamais levée — l'iterator se répète éternellement."
+hints:
+  - "Lis `__next__` ligne à ligne : que doit-il faire entre le check et le return ?"
+  - "Un compteur qui ne s'incrémente pas… ne s'incrémente pas."
+  - "Une seule ligne à ajouter."
+reference_book: "Fluent Python ch 17 — Iterator protocol pitfall"
+pymistral_link: null
+tags:
+  - debugging
+  - iter-protocol

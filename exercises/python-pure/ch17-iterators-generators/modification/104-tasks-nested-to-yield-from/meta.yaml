@@ -1,0 +1,21 @@
+id: ch17-104-tasks-nested-to-yield-from
+chapter: 17
+chapter_slug: iterators-generators
+type: modification
+difficulty: 3
+estimated_minutes: 8
+concepts:
+  - yield-from
+  - generator-delegation
+theme: tasks
+title: "Double boucle yield → yield from"
+short_description: "Une délégation explicite remplace une boucle imbriquée."
+hints:
+  - "`yield from sprint` ≡ `for t in sprint: yield t` — mais propage aussi send/throw/close."
+  - "Garde la boucle externe sur `sprints` ; seule la boucle interne disparaît."
+  - "Le test de forme attend un noeud `ast.YieldFrom`."
+reference_book: "Fluent Python ch 17 — yield from delegation"
+pymistral_link: null
+tags:
+  - refactor
+  - yield-from

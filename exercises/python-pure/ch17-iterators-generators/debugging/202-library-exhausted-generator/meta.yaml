@@ -1,0 +1,21 @@
+id: ch17-202-library-exhausted-generator
+chapter: 17
+chapter_slug: iterators-generators
+type: debugging
+difficulty: 3
+estimated_minutes: 9
+concepts:
+  - generator-single-use
+  - silent-empty-iteration
+theme: library
+title: "Le second parcours retourne []"
+short_description: "Un iterator épuisé reste épuisé — silencieusement vide à la 2e lecture."
+hints:
+  - "Ajoute un `print(list(overdue))` avant et après le `sum(...)` : tu verras."
+  - "Un générateur est à USAGE UNIQUE. Une fois consommé : silencieusement vide."
+  - "Tu peux matérialiser en liste avant de l'utiliser deux fois."
+reference_book: "Fluent Python ch 17 — Exhausted generator pitfall"
+pymistral_link: null
+tags:
+  - debugging
+  - generator

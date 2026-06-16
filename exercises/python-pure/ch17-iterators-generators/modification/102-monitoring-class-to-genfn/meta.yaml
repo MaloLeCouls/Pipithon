@@ -1,0 +1,22 @@
+id: ch17-102-monitoring-class-to-genfn
+chapter: 17
+chapter_slug: iterators-generators
+type: modification
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - generator-function
+  - iter-protocol-refactor
+theme: monitoring
+title: "Iterator manuel → generator function"
+short_description: "Une classe d'iterator à 3 dunders se réécrit en 3 lignes avec yield."
+hints:
+  - "Conserve la fonction `metric_stream(metrics, severity)` mais réécris son corps avec yield."
+  - "Supprime entièrement la classe MetricStream — elle ne sert plus à rien."
+  - "Le test de forme vérifie que `MetricStream` n'existe plus dans le module."
+reference_book: "Fluent Python ch 17 — Classic iterator → generator"
+pymistral_link: null
+tags:
+  - refactor
+  - iter-protocol
+  - generator

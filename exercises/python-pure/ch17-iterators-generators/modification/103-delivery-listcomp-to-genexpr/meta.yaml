@@ -1,0 +1,21 @@
+id: ch17-103-delivery-listcomp-to-genexpr
+chapter: 17
+chapter_slug: iterators-generators
+type: modification
+difficulty: 2
+estimated_minutes: 5
+concepts:
+  - generator-expression
+  - lazy-vs-eager
+theme: delivery
+title: "List comprehension → generator expression"
+short_description: "Deux caractères de différence, un ordre de grandeur en mémoire."
+hints:
+  - "`[...]` -> `(...)`. C'est tout (ou presque)."
+  - "Le test de forme exige un Iterator en retour, pas une `list`."
+  - "Pas de `yield` ici : on retourne directement l'objet genexpr."
+reference_book: "Fluent Python ch 17 — Generator expressions"
+pymistral_link: null
+tags:
+  - refactor
+  - genexpr

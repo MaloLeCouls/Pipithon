@@ -1,0 +1,23 @@
+id: ch17-203-llm-serving-unprimed-coroutine
+chapter: 17
+chapter_slug: iterators-generators
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - classic-coroutine
+  - generator-priming
+  - send
+theme: llm-serving
+title: "TypeError: can't send non-None value to a just-started generator"
+short_description: "Une coroutine doit être *amorcée* avant son premier send."
+hints:
+  - "Lis la trace : Python te dit que le générateur vient de démarrer."
+  - "Un `yield` n'est pas encore atteint — il faut le forcer une fois."
+  - "Une seule ligne à ajouter avant le `return coro`."
+reference_book: "Fluent Python ch 17 — Classic coroutine priming"
+pymistral_link: null
+tags:
+  - debugging
+  - coroutine
+  - priming

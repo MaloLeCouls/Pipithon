@@ -1,0 +1,22 @@
+id: ch17-101-library-list-to-generator
+chapter: 17
+chapter_slug: iterators-generators
+type: modification
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - generator-function
+  - yield
+theme: library
+title: "List builder → générateur (yield)"
+short_description: "Une liste accumulée + return : remplace-la par un yield."
+hints:
+  - "Supprime `result = []`, `result.append(...)`, et `return result`."
+  - "Mets juste `yield loan.isbn` là où tu faisais l'append."
+  - "Le test exige un Iterator en retour, pas une `list`."
+reference_book: "Fluent Python ch 17 — From list builder to generator"
+pymistral_link: null
+tags:
+  - refactor
+  - generator
+  - yield
