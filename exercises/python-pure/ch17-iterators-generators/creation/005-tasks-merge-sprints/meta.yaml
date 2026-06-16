@@ -1,0 +1,21 @@
+id: ch17-005-tasks-merge-sprints
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - itertools-chain
+  - generator-pipeline
+theme: tasks
+title: "Concaténer plusieurs sprints"
+short_description: "itertools.chain : un seul flux à partir de N itérables."
+hints:
+  - "`itertools.chain(*sprints)` enchaîne les itérables dans l'ordre."
+  - "`chain.from_iterable(sprints)` est l'équivalent quand on passe une liste de listes."
+  - "Pas besoin de copier en RAM : c'est paresseux."
+reference_book: "Fluent Python ch 17 — itertools.chain"
+pymistral_link: null
+tags:
+  - itertools
+  - chain

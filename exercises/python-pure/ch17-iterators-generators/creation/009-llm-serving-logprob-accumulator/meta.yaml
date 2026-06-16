@@ -1,0 +1,24 @@
+id: ch17-009-llm-serving-logprob-accumulator
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - classic-coroutine
+  - send
+  - close
+  - generator-priming
+theme: llm-serving
+title: "Coroutine d'accumulation des logprobs"
+short_description: "send/close : un consommateur paresseux qui maintient une moyenne courante."
+hints:
+  - "Une coroutine classique a `yield` à droite d'une affectation : `value = yield current`."
+  - "Le client va t'envoyer des floats via `.send(...)` — la coroutine doit être prête à les recevoir."
+  - "À la fermeture, `GeneratorExit` est levée dans le `yield` ; capture-la proprement."
+reference_book: "Fluent Python ch 17 — Classic coroutines (send/throw/close)"
+pymistral_link: null
+tags:
+  - coroutine
+  - send
+  - close

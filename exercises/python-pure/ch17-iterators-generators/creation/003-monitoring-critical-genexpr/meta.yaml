@@ -1,0 +1,21 @@
+id: ch17-003-monitoring-critical-genexpr
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - generator-expression
+  - lazy-filtering
+theme: monitoring
+title: "Filtrage paresseux des alertes critiques"
+short_description: "Une seule expression : la generator expression remplace yield."
+hints:
+  - "Format : `(m for m in metrics if ...)` — c'est tout."
+  - "Pas de `yield` ici : tu retournes directement l'objet iterator de la genexpr."
+  - "Pas de crochets [...] : ce serait une liste, plus paresseuse."
+reference_book: "Fluent Python ch 17 — Generator expressions"
+pymistral_link: null
+tags:
+  - generator-expression
+  - lazy

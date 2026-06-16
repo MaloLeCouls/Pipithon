@@ -53,11 +53,18 @@
   ML ouvert par la règle d'or `themes.md`). 4 exos avec `tests_form_kind:
   mypy` actif. Cf. `docs/sessions/2026-06-11-upgrade-request.md` pour la
   roadmap restante (ateliers B, C, D).
-- Track active : `python-pure` (**158 exos validés** ; ch1 18, ch2 14,
-  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18 ; ch10-ch24
-  scaffold). **Couverture du contrat : ~38 %.**
-- Prochaine action (atelier A reliquat) : C2 ch17 generators (streaming
-  tokens *via* pymistral), C3 ch18 context managers (`@inference_context`),
+- **C2 — ch17 generators creation seed : fait (2026-06-16).** 10 exos
+  creation drillant le protocole d'itération (manuel + générateurs), les
+  generator expressions, `itertools.chain/islice/takewhile`, `yield from`,
+  les coroutines classiques (send/throw/close) et le checkpoint niveau 5
+  `TokenStream` en 3 formes (iterator manuel / generator function / genexpr,
+  équivalent llm-serving de `Sentence`). 4 exos `llm-serving` importent
+  `pymistral.Token` — streaming de tokens fil rouge inférence.
+- Track active : `python-pure` (**168 exos validés** ; ch1 18, ch2 14,
+  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch17 10 creation ;
+  ch10-16, ch18-24 scaffold). **Couverture du contrat : ~40 %.**
+- Prochaine action (atelier A reliquat) : compléter ch17 (modification +
+  debugging — 8 exos) ; C3 ch18 context managers (`@inference_context`),
   C4 ch21 asyncio (Scheduler async, vérifier `asyncio.run` Pyodide), C5
   ch13 Protocol/ABC plein, M5 mode « refaire de mémoire » côté webapp.
   Ensuite ateliers B (type `review` + tracks code-reading/oss-onboarding /

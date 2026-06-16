@@ -1,0 +1,21 @@
+id: ch17-002-library-overdue-loans
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - generator-function
+  - yield
+theme: library
+title: "Stream des emprunts en retard"
+short_description: "Refrap du yield : un autre filtrage, un autre thème."
+hints:
+  - "Comme `iter_delivered`, mais le critère est `due_date < today`."
+  - "yield le Loan entier (pas seulement son isbn) pour que le client garde la main."
+  - "Pas de list comprehension — c'est un générateur (yield)."
+reference_book: "Fluent Python ch 17 — Generator functions"
+pymistral_link: null
+tags:
+  - generator
+  - yield

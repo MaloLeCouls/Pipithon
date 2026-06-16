@@ -1,0 +1,21 @@
+id: ch17-001-delivery-iter-delivered
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - generator-function
+  - yield
+theme: delivery
+title: "Lazy listing des colis livrés"
+short_description: "Un yield, un if, un flux paresseux — la base du générateur."
+hints:
+  - "Une fonction qui contient `yield` retourne un Iterator, pas une liste."
+  - "Boucle sur les colis ; `yield pkg.tracking_id` quand le statut convient."
+  - "Pas besoin de construire de list intermédiaire — c'est tout l'intérêt."
+reference_book: "Fluent Python ch 17 — Generator functions"
+pymistral_link: null
+tags:
+  - generator
+  - yield

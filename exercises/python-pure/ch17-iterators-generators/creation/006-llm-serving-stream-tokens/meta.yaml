@@ -1,0 +1,22 @@
+id: ch17-006-llm-serving-stream-tokens
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - generator-function
+  - pymistral-token
+theme: llm-serving
+title: "Streamer les tokens d'une réponse"
+short_description: "Le cas canonique : un générateur qui simule un LLM en streaming."
+hints:
+  - "Boucle sur les caractères de `text` ; pour chaque caractère, ajoute-le au vocab."
+  - "`vocab.add(ch)` est idempotent : il retourne l'id existant si déjà présent."
+  - "yield un `Token(id=..., text=ch)` (Token est *frozen* — pas de mutation après)."
+reference_book: "Fluent Python ch 17 — Generator function, streaming pattern"
+pymistral_link: pymistral.tokens
+tags:
+  - generator
+  - llm-serving
+  - pymistral

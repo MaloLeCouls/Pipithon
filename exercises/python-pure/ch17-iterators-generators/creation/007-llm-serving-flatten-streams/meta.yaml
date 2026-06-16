@@ -1,0 +1,23 @@
+id: ch17-007-llm-serving-flatten-streams
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - yield-from
+  - generator-delegation
+  - pymistral-token
+theme: llm-serving
+title: "Aplatir N streams de tokens en un seul"
+short_description: "yield from : déléguer à des sous-générateurs sans recopier."
+hints:
+  - "`yield from sub_gen` rebalance chaque token du sous-générateur vers l'appelant."
+  - "Itère **une seule fois** sur `streams` — un générateur épuisé est silencieusement vide."
+  - "C'est strictement plus expressif qu'une double boucle (gère aussi send/throw)."
+reference_book: "Fluent Python ch 17 — yield from delegation"
+pymistral_link: pymistral.tokens
+tags:
+  - yield-from
+  - delegation
+  - llm-serving

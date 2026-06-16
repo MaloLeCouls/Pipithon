@@ -1,0 +1,22 @@
+id: ch17-004-restaurant-menu-iterator
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - iter-protocol
+  - dunder-iter
+  - dunder-next
+theme: restaurant
+title: "Iterator manuel sur un menu"
+short_description: "Écrire __iter__/__next__ à la main — le protocole sans yield."
+hints:
+  - "`Menu.__iter__` doit retourner un *nouvel* iterator (Menu réutilisable)."
+  - "`MenuIterator.__iter__` retourne `self` (un iterator est son propre iterable)."
+  - "`MenuIterator.__next__` avance un index ; lève `StopIteration` quand fini."
+reference_book: "Fluent Python ch 17 — Iterator protocol, classic iterator"
+pymistral_link: null
+tags:
+  - iter-protocol
+  - dunder

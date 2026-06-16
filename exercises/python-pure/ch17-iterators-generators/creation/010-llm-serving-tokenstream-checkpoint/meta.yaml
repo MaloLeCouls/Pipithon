@@ -1,0 +1,25 @@
+id: ch17-010-llm-serving-tokenstream-checkpoint
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 5
+estimated_minutes: 28
+concepts:
+  - iter-protocol
+  - generator-function
+  - generator-expression
+  - pymistral-token
+theme: llm-serving
+title: "Checkpoint ch.17 — TokenStream en 3 formes"
+short_description: "Reproduire l'exemple canonique Sentence appliqué aux tokens d'inférence."
+hints:
+  - "Forme 1 : iterator manuel — __init__ stocke text+index, __iter__ retourne self, __next__ avance."
+  - "Forme 2 : generator function — un `for i, ch in enumerate(text): yield Token(...)`."
+  - "Forme 3 : generator expression — un `return (Token(...) for i, ch in enumerate(text))`."
+reference_book: "Fluent Python ch 17 — Sentence (3 forms), checkpoint"
+pymistral_link: pymistral.tokens
+tags:
+  - checkpoint
+  - iter-protocol
+  - yield
+  - generator-expression

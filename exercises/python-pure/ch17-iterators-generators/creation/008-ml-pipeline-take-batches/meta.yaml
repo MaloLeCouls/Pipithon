@@ -1,0 +1,24 @@
+id: ch17-008-ml-pipeline-take-batches
+chapter: 17
+chapter_slug: iterators-generators
+type: creation
+difficulty: 3
+estimated_minutes: 13
+concepts:
+  - itertools-islice
+  - itertools-takewhile
+  - lazy-pipeline
+theme: ml-pipeline
+title: "DataLoader paresseux avec budget"
+short_description: "Chaîner takewhile et islice : un pipeline en deux opérations."
+hints:
+  - "`takewhile(pred, it)` arrête dès que `pred` devient faux (et n'avance plus)."
+  - "`islice(it, n)` cape à `n` éléments — comme `[:n]` sur un iterator."
+  - "L'ordre compte : `islice(takewhile(...), n)` ≠ `takewhile(..., islice(...))`."
+reference_book: "Fluent Python ch 17 — itertools recipes (islice, takewhile)"
+pymistral_link: null
+tags:
+  - itertools
+  - islice
+  - takewhile
+  - pipeline
