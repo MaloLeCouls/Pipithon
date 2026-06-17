@@ -1,0 +1,23 @@
+id: ch13-102-ml-pipeline-notimpl-to-abstractmethod
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: modification
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - abc
+  - abstractmethod
+  - enforce-contract
+theme: ml-pipeline
+title: "`NotImplementedError` au runtime → ABC + `@abstractmethod`"
+short_description: "Le contrat doit échouer à l'INSTANCIATION, pas au premier appel."
+hints:
+  - "Hérite de `abc.ABC`."
+  - "Décore les méthodes vides avec `@abc.abstractmethod`."
+  - "Instancier une sous-classe incomplète doit lever `TypeError`."
+reference_book: "Fluent Python ch 13 — ABC raises at instantiation, not at call"
+pymistral_link: null
+tags:
+  - refactor
+  - abc
+  - abstractmethod

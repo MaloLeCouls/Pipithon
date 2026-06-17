@@ -1,0 +1,23 @@
+id: ch13-103-monitoring-hasattr-to-runtime-checkable
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: modification
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - typing-protocol
+  - runtime-checkable
+  - isinstance
+theme: monitoring
+title: "`hasattr` manuel → `@runtime_checkable` + `isinstance`"
+short_description: "Décris l'interface via un Protocol et `isinstance`, pas via une suite de `hasattr`."
+hints:
+  - "Déclare un Protocol `Pingable` avec `def ping(self) -> bool: ...`."
+  - "Décore-le `@runtime_checkable`."
+  - "Remplace `hasattr(...)` par `isinstance(obj, Pingable)`."
+reference_book: "Fluent Python ch 13 — Protocol vs ad-hoc hasattr"
+pymistral_link: null
+tags:
+  - refactor
+  - protocol
+  - runtime-checkable

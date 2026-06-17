@@ -1,0 +1,23 @@
+id: ch13-201-ml-pipeline-incomplete-abc
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - abc
+  - abstractmethod
+  - typeerror
+theme: ml-pipeline
+title: "Sous-classe ABC qui oublie un `@abstractmethod`"
+short_description: "Tu hérites bien, mais l'instanciation pète : TypeError, méthode abstraite manquante."
+hints:
+  - "Une ABC interdit l'instanciation si une `@abstractmethod` n'est pas overridée."
+  - "Lis le message d'erreur : Python te donne le nom exact de la méthode manquante."
+  - "Ajoute la méthode manquante avec une implé minimale cohérente."
+reference_book: "Fluent Python ch 13 — ABC enforces at instantiation"
+pymistral_link: null
+tags:
+  - bug
+  - abc
+  - abstractmethod

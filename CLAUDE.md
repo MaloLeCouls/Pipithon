@@ -96,11 +96,30 @@
   `asyncio.new_event_loop()` + `run_until_complete(coro)` qui contourne le
   refus d'`asyncio.run` quand un loop tourne (CPython OK ; Pyodide à
   smoke-tester côté navigateur — voir `webapp-pyodide-asyncio`).
-- Track active : `python-pure` (**212 exos validés** ; ch1 18, ch2 14,
-  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch17 18, ch18 18,
-  ch21 18 ; ch10-16, ch19-20, ch22-24 scaffold). **Couverture du contrat : ~50 %.**
-- Prochaine action (atelier A reliquat) : C5 ch13 Protocol/ABC plein,
-  M5 mode « refaire de mémoire » côté webapp.
+- **C5 — ch13 Protocol/ABC complet : fait (2026-06-17).** 18 exos
+  (10 creation + 5 mod + 3 debug). Creation drille `typing.Protocol`
+  structurel, Protocol avec attribut, `@runtime_checkable` (+ piège
+  « signature ignorée »), `abc.ABC` + `@abstractmethod`,
+  `collections.abc.Sized + Iterable` (héritage multiple), template
+  method via ABC concrète (`Pipeline`), `ABC.register` virtual subclass,
+  implémentation du Protocol `pymistral.Sampler` via classe call-able
+  (`CountingSampler`), `__subclasshook__` pour détection structurelle
+  (`TokenizerABC`), et le checkpoint niveau 5 `TokenBuffer` qui reproduit
+  la `Tombola` de Fluent Python (ABC + `loaded`/`inspect` concrets via
+  abstraits + `RandomBuffer`/`FIFOBuffer` héritages + `ListBuffer` registered
+  comme virtual). Modification : `isinstance(dict)` → `Mapping`,
+  `NotImplementedError` → `@abstractmethod`, `hasattr` manuel →
+  `@runtime_checkable`, `Any` → Protocol typé, ABC sans impl partagée →
+  Protocol. Debugging : sous-classe ABC qui oublie un `@abstractmethod`
+  (TypeError à l'instanciation), `isinstance(str, Sequence)` True (piège
+  classique — exclure str/bytes), `@runtime_checkable` qui accepte une
+  signature pourrie puis crash à l'appel (mypy seul attrape ça au build).
+- Track active : `python-pure` (**230 exos validés** ; ch1 18, ch2 14,
+  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch13 18,
+  ch17 18, ch18 18, ch21 18 ; ch10-12, ch14-16, ch19-20, ch22-24 scaffold).
+  **Couverture du contrat : ~54 %.**
+- Prochaine action (atelier A reliquat) : M5 mode « refaire de mémoire »
+  côté webapp.
   Ensuite ateliers B (type `review` + tracks code-reading/oss-onboarding /
   testing-discipline / métrique PR scopée) puis C (modes chrono +
   closed-book) puis D (concours bot-programming, parallèle).

@@ -1,0 +1,23 @@
+id: ch13-101-delivery-isinstance-dict-to-mapping
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: modification
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - collections-abc
+  - mapping
+  - isinstance
+theme: delivery
+title: "`isinstance(x, dict)` → `isinstance(x, Mapping)`"
+short_description: "La check rejette `MappingProxyType`/`OrderedDict` à tort. Élargis le contrat."
+hints:
+  - "Importe `Mapping` depuis `collections.abc`."
+  - "Remplace `isinstance(x, dict)` par `isinstance(x, Mapping)`."
+  - "Le test vérifie que `MappingProxyType({...})` est accepté."
+reference_book: "Fluent Python ch 13 — Use ABCs over concrete types"
+pymistral_link: null
+tags:
+  - refactor
+  - mapping
+  - collections-abc

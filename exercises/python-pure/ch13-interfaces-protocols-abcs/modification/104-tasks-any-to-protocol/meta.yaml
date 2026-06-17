@@ -1,0 +1,24 @@
+id: ch13-104-tasks-any-to-protocol
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - typing-protocol
+  - type-hint
+  - structural-typing
+theme: tasks
+title: "`Any` → Protocol typé"
+short_description: "Une fn qui « accepte ce qui a un `complete()` » mérite une annotation précise."
+hints:
+  - "Déclare `Completable(Protocol)` avec `def complete(self) -> str: ...`."
+  - "Remplace l'annotation `Any` du paramètre par `Completable`."
+  - "Pas besoin de `@runtime_checkable` ici — c'est du typing statique."
+reference_book: "Fluent Python ch 13 — Replace Any with a Protocol"
+pymistral_link: null
+tags:
+  - refactor
+  - protocol
+  - type-hint
+tests_form_kind: mypy

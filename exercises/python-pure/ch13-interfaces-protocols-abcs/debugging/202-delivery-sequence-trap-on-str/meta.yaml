@@ -1,0 +1,25 @@
+id: ch13-202-delivery-sequence-trap-on-str
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - collections-abc
+  - sequence
+  - str
+  - isinstance
+theme: delivery
+title: "`isinstance(x, Sequence)` est True pour `str` — piège"
+short_description: "Le helper accepte une str entière comme « liste d'adresses »."
+hints:
+  - "`str` satisfait `collections.abc.Sequence` — c'est le piège classique."
+  - "Ajoute une exclusion explicite : `not isinstance(x, (str, bytes))`."
+  - "Ou : exige un `list`/`tuple` concret si l'API parle vraiment de containers."
+reference_book: "Fluent Python ch 13 — `str` is a Sequence (pitfall)"
+pymistral_link: null
+tags:
+  - bug
+  - sequence
+  - str
+  - collections-abc

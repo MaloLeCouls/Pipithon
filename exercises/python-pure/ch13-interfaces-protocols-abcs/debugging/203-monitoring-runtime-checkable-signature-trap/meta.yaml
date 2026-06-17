@@ -1,0 +1,23 @@
+id: ch13-203-monitoring-runtime-checkable-signature-trap
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - runtime-checkable
+  - typing-protocol
+  - signature-mismatch
+theme: monitoring
+title: "`@runtime_checkable` accepte la signature pourrie : crash plus loin"
+short_description: "isinstance dit True, l'appel explose. Pourquoi ? Et comment fixer ?"
+hints:
+  - "`@runtime_checkable` ne vérifie que la PRÉSENCE de la méthode, pas sa signature."
+  - "Compare la signature de `Probe.read` à celle de `BadProbe.read`."
+  - "Aligne `BadProbe.read` sur le contrat (`(self) -> float`)."
+reference_book: "Fluent Python ch 13 — `runtime_checkable` signature pitfall"
+pymistral_link: null
+tags:
+  - bug
+  - runtime-checkable
+  - signature
