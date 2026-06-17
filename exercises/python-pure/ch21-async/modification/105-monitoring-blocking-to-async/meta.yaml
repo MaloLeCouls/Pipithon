@@ -1,0 +1,23 @@
+id: ch21-105-monitoring-blocking-to-async
+chapter: 21
+chapter_slug: async
+type: modification
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - asyncio-sleep
+  - non-blocking
+  - event-loop
+theme: monitoring
+title: "Coroutine bloquante (`time.sleep`) → vraie async"
+short_description: "Un `time.sleep` dans une coroutine fige toute la boucle. Élimine-le."
+hints:
+  - "`time.sleep` est synchrone : il bloque LA boucle, pas seulement la coroutine."
+  - "Pour céder le contrôle, c'est `await asyncio.sleep(...)`."
+  - "Le test interdit l'import/usage de `time.sleep` dans le module."
+reference_book: "Fluent Python ch 21 — Don't block the event loop"
+pymistral_link: null
+tags:
+  - refactor
+  - blocking
+  - asyncio-sleep

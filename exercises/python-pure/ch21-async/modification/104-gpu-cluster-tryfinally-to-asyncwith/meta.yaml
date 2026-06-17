@@ -1,0 +1,24 @@
+id: ch21-104-gpu-cluster-tryfinally-to-asyncwith
+chapter: 21
+chapter_slug: async
+type: modification
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - async-with
+  - async-context-manager
+  - aenter
+  - aexit
+theme: gpu-cluster
+title: "`try/finally` async → `async with`"
+short_description: "Symétrise l'acquire/release derrière un async context manager."
+hints:
+  - "Crée une classe `GPULease` avec `async __aenter__` et `async __aexit__`."
+  - "L'acquire devient le corps d'`__aenter__`, le release devient le corps d'`__aexit__`."
+  - "L'appelant utilise `async with GPULease(...) as lease:` — plus de try/finally."
+reference_book: "Fluent Python ch 21 — try/finally async → async with"
+pymistral_link: null
+tags:
+  - refactor
+  - async-with
+  - cleanup

@@ -1,0 +1,23 @@
+id: ch21-203-gpu-cluster-tasks-not-gathered
+chapter: 21
+chapter_slug: async
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - asyncio-create-task
+  - asyncio-gather
+  - task-lifetime
+theme: gpu-cluster
+title: "`create_task` sans `gather` : on rend la main avant l'exécution"
+short_description: "La fonction renvoie une liste vide alors qu'on a bien scheduled N tasks."
+hints:
+  - "`create_task` schedule la coroutine mais ne l'exécute pas tout de suite."
+  - "Si on `return` sans céder le contrôle, les tasks n'ont jamais eu leur tour."
+  - "Ajoute un `await asyncio.gather(*tasks)` avant le `return`."
+reference_book: "Fluent Python ch 21 — Task lifetime & gather"
+pymistral_link: null
+tags:
+  - bug
+  - create-task
+  - gather

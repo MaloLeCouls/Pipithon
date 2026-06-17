@@ -1,0 +1,23 @@
+id: ch21-102-ml-pipeline-aiter-class-to-asyncgen
+chapter: 21
+chapter_slug: async
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - async-generator
+  - async-for
+  - yield
+theme: ml-pipeline
+title: "Classe `__aiter__/__anext__` → async generator"
+short_description: "Le protocole à la main est verbeux : remplace par `async def + yield`."
+hints:
+  - "Définis une fonction `async def stream_batches(batches): ...` avec un `yield`."
+  - "Supprime la classe : un async generator function suffit, le compilateur fait le reste."
+  - "Le test exige une fn (pas une classe) et la présence de `yield`."
+reference_book: "Fluent Python ch 21 — Async generator vs manual async iterator"
+pymistral_link: null
+tags:
+  - refactor
+  - async-generator
+  - yield

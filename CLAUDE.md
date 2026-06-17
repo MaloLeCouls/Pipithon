@@ -77,12 +77,30 @@
   `suppress`, nesting récursif → `ExitStack`. Debugging : `__exit__`
   retourne True (avale tout), for/else mal lu (« se déclenche si liste
   vide » → faux), `@contextmanager` sans try/finally (cleanup volatile).
-- Track active : `python-pure` (**194 exos validés** ; ch1 18, ch2 14,
-  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch17 18, ch18 18 ;
-  ch10-16, ch19-24 scaffold). **Couverture du contrat : ~46 %.**
-- Prochaine action (atelier A reliquat) : C4 ch21 asyncio (Scheduler async,
-  vérifier `asyncio.run` Pyodide), C5 ch13 Protocol/ABC plein, M5 mode
-  « refaire de mémoire » côté webapp.
+- **C4 — ch21 asyncio complet : fait (2026-06-17).** 18 exos
+  (10 creation + 5 mod + 3 debug). Creation drille `async def`/`await`,
+  `asyncio.gather`, `as_completed`, `Semaphore` (rate-limit inférence),
+  async generator (`async def` + `yield`), `async with` (`__aenter__`/
+  `__aexit__` autour d'une `InferenceSession`), async iterator manuel
+  (`__aiter__`/`__anext__` + `StopAsyncIteration`), `create_task` +
+  garde-ref via set + `add_done_callback`, `gather(return_exceptions=True)`,
+  et le checkpoint niveau 5 `LLMScheduler` qui combine `Semaphore` + gather
+  + `as_completed` + async-CM (équivalent llm-serving de `flags_asyncio2.py`).
+  Modification : awaits série → gather, classe `__aiter__/__anext__` →
+  async gen, gather → `return_exceptions=True`, try/finally → `async with`,
+  `time.sleep` bloquant → `asyncio.sleep`. Debugging : `await` oublié
+  (coroutine renvoyée au lieu de la valeur), `asyncio.run` dans une
+  coroutine (boucle déjà active — piège Pyodide en bonus), `create_task`
+  sans gather (la fn rend la main avant l'exécution → résultats vides).
+  Pattern de test asyncio adopté : helper `_run(coro)` =
+  `asyncio.new_event_loop()` + `run_until_complete(coro)` qui contourne le
+  refus d'`asyncio.run` quand un loop tourne (CPython OK ; Pyodide à
+  smoke-tester côté navigateur — voir `webapp-pyodide-asyncio`).
+- Track active : `python-pure` (**212 exos validés** ; ch1 18, ch2 14,
+  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch17 18, ch18 18,
+  ch21 18 ; ch10-16, ch19-20, ch22-24 scaffold). **Couverture du contrat : ~50 %.**
+- Prochaine action (atelier A reliquat) : C5 ch13 Protocol/ABC plein,
+  M5 mode « refaire de mémoire » côté webapp.
   Ensuite ateliers B (type `review` + tracks code-reading/oss-onboarding /
   testing-discipline / métrique PR scopée) puis C (modes chrono +
   closed-book) puis D (concours bot-programming, parallèle).

@@ -1,0 +1,23 @@
+id: ch21-202-llm-serving-asyncio-run-in-loop
+chapter: 21
+chapter_slug: async
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - asyncio-run
+  - event-loop
+  - nested-loops
+theme: llm-serving
+title: "`asyncio.run` appelé alors qu'une boucle tourne déjà"
+short_description: "RuntimeError « asyncio.run() cannot be called from a running event loop »."
+hints:
+  - "`asyncio.run` crée un loop et le démarre — interdit si un loop tourne déjà."
+  - "À l'intérieur d'une coroutine, tu DOIS utiliser `await`, pas `asyncio.run`."
+  - "Remplace l'appel par `await ...` direct ; l'appelant a déjà son loop."
+reference_book: "Fluent Python ch 21 — Don't nest asyncio.run"
+pymistral_link: null
+tags:
+  - bug
+  - asyncio-run
+  - event-loop

@@ -1,0 +1,23 @@
+id: ch21-103-llm-serving-gather-add-return-exceptions
+chapter: 21
+chapter_slug: async
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - asyncio-gather
+  - return-exceptions
+  - error-handling
+theme: llm-serving
+title: "`gather` fragile → `gather(return_exceptions=True)`"
+short_description: "Une seule requête plante et tout le batch saute. Robustifie sans changer l'API."
+hints:
+  - "Ajoute `return_exceptions=True` à l'appel `gather`."
+  - "Pour chaque item du résultat : si c'est une exception, remplace par `None`."
+  - "Le test vérifie qu'aucune exception ne fuit hors de `batch`."
+reference_book: "Fluent Python ch 21 — Robustifier `gather`"
+pymistral_link: null
+tags:
+  - refactor
+  - gather
+  - robust

@@ -1,0 +1,22 @@
+id: ch21-201-delivery-missing-await
+chapter: 21
+chapter_slug: async
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - await
+  - coroutine-never-awaited
+theme: delivery
+title: "`await` oublié : la coroutine ne s'exécute jamais"
+short_description: "Le code « marche » sans erreur mais la moitié des résultats sont None."
+hints:
+  - "Sans `await`, `coro()` renvoie une coroutine — pas la valeur résolue."
+  - "Cherche une ligne qui appelle une fn `async def` SANS `await`."
+  - "Le runtime émet un RuntimeWarning « coroutine ... was never awaited »."
+reference_book: "Fluent Python ch 21 — Forgetting await"
+pymistral_link: null
+tags:
+  - bug
+  - await
+  - coroutine

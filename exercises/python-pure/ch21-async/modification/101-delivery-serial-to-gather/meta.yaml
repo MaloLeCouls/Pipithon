@@ -1,0 +1,22 @@
+id: ch21-101-delivery-serial-to-gather
+chapter: 21
+chapter_slug: async
+type: modification
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - asyncio-gather
+  - parallel
+theme: delivery
+title: "Awaits en série → `gather`"
+short_description: "Trois `await` séquentiels alors qu'on pourrait les paralléliser."
+hints:
+  - "Trois `await` dans une boucle = latence totale ≈ somme. C'est nul si les calls sont indépendants."
+  - "Remplace la boucle par `await asyncio.gather(*[ship(p) for p in packages])`."
+  - "Le test vérifie qu'aucun `await` n'apparaît dans une boucle for/while."
+reference_book: "Fluent Python ch 21 — Sequential vs concurrent awaits"
+pymistral_link: null
+tags:
+  - refactor
+  - gather
+  - parallel
