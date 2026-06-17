@@ -1,0 +1,23 @@
+id: ch11-101-furniture-mutable-class-attr
+chapter: 11
+chapter_slug: pythonic-object
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - class-attribute
+  - mutable-default
+  - instance-attribute
+theme: furniture
+title: "Mutable class attribute → instance attribute"
+short_description: "`tags = []` au niveau classe = piège classique partagé entre instances."
+hints:
+  - "Une liste mutable au niveau classe est PARTAGÉE entre toutes les instances."
+  - "Solution : initialise dans `__init__` : `self.tags = []` (ou `list(tags) if tags is not None else []`)."
+  - "Le test vérifie que deux Chair indépendants ont des `tags` distincts."
+reference_book: "Fluent Python ch 11 — Mutable class attribute pitfall"
+pymistral_link: null
+tags:
+  - refactor
+  - mutable-default
+  - class-attribute

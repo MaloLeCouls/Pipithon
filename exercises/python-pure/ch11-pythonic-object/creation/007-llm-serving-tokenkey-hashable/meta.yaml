@@ -1,0 +1,25 @@
+id: ch11-007-llm-serving-tokenkey-hashable
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - hash
+  - eq
+  - slots
+  - immutability
+theme: llm-serving
+title: "`TokenKey` hashable + slotted (clé KVCache)"
+short_description: "Une clé de cache stable, immuable, économe — pattern vLLM."
+hints:
+  - "`__slots__ = ('_prefix', '_seq_id')` : pas de __dict__, mémoire prévisible."
+  - "`__hash__` = `hash((self._prefix, self._seq_id))` — basé sur les valeurs."
+  - "Lever `AttributeError` si on tente de re-assigner `_prefix`/`_seq_id` après init (via __setattr__)."
+reference_book: "Fluent Python ch 11 — Immutable + hashable Vector2d"
+pymistral_link: null
+tags:
+  - hashable
+  - slots
+  - immutable
+  - llm-serving

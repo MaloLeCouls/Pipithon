@@ -1,0 +1,23 @@
+id: ch11-201-library-hash-drift
+chapter: 11
+chapter_slug: pythonic-object
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - hash
+  - mutability
+  - hashable
+theme: library
+title: "Hash drift : mute un objet hashable stocké dans un set"
+short_description: "Le livre est dans le set, on le mute, et il « disparaît »."
+hints:
+  - "`hash(book)` change quand on mute `title` (car hash dépend de title)."
+  - "Du coup le set ne sait plus retrouver le book — c'est dans le mauvais bucket."
+  - "Fix : rendre les attributs read-only (via @property) pour interdire la mutation."
+reference_book: "Fluent Python ch 11 — Hashable means immutable"
+pymistral_link: null
+tags:
+  - bug
+  - hash
+  - mutability

@@ -1,0 +1,22 @@
+id: ch11-004-tasks-format-mini-language
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - format
+  - format-spec
+theme: tasks
+title: "`__format__` : mini-langage de format custom"
+short_description: "Une `Task` qui répond à `format(t, 'short')` et `format(t, 'full')`."
+hints:
+  - "`__format__(self, spec: str) -> str` reçoit ce qu'il y a après `:` dans le f-string."
+  - "Si `spec == \"short\"` → renvoie juste le titre. Si `\"full\"` → titre + statut."
+  - "Pour un spec vide, fais comme `__str__` (ou délègue à lui)."
+reference_book: "Fluent Python ch 11 — Vector2d `__format__`"
+pymistral_link: null
+tags:
+  - dunder
+  - format
+  - mini-language

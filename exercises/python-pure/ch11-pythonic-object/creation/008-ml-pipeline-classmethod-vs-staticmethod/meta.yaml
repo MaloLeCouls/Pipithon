@@ -1,0 +1,23 @@
+id: ch11-008-ml-pipeline-classmethod-vs-staticmethod
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - classmethod
+  - staticmethod
+  - design-choice
+theme: ml-pipeline
+title: "`classmethod` vs `staticmethod` : choisir le bon"
+short_description: "Un constructeur alternatif (cls) et une fn utilitaire (sans state)."
+hints:
+  - "`@classmethod` quand tu as besoin de `cls` (construction polymorphique, accès au class)."
+  - "`@staticmethod` quand la fn est juste rangée dans la classe par cohérence, sans `cls` ni `self`."
+  - "Si tu n'utilises pas `cls`, c'est une `staticmethod`."
+reference_book: "Fluent Python ch 11 — classmethod vs staticmethod"
+pymistral_link: null
+tags:
+  - classmethod
+  - staticmethod
+  - design

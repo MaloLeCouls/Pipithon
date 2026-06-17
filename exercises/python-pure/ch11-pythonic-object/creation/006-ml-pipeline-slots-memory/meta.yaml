@@ -1,0 +1,23 @@
+id: ch11-006-ml-pipeline-slots-memory
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - slots
+  - memory
+  - attribute-restriction
+theme: ml-pipeline
+title: "`__slots__` : économie mémoire + attributs verrouillés"
+short_description: "Une `Sample` lourde × 1M : économise le `__dict__` par instance."
+hints:
+  - "`__slots__ = ('label', 'features')` : déclare les seuls attributs autorisés."
+  - "Tout autre `self.x = ...` lève `AttributeError`."
+  - "Pas de `__dict__` → mémoire / instance ↓↓. Critique pour les KVCache d'inférence."
+reference_book: "Fluent Python ch 11 — `__slots__` and memory savings"
+pymistral_link: null
+tags:
+  - slots
+  - memory
+  - restriction

@@ -1,0 +1,30 @@
+id: ch11-010-llm-serving-embedding2d-checkpoint
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 5
+estimated_minutes: 35
+concepts:
+  - repr
+  - eq
+  - hash
+  - abs
+  - bool
+  - format
+  - slots
+  - classmethod
+  - immutability
+theme: llm-serving
+title: "Checkpoint ch.11 — Embedding2d complet (Vector2d transposé)"
+short_description: "Tous les dunders d'un value object hashable + slotted."
+hints:
+  - "Stocke `__x`/`__y` (read-only via @property) + `__slots__`."
+  - "`__abs__` = norme euclidienne ; `__bool__` = bool(abs(self))."
+  - "`__format__('')` = `'(x, y)'` ; `__format__('p')` = `'<r, theta>'` (polaire)."
+reference_book: "Fluent Python ch 11 — Vector2d v3 (final)"
+pymistral_link: null
+tags:
+  - checkpoint
+  - dunder
+  - hashable
+  - slots

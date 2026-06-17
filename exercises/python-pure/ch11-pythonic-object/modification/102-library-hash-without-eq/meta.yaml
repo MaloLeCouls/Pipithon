@@ -1,0 +1,23 @@
+id: ch11-102-library-hash-without-eq
+chapter: 11
+chapter_slug: pythonic-object
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - hash
+  - eq
+  - coherence
+theme: library
+title: "`__hash__` défini SANS `__eq__` cohérent → ajoute `__eq__`"
+short_description: "L'invariant hash+eq est violé : deux Books « égaux » n'ont pas le même hash."
+hints:
+  - "La règle : `a == b` => `hash(a) == hash(b)`."
+  - "Ici `__hash__` repose sur isbn/title, mais `__eq__` n'est pas défini → hérite d'`object.__eq__` (identité)."
+  - "Ajoute `__eq__` qui matche le hash (par valeur)."
+reference_book: "Fluent Python ch 11 — hash/eq coherence"
+pymistral_link: null
+tags:
+  - refactor
+  - hash
+  - eq

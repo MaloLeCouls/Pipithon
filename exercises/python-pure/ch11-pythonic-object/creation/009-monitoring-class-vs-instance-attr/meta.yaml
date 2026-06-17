@@ -1,0 +1,23 @@
+id: ch11-009-monitoring-class-vs-instance-attr
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 4
+estimated_minutes: 14
+concepts:
+  - class-attribute
+  - instance-attribute
+  - name-mangling
+theme: monitoring
+title: "Class attribute vs instance attribute + name mangling"
+short_description: "Une valeur de classe override-able par instance, et un compteur privé via __."
+hints:
+  - "`UNIT = \"ms\"` au niveau classe = défaut partagé."
+  - "Override par instance : `metric.UNIT = \"ns\"` ne touche QUE l'instance."
+  - "`__count` (double underscore) déclenche le name mangling -> `_Metric__count`."
+reference_book: "Fluent Python ch 11 — class attrs, override, name mangling"
+pymistral_link: null
+tags:
+  - class-attribute
+  - instance-attribute
+  - name-mangling

@@ -1,0 +1,23 @@
+id: ch11-105-llm-serving-classmethod-misused
+chapter: 11
+chapter_slug: pythonic-object
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - classmethod
+  - staticmethod
+  - design-choice
+theme: llm-serving
+title: "`@classmethod` qui n'utilise pas `cls` → `@staticmethod`"
+short_description: "Si tu n'as pas besoin de `cls`, c'est une staticmethod."
+hints:
+  - "Lis le corps : aucun usage de `cls`."
+  - "Remplace `@classmethod` par `@staticmethod` et supprime le param `cls`."
+  - "Le test vérifie le type via `inspect.isfunction` (staticmethod) vs `ismethod` (classmethod)."
+reference_book: "Fluent Python ch 11 — Use staticmethod when cls is not used"
+pymistral_link: null
+tags:
+  - refactor
+  - classmethod
+  - staticmethod

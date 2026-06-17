@@ -1,0 +1,25 @@
+id: ch11-003-library-hash-eq-coherent
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - hash
+  - eq
+  - hashable
+  - immutability
+theme: library
+title: "`__hash__` + `__eq__` cohérents → objet hashable"
+short_description: "Un `Book` utilisable comme clé de set/dict."
+hints:
+  - "Si `a == b`, alors `hash(a) == hash(b)` — règle d'or."
+  - "Hash via `hash((self.isbn, self.title))` — un tuple des champs."
+  - "Pour rester sain : attributs read-only via `@property` (l'exo le fait)."
+reference_book: "Fluent Python ch 11 — Hashable Vector2d"
+pymistral_link: null
+tags:
+  - dunder
+  - hash
+  - eq
+  - hashable

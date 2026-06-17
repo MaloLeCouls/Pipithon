@@ -1,0 +1,22 @@
+id: ch11-104-tasks-add-repr-str
+chapter: 11
+chapter_slug: pythonic-object
+type: modification
+difficulty: 1
+estimated_minutes: 6
+concepts:
+  - repr
+  - str
+theme: tasks
+title: "Ajoute `__repr__` (debug) + `__str__` (présentation)"
+short_description: "Aujourd'hui `print(task)` affiche `<Task object at 0x...>`. Fais mieux."
+hints:
+  - "`__repr__` : reconstructeur (eval-friendly) avec `!r` sur les str."
+  - "`__str__` : version utilisateur, lisible."
+  - "Si `__str__` n'est pas défini, `print(obj)` retombe sur `__repr__`."
+reference_book: "Fluent Python ch 11 — `__repr__` vs `__str__`"
+pymistral_link: null
+tags:
+  - refactor
+  - repr
+  - str

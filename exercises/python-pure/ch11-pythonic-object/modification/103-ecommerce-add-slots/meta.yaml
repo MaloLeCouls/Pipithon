@@ -1,0 +1,22 @@
+id: ch11-103-ecommerce-add-slots
+chapter: 11
+chapter_slug: pythonic-object
+type: modification
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - slots
+  - memory
+theme: ecommerce
+title: "Ajoute `__slots__` à un value object"
+short_description: "Une `LineItem` × millions : supprime le `__dict__` par instance."
+hints:
+  - "Ajoute `__slots__ = (\"sku\", \"quantity\", \"unit_price\")`."
+  - "Plus de `__dict__` ; plus d'attributs hors slots possibles."
+  - "Le test vérifie l'absence de `__dict__` et la levée AttributeError sur attr inconnu."
+reference_book: "Fluent Python ch 11 — Adding `__slots__`"
+pymistral_link: null
+tags:
+  - refactor
+  - slots
+  - memory

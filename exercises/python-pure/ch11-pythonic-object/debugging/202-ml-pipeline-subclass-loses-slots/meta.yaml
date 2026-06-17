@@ -1,0 +1,23 @@
+id: ch11-202-ml-pipeline-subclass-loses-slots
+chapter: 11
+chapter_slug: pythonic-object
+type: debugging
+difficulty: 4
+estimated_minutes: 12
+concepts:
+  - slots
+  - inheritance
+theme: ml-pipeline
+title: "Sous-classe sans `__slots__` : le `__dict__` revient"
+search_description: ""
+short_description: "Le parent économise la mémoire, le child la regaspille."
+hints:
+  - "`__slots__` doit être déclaré sur CHAQUE classe de la chaîne, sinon Python ajoute `__dict__`."
+  - "Ajoute `__slots__ = ()` sur la sous-classe si elle n'a pas d'attribut supplémentaire."
+  - "Sinon liste les nouveaux attributs : `__slots__ = (\"split\",)`."
+reference_book: "Fluent Python ch 11 — `__slots__` and inheritance"
+pymistral_link: null
+tags:
+  - bug
+  - slots
+  - inheritance

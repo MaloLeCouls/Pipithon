@@ -1,0 +1,22 @@
+id: ch11-005-library-classmethod-from-string
+chapter: 11
+chapter_slug: pythonic-object
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - classmethod
+  - alternative-constructor
+theme: library
+title: "`@classmethod` : constructeur alternatif"
+short_description: "Un `Book.from_csv_line` qui parse une ligne CSV en Book."
+hints:
+  - "`@classmethod` reçoit `cls` (la classe) — important pour la souche en sous-classe."
+  - "Parse via `line.split(',')`, retourne `cls(isbn, title)`."
+  - "Pas de `__init__` à toucher — c'est juste un wrapper de construction."
+reference_book: "Fluent Python ch 11 — `classmethod` for alternative constructors"
+pymistral_link: null
+tags:
+  - classmethod
+  - constructor
+  - basics
