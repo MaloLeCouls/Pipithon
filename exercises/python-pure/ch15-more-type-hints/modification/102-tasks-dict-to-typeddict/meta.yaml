@@ -1,0 +1,23 @@
+id: ch15-102-tasks-dict-to-typeddict
+chapter: 15
+chapter_slug: more-type-hints
+type: modification
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - typeddict
+  - dict-any
+  - records
+theme: tasks
+title: "`dict[str, Any]` → `TypedDict`"
+short_description: "Le record JSON-like doit avoir une forme typée."
+hints:
+  - "Déclare `TaskRecord(TypedDict)` avec les clés et leurs types."
+  - "Annote `process(task: TaskRecord)` à la place de `dict[str, Any]`."
+  - "À runtime, rien ne change — c'est pure annotation."
+reference_book: "Fluent Python ch 15 — From dict[str, Any] to TypedDict"
+pymistral_link: null
+tags:
+  - refactor
+  - typeddict
+  - typing

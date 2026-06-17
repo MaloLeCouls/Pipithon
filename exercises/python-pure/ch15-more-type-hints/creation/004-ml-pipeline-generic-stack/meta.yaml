@@ -1,0 +1,23 @@
+id: ch15-004-ml-pipeline-generic-stack
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - generic
+  - typevar
+  - container
+theme: ml-pipeline
+title: "`Generic[T]` + `TypeVar` : un Stack paramétré"
+short_description: "Stack typé d'éléments quelconques tout en préservant T."
+hints:
+  - "`T = TypeVar(\"T\")` + `class Stack(Generic[T])`."
+  - "Méthodes : `push(x: T) -> None`, `pop() -> T`, `peek() -> T`."
+  - "Un `Stack[int]()` doit ne pas accepter `push(\"hello\")` côté mypy."
+reference_book: "Fluent Python ch 15 — User-defined generic class"
+pymistral_link: null
+tags:
+  - generic
+  - typevar
+  - typing

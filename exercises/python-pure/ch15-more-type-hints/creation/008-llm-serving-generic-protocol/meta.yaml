@@ -1,0 +1,23 @@
+id: ch15-008-llm-serving-generic-protocol
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 4
+estimated_minutes: 16
+concepts:
+  - generic-protocol
+  - protocol
+  - typevar
+theme: llm-serving
+title: "Generic `Protocol[K, V]` : interface paramétrée"
+short_description: "Un `Cache[K, V]` Protocol que dict, OrderedDict, etc. satisfont."
+hints:
+  - "`class Cache(Protocol[K, V])` paramétré par deux TypeVars."
+  - "Méthodes : `get(self, key: K) -> V | None` et `set(self, key: K, value: V) -> None`."
+  - "`dict` ne satisfait pas car il n'a pas `set` — montre-le avec un wrapper."
+reference_book: "Fluent Python ch 15 — Generic Protocol"
+pymistral_link: null
+tags:
+  - protocol
+  - generic
+  - typevar

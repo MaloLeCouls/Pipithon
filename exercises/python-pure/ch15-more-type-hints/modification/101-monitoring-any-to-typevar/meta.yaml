@@ -1,0 +1,23 @@
+id: ch15-101-monitoring-any-to-typevar
+chapter: 15
+chapter_slug: more-type-hints
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - typevar
+  - any
+  - type-preservation
+theme: monitoring
+title: "`Any` → `TypeVar` pour préserver le type"
+short_description: "`first(items)` rend `Any`, on perd toute info de type."
+hints:
+  - "Déclare `T = TypeVar(\"T\")`."
+  - "Change la signature en `first(items: list[T]) -> T`."
+  - "mypy : `first([1, 2])` est typé `int`, plus `Any`."
+reference_book: "Fluent Python ch 15 — Replace Any with TypeVar"
+pymistral_link: null
+tags:
+  - refactor
+  - typevar
+  - typing

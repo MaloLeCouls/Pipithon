@@ -1,0 +1,23 @@
+id: ch15-005-monitoring-get-type-hints
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - get-type-hints
+  - annotations
+  - runtime-introspection
+theme: monitoring
+title: "`get_type_hints` : lire les annotations résolues à runtime"
+short_description: "Lit les annotations d'une fonction (résolues, pas stringifiées)."
+hints:
+  - "Importe `get_type_hints` depuis `typing`."
+  - "`get_type_hints(fn)` retourne un dict `{name: actual_type}` (résout les `from __future__ import annotations`)."
+  - "Compare au `fn.__annotations__` brut qui peut être stringifié."
+reference_book: "Fluent Python ch 15 — Runtime introspection with get_type_hints"
+pymistral_link: null
+tags:
+  - get-type-hints
+  - introspection
+  - typing

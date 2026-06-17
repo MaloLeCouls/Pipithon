@@ -1,0 +1,23 @@
+id: ch15-007-tasks-typevar-bound
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - typevar
+  - bound
+  - upper-bound
+theme: tasks
+title: "`TypeVar(bound=...)` : contraindre la borne supérieure"
+short_description: "Une fn polymorphe qui n'accepte que des `Comparable`."
+hints:
+  - "`T = TypeVar(\"T\", bound=Comparable)` exige que T soit un sous-type de Comparable."
+  - "`Comparable` est un Protocol avec `__lt__`."
+  - "Le test passe pour `int`/`str` mais devrait être REFUSÉ par mypy pour un type sans `__lt__`."
+reference_book: "Fluent Python ch 15 — TypeVar with bound"
+pymistral_link: null
+tags:
+  - typevar
+  - bound
+  - protocol

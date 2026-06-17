@@ -1,0 +1,22 @@
+id: ch15-105-monitoring-make-class-generic
+chapter: 15
+chapter_slug: more-type-hints
+type: modification
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - generic
+  - typevar
+theme: monitoring
+title: "Classe non générique → `Generic[T]`"
+short_description: "Une `Box(value: Any)` qui perd l'info de type — paramétrise-la."
+hints:
+  - "`T = TypeVar(\"T\")` + `class Box(Generic[T])`."
+  - "Type `value: T` et le retour de `unwrap` également."
+  - "Comportement runtime inchangé ; mypy gagne la précision."
+reference_book: "Fluent Python ch 15 — Make a class generic"
+pymistral_link: null
+tags:
+  - refactor
+  - generic
+  - typevar

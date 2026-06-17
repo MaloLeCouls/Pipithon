@@ -1,0 +1,22 @@
+id: ch15-104-llm-serving-two-fns-to-overload
+chapter: 15
+chapter_slug: more-type-hints
+type: modification
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - overload
+  - signature
+theme: llm-serving
+title: "Deux fonctions duplicates → une seule `@overload`"
+short_description: "`decode_int` et `decode_list` partagent la logique : fusionne via overload."
+hints:
+  - "Une seule fonction `decode` avec 2 stubs `@overload` + 1 impl."
+  - "Stub 1 : `(token_id: int) -> str`. Stub 2 : `(token_ids: list[int]) -> list[str]`."
+  - "L'impl dispatche selon `isinstance`."
+reference_book: "Fluent Python ch 15 — `@overload` to unify variants"
+pymistral_link: null
+tags:
+  - refactor
+  - overload
+  - typing

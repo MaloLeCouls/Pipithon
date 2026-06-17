@@ -1,0 +1,22 @@
+id: ch15-201-ml-pipeline-overload-no-impl
+chapter: 15
+chapter_slug: more-type-hints
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - overload
+  - implementation
+theme: ml-pipeline
+title: "`@overload` sans implémentation finale → NotImplementedError"
+short_description: "Tous les appels lèvent — l'auteur a décoré l'impl par erreur."
+hints:
+  - "`@overload` ne sert QU'À DÉCRIRE des signatures. Le corps doit être `...`."
+  - "L'impl RÉELLE est la dernière fn, SANS `@overload`."
+  - "Supprime `@overload` de la dernière définition."
+reference_book: "Fluent Python ch 15 — `@overload` requires a concrete final impl"
+pymistral_link: null
+tags:
+  - bug
+  - overload
+  - typing

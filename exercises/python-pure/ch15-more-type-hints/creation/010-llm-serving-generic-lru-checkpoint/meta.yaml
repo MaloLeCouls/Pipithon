@@ -1,0 +1,25 @@
+id: ch15-010-llm-serving-generic-lru-checkpoint
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 5
+estimated_minutes: 30
+concepts:
+  - generic
+  - typevar
+  - lru-cache
+  - container
+theme: llm-serving
+title: "Checkpoint ch.15 — `LRUCache[K, V]` générique"
+short_description: "Cache générique typé K/V, éviction LRU sur capacity dépassée."
+hints:
+  - "`OrderedDict` + `move_to_end` rend l'LRU trivial."
+  - "Type via `class LRUCache(Generic[K, V])` + `OrderedDict[K, V]`."
+  - "`put` évince le moins récent quand `len(self) > capacity`."
+reference_book: "Fluent Python ch 15 — Generic class with container backing"
+pymistral_link: null
+tags:
+  - checkpoint
+  - generic
+  - lru
+  - cache

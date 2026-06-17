@@ -1,0 +1,23 @@
+id: ch15-203-llm-serving-forward-ref-broken
+chapter: 15
+chapter_slug: more-type-hints
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - get-type-hints
+  - forward-ref
+  - annotations
+theme: llm-serving
+title: "`get_type_hints` plante : forward ref non résolue"
+short_description: "NameError: name 'List' is not defined — import oublié."
+hints:
+  - "Avec `from __future__ import annotations`, les annotations sont des STRINGS."
+  - "`get_type_hints(cls)` tente de les RÉSOUDRE — le nom doit exister dans le scope."
+  - "Soit importe `List` depuis `typing`, soit utilise `list[...]` builtin (PEP 585)."
+reference_book: "Fluent Python ch 15 — Forward references and get_type_hints"
+pymistral_link: null
+tags:
+  - bug
+  - forward-ref
+  - typing

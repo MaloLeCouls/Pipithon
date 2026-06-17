@@ -1,0 +1,22 @@
+id: ch15-001-monitoring-overload-basic
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - overload
+  - signature
+theme: monitoring
+title: "`@overload` : signatures multiples pour `format_metric`"
+short_description: "int → str sans unité ; float → str avec unité ms."
+hints:
+  - "Importe `overload` depuis `typing`."
+  - "Déclare 2 stubs `@overload def format_metric(x: int) -> str: ...` puis le même avec float."
+  - "La FONCTION RÉELLE finale n'est PAS décorée et accepte `int | float`."
+reference_book: "Fluent Python ch 15 — `@overload` signatures"
+pymistral_link: null
+tags:
+  - overload
+  - typing
+  - basics

@@ -1,0 +1,23 @@
+id: ch15-009-monitoring-typevar-constrained
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 4
+estimated_minutes: 13
+concepts:
+  - typevar
+  - constrained
+  - choice
+theme: monitoring
+title: "`TypeVar(\"T\", int, float)` : choix entre plusieurs types fixés"
+short_description: "Une fn qui marche sur int OU float, mais pas leur union ni un mix."
+hints:
+  - "`T = TypeVar(\"T\", int, float)` — exactement int OU exactement float, pas Union."
+  - "Différent de `bound` : ici T est un de ces 2 types, pas un sous-type quelconque."
+  - "`sum_typed([1, 2, 3])` -> int, `sum_typed([1.0, 2.0])` -> float, `sum_typed([1, 2.0])` -> erreur mypy."
+reference_book: "Fluent Python ch 15 — Constrained TypeVar"
+pymistral_link: null
+tags:
+  - typevar
+  - constrained
+  - typing

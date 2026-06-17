@@ -1,0 +1,23 @@
+id: ch15-103-ml-pipeline-remove-unneeded-cast
+chapter: 15
+chapter_slug: more-type-hints
+type: modification
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - cast
+  - isinstance
+  - type-narrowing
+theme: ml-pipeline
+title: "`cast` superflu → narrowing par `isinstance`"
+short_description: "`cast` est un aveu — quand `isinstance` suffit, supprime-le."
+hints:
+  - "Avant le `cast`, il y a un check `isinstance` — mypy l'a déjà compris."
+  - "Supprime le `cast` et utilise la valeur directement."
+  - "Si la valeur n'est pas du bon type, on lève — pas de `cast` fallacieux."
+reference_book: "Fluent Python ch 15 — `cast` is an admission; prefer `isinstance`"
+pymistral_link: null
+tags:
+  - refactor
+  - cast
+  - isinstance

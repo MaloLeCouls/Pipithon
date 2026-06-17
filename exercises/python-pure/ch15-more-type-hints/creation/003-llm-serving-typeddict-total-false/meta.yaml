@@ -1,0 +1,23 @@
+id: ch15-003-llm-serving-typeddict-total-false
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - typeddict
+  - total-false
+  - not-required
+theme: llm-serving
+title: "`TypedDict(total=False)` : champs optionnels"
+short_description: "Une `SamplingConfig` JSON-like avec champs requis ET optionnels."
+hints:
+  - "`class SamplingConfig(TypedDict, total=False)` rend TOUTES les clés optionnelles."
+  - "Ou : utilise `NotRequired[...]` pour cibler une clé en particulier (mix d'obligatoires/optionnels)."
+  - "À runtime, juste un dict — le test va lire avec `.get(key)` pour les optionnels."
+reference_book: "Fluent Python ch 15 — TypedDict total + NotRequired"
+pymistral_link: null
+tags:
+  - typeddict
+  - optional
+  - typing

@@ -1,0 +1,22 @@
+id: ch15-006-llm-serving-cast-narrow
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - cast
+  - type-narrowing
+theme: llm-serving
+title: "`typing.cast` : promettre un type à mypy après narrowing"
+short_description: "Quand `isinstance` ne suffit pas, `cast` est l'aveu de connaissance."
+hints:
+  - "`cast(Target, value)` ne fait RIEN à runtime : pure annotation."
+  - "À utiliser quand tu SAIS qu'une valeur est d'un type précis mais mypy n'y arrive pas."
+  - "C'est un aveu, pas une preuve — préfère `isinstance` quand c'est possible."
+reference_book: "Fluent Python ch 15 — `typing.cast`"
+pymistral_link: null
+tags:
+  - cast
+  - typing
+  - narrowing

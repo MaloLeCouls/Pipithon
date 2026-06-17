@@ -1,0 +1,23 @@
+id: ch15-202-monitoring-typeddict-missing-key
+chapter: 15
+chapter_slug: more-type-hints
+type: debugging
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - typeddict
+  - total
+  - not-required
+theme: monitoring
+title: "Clé `NotRequired` lue avec `[]` → KeyError"
+short_description: "On accède direct à une clé optionnelle absente."
+hints:
+  - "`NotRequired` rend la clé optionnelle — accessible avec `.get()`, pas `[]`."
+  - "Pour `unit` qui est `NotRequired`, utilise `cfg.get(\"unit\", \"ms\")`."
+  - "Sinon, KeyError quand le client ne fournit pas la clé."
+reference_book: "Fluent Python ch 15 — TypedDict NotRequired access"
+pymistral_link: null
+tags:
+  - bug
+  - typeddict
+  - keyerror

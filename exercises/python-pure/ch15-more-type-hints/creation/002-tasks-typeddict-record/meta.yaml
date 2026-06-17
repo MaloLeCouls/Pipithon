@@ -1,0 +1,22 @@
+id: ch15-002-tasks-typeddict-record
+chapter: 15
+chapter_slug: more-type-hints
+type: creation
+difficulty: 1
+estimated_minutes: 8
+concepts:
+  - typeddict
+  - record-type
+theme: tasks
+title: "`TypedDict` : un record JSON-like typé"
+short_description: "Une `TaskRecord` typée avec champs obligatoires."
+hints:
+  - "`class TaskRecord(TypedDict): title: str ; priority: int`"
+  - "Au runtime, `TaskRecord(title=\"x\", priority=1)` renvoie juste un `dict` normal."
+  - "Mais mypy --strict refuse les clés manquantes ou mal typées."
+reference_book: "Fluent Python ch 15 — TypedDict"
+pymistral_link: null
+tags:
+  - typeddict
+  - typing
+  - records
