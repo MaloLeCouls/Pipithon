@@ -1,0 +1,23 @@
+id: ch13-001-monitoring-probe-protocol
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 1
+estimated_minutes: 8
+concepts:
+  - typing-protocol
+  - structural-typing
+  - duck-typing
+theme: monitoring
+title: "`typing.Protocol` : interface structurelle minimale"
+short_description: "Définis un `Probe` Protocol qu'une classe quelconque satisfait sans hériter."
+hints:
+  - "`class Probe(Protocol): def read(self) -> float: ...`"
+  - "Aucun héritage requis côté implémentation — le Protocol est structurel."
+  - "Pour annoter une fn : `def sample(p: Probe) -> float`."
+reference_book: "Fluent Python ch 13 — typing.Protocol (structural subtyping)"
+pymistral_link: null
+tags:
+  - protocol
+  - typing
+  - basics

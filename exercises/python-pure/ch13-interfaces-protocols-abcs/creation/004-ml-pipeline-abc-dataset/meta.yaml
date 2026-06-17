@@ -1,0 +1,23 @@
+id: ch13-004-ml-pipeline-abc-dataset
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 2
+estimated_minutes: 12
+concepts:
+  - abc
+  - abstractmethod
+  - nominal-typing
+theme: ml-pipeline
+title: "ABC + `@abstractmethod` : interface nominale"
+short_description: "Une ABC `Dataset` avec deux méthodes abstraites, plus une concrète."
+hints:
+  - "Hérite de `abc.ABC` (ou utilise `metaclass=abc.ABCMeta`)."
+  - "Décore les méthodes abstraites avec `@abc.abstractmethod`."
+  - "Instancier la classe abstraite directement → `TypeError`."
+reference_book: "Fluent Python ch 13 — `abc.ABC` + abstractmethod"
+pymistral_link: null
+tags:
+  - abc
+  - abstractmethod
+  - nominal

@@ -1,0 +1,24 @@
+id: ch13-008-llm-serving-sampler-protocol
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - typing-protocol
+  - runtime-checkable
+  - callable-class
+theme: llm-serving
+title: "Implémenter le Protocol `pymistral.Sampler` avec une classe call-able"
+short_description: "Un Sampler statefull (avec compteur d'appels) reste compatible avec le Protocol."
+hints:
+  - "Le Protocol exige `__call__(logits, config, rng) -> int`."
+  - "Une classe avec `__call__` satisfait le Protocol — pas besoin d'hériter."
+  - "`isinstance(sampler, Sampler)` doit être True car `Sampler` est `@runtime_checkable`."
+reference_book: "Fluent Python ch 13 — Protocol with __call__ (callable protocol)"
+pymistral_link: pymistral.sampling
+tags:
+  - protocol
+  - runtime-checkable
+  - callable
+  - pymistral

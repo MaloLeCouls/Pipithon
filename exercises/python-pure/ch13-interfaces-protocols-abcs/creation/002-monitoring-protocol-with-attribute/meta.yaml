@@ -1,0 +1,22 @@
+id: ch13-002-monitoring-protocol-with-attribute
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 1
+estimated_minutes: 7
+concepts:
+  - typing-protocol
+  - protocol-attributes
+theme: monitoring
+title: "`Protocol` avec attribut typé"
+short_description: "Un Protocol peut exiger un attribut (pas seulement une méthode)."
+hints:
+  - "`class Named(Protocol): name: str` — la syntaxe d'annotation suffit."
+  - "Toute classe avec un attribut `name: str` satisfait le Protocol."
+  - "On annote la fn pour mypy, à runtime c'est juste du duck typing."
+reference_book: "Fluent Python ch 13 — Protocol with attributes"
+pymistral_link: null
+tags:
+  - protocol
+  - attribute
+  - typing

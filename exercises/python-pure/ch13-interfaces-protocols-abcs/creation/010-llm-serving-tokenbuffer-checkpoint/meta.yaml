@@ -1,0 +1,26 @@
+id: ch13-010-llm-serving-tokenbuffer-checkpoint
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 5
+estimated_minutes: 30
+concepts:
+  - abc
+  - abstractmethod
+  - template-method
+  - register
+  - virtual-subclass
+theme: llm-serving
+title: "Checkpoint ch.13 — TokenBuffer ABC + 2 subclasses + 1 register"
+short_description: "Reproduire la `Tombola` de Fluent Python en version llm-serving."
+hints:
+  - "L'ABC fournit `loaded()` et `inspect()` en CONCRET, basées sur `load`/`pick` abstraites."
+  - "`RandomBuffer` et `FIFOBuffer` héritent et implémentent `load`/`pick`."
+  - "`ListBuffer(list)` est registered via `TokenBuffer.register(...)` — virtual subclass."
+reference_book: "Fluent Python ch 13 — Tombola (ABC + 2 héritages + 1 register)"
+pymistral_link: null
+tags:
+  - checkpoint
+  - abc
+  - register
+  - template-method

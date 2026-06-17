@@ -1,0 +1,24 @@
+id: ch13-005-monitoring-sized-iterable
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - collections-abc
+  - sized
+  - iterable
+theme: monitoring
+title: "`collections.abc.Sized` + `Iterable` : héritage de stdlib"
+short_description: "Une fenêtre de métriques satisfait à la fois `len()` et le for."
+hints:
+  - "Hérite de `collections.abc.Sized` et `Iterable[float]` (héritage multiple)."
+  - "Implémente `__len__` et `__iter__` — c'est ce que les ABCs imposent."
+  - "Les ABCs `collections.abc` sont des contrats nominaux sans surprise."
+reference_book: "Fluent Python ch 13 — collections.abc usage"
+pymistral_link: null
+tags:
+  - collections-abc
+  - sized
+  - iterable
+  - multi-inheritance

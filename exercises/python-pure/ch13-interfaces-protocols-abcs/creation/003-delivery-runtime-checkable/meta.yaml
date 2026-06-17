@@ -1,0 +1,23 @@
+id: ch13-003-delivery-runtime-checkable
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - runtime-checkable
+  - isinstance
+  - typing-protocol
+theme: delivery
+title: "`@runtime_checkable` : isinstance sur un Protocol"
+short_description: "Active `isinstance(x, MonProtocol)` à runtime."
+hints:
+  - "Décore ta classe Protocol avec `@runtime_checkable` (importé depuis `typing`)."
+  - "`isinstance(obj, Protocol)` ne vérifie que la PRÉSENCE des méthodes, pas leur signature (cf. ch13 piège)."
+  - "Renvoie True si l'objet a `track()`, False sinon."
+reference_book: "Fluent Python ch 13 — `@runtime_checkable`"
+pymistral_link: null
+tags:
+  - protocol
+  - runtime-checkable
+  - isinstance

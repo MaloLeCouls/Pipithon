@@ -1,0 +1,23 @@
+id: ch13-009-ml-pipeline-subclasshook
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 4
+estimated_minutes: 18
+concepts:
+  - abc
+  - subclasshook
+  - goose-typing
+theme: ml-pipeline
+title: "`__subclasshook__` : faire d'une ABC un détecteur structurel"
+short_description: "Une ABC qui reconnaît automatiquement toute classe ayant `tokenize`."
+hints:
+  - "Définis `@classmethod __subclasshook__(cls, C)` sur l'ABC."
+  - "Renvoie True si C (ou un parent) a `tokenize`, NotImplemented sinon."
+  - "`isinstance(obj, MyABC)` consulte le hook — pas besoin de register manuel."
+reference_book: "Fluent Python ch 13 — `__subclasshook__` (cf. `Iterable` impl)"
+pymistral_link: null
+tags:
+  - abc
+  - subclasshook
+  - structural

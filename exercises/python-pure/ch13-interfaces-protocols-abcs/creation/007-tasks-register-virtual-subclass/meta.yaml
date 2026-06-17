@@ -1,0 +1,23 @@
+id: ch13-007-tasks-register-virtual-subclass
+chapter: 13
+chapter_slug: interfaces-protocols-abcs
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - abc-register
+  - virtual-subclass
+  - goose-typing
+theme: tasks
+title: "`ABC.register` : virtual subclass sans héritage"
+short_description: "Déclare qu'une classe satisfait une ABC SANS hériter."
+hints:
+  - "`MyABC.register(OtherClass)` ou `@MyABC.register` en décorateur."
+  - "Aucun garde-fou : tu peux register n'importe quoi (cf. piège du chapitre)."
+  - "`isinstance(x, MyABC)` retourne True après register."
+reference_book: "Fluent Python ch 13 — ABC.register & virtual subclasses"
+pymistral_link: null
+tags:
+  - abc
+  - register
+  - virtual-subclass
