@@ -1,0 +1,23 @@
+id: ch21-003-ml-pipeline-as-completed
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 2
+estimated_minutes: 12
+concepts:
+  - as-completed
+  - create-task
+  - asyncio-sleep
+theme: ml-pipeline
+title: "`as_completed` : récupérer les shards dans l'ordre d'arrivée"
+short_description: "Charge N shards en parallèle, renvoie les indices dans l'ordre de FIN (pas d'appel)."
+hints:
+  - "`asyncio.as_completed(tasks)` yield les futures *au fur et à mesure* qu'elles finissent."
+  - "On veut l'ORDRE d'arrivée, pas l'ordre d'appel — c'est précisément le rôle de `as_completed` (et pas `gather`)."
+  - "Pour ordonner par durée croissante, suit l'astuce : chaque tâche renvoie son `index`."
+reference_book: "Fluent Python ch 21 — `as_completed` (flag downloads)"
+pymistral_link: null
+tags:
+  - as-completed
+  - create-task
+  - ordering

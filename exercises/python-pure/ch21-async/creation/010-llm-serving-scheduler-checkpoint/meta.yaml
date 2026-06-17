@@ -1,0 +1,27 @@
+id: ch21-010-llm-serving-scheduler-checkpoint
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 5
+estimated_minutes: 30
+concepts:
+  - asyncio-gather
+  - as-completed
+  - asyncio-semaphore
+  - async-with
+  - async-generator
+  - async-context-manager
+theme: llm-serving
+title: "Checkpoint ch.21 — Scheduler async (gather + Semaphore + as_completed)"
+short_description: "Reproduire le `blogdom`/`flags_asyncio2` de Fluent Python en version llm-serving."
+hints:
+  - "`__aenter__`/`__aexit__` sont async ; `infer_one` prend le sem avec `async with self._sem`."
+  - "`infer_many` lance via `await asyncio.gather(*coros)` et préserve l'ordre des prompts."
+  - "`as_they_complete` est un async generator qui yield au fur et à mesure des `as_completed(tasks)`."
+reference_book: "Fluent Python ch 21 — `flags_asyncio2.py` (Semaphore + gather + as_completed)"
+pymistral_link: null
+tags:
+  - checkpoint
+  - async
+  - scheduler
+  - integration

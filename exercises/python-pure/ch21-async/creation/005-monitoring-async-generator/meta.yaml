@@ -1,0 +1,23 @@
+id: ch21-005-monitoring-async-generator
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - async-generator
+  - async-for
+  - yield
+theme: monitoring
+title: "Async generator : streamer des datapoints à la volée"
+short_description: "Une `async def` avec `yield` produit un async iterator consommé par `async for`."
+hints:
+  - "`async def stream_metrics(...): yield ...` → c'est un async generator."
+  - "Côté consommateur : `async for dp in stream_metrics(...):`."
+  - "Insère un `await asyncio.sleep(0)` entre les `yield` pour montrer que c'est bien async."
+reference_book: "Fluent Python ch 21 — Async generator functions"
+pymistral_link: null
+tags:
+  - async-generator
+  - async-for
+  - yield

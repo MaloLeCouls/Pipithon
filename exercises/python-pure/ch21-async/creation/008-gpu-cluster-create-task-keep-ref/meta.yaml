@@ -1,0 +1,23 @@
+id: ch21-008-gpu-cluster-create-task-keep-ref
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 3
+estimated_minutes: 12
+concepts:
+  - asyncio-create-task
+  - task-keepalive
+  - asyncio-gather
+theme: gpu-cluster
+title: "`asyncio.create_task` : garde la ref ou ta task disparaît"
+short_description: "Lance des tasks fire-and-forget en gardant les références dans un set."
+hints:
+  - "`asyncio.create_task(coro)` schedule la coroutine ET renvoie une Task."
+  - "Sans `tasks.add(t)`, la Task peut être collectée avant la fin → silencieusement ignorée."
+  - "À la fin : `await asyncio.gather(*tasks)` pour attendre tout le monde."
+reference_book: "Fluent Python ch 21 — `asyncio.create_task` gotcha (keep references)"
+pymistral_link: null
+tags:
+  - create-task
+  - keepalive
+  - gather

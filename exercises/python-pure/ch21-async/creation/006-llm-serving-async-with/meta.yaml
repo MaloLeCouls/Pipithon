@@ -1,0 +1,25 @@
+id: ch21-006-llm-serving-async-with
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - async-context-manager
+  - aenter
+  - aexit
+  - async-with
+theme: llm-serving
+title: "`async with` : session d'inférence avec `__aenter__`/`__aexit__`"
+short_description: "Une session de génération qui s'ouvre, sample, et garantit le close même sur erreur."
+hints:
+  - "`__aenter__` est `async def __aenter__(self)`."
+  - "`__aexit__` est `async def __aexit__(self, exc_type, exc, tb)`."
+  - "Renvoie False (ou rien) depuis `__aexit__` pour laisser remonter les erreurs."
+reference_book: "Fluent Python ch 21 — Async context managers"
+pymistral_link: null
+tags:
+  - async-with
+  - aenter
+  - aexit
+  - cleanup

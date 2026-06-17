@@ -1,0 +1,23 @@
+id: ch21-002-monitoring-gather-probes
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 1
+estimated_minutes: 9
+concepts:
+  - asyncio-gather
+  - async-def
+  - await
+theme: monitoring
+title: "`asyncio.gather` : sonder N probes en parallèle"
+short_description: "Lance N probes async en parallèle et collecte les valeurs dans l'ordre."
+hints:
+  - "`gather(*coros)` attend que toutes les coroutines terminent."
+  - "Le résultat de `await gather(...)` est une liste dans l'ordre d'appel."
+  - "Construis la liste des coroutines via une compréhension : `[probe(name) for name in names]`."
+reference_book: "Fluent Python ch 21 — `asyncio.gather` pattern"
+pymistral_link: null
+tags:
+  - gather
+  - parallel
+  - basics

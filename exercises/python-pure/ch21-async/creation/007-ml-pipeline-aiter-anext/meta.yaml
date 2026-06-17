@@ -1,0 +1,24 @@
+id: ch21-007-ml-pipeline-aiter-anext
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 3
+estimated_minutes: 14
+concepts:
+  - async-iterator
+  - aiter
+  - anext
+  - stop-async-iteration
+theme: ml-pipeline
+title: "Async iterator manuel : `__aiter__` + `__anext__`"
+short_description: "Implémente le protocole d'itération async à la main sans générateur."
+hints:
+  - "`__aiter__` est sync et retourne `self`."
+  - "`__anext__` est `async def` et lève `StopAsyncIteration` à la fin (PAS `StopIteration`)."
+  - "Idéal pour montrer ce que le compilateur génère derrière `async def + yield`."
+reference_book: "Fluent Python ch 21 — Async iterators (Sentence-like en async)"
+pymistral_link: null
+tags:
+  - aiter
+  - anext
+  - protocol

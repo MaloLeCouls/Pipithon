@@ -1,0 +1,23 @@
+id: ch21-009-llm-serving-gather-return-exceptions
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 4
+estimated_minutes: 14
+concepts:
+  - asyncio-gather
+  - return-exceptions
+  - error-handling
+theme: llm-serving
+title: "`gather(return_exceptions=True)` : ne pas planter le batch entier"
+short_description: "Si une requête plante, garde les autres résultats au lieu de tout perdre."
+hints:
+  - "Par défaut, `gather` lève à la première exception et annule le reste."
+  - "Avec `return_exceptions=True`, les exceptions deviennent des items dans le résultat."
+  - "On veut une liste de tuples `(prompt, ok, value_or_msg)` propres à l'appelant."
+reference_book: "Fluent Python ch 21 — `gather(return_exceptions=True)`"
+pymistral_link: null
+tags:
+  - gather
+  - return-exceptions
+  - robust

@@ -1,0 +1,23 @@
+id: ch21-004-llm-serving-semaphore-limit
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 2
+estimated_minutes: 12
+concepts:
+  - asyncio-semaphore
+  - asyncio-gather
+  - async-with
+theme: llm-serving
+title: "`asyncio.Semaphore` : limiter le nombre d'inférences concurrentes"
+short_description: "Lance N requêtes mais autorise au plus `max_concurrent` en vol."
+hints:
+  - "`asyncio.Semaphore(k)` : `async with sem: ...` autorise au plus k entrées concurrentes."
+  - "Wrappe l'appel d'inférence dans une coroutine qui prend d'abord le sem."
+  - "`gather` lance tout — c'est le sem qui régule, pas gather."
+reference_book: "Fluent Python ch 21 — `flags_asyncio2.py` (Semaphore)"
+pymistral_link: null
+tags:
+  - semaphore
+  - rate-limit
+  - async-with

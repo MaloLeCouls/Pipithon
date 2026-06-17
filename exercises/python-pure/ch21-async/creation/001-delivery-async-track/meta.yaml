@@ -1,0 +1,23 @@
+id: ch21-001-delivery-async-track
+chapter: 21
+chapter_slug: async
+type: creation
+difficulty: 1
+estimated_minutes: 8
+concepts:
+  - async-def
+  - await
+  - asyncio-run
+theme: delivery
+title: "Tracker asynchrone : `async def` / `await` minimal"
+short_description: "Écris une coroutine qui interroge un tracker fake et renvoie le statut."
+hints:
+  - "Une coroutine se déclare avec `async def`."
+  - "`await` consomme un awaitable (ici une coroutine ou `asyncio.sleep(0)`)."
+  - "Pour appeler une coroutine depuis du code sync de test : `asyncio.run(coro)`."
+reference_book: "Fluent Python ch 21 — premiers pas async/await"
+pymistral_link: null
+tags:
+  - async
+  - await
+  - basics
