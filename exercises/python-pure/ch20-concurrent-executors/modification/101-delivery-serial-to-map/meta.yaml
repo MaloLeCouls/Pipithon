@@ -1,0 +1,22 @@
+id: ch20-101-delivery-serial-to-map
+chapter: 20
+chapter_slug: concurrent-executors
+type: modification
+difficulty: 2
+estimated_minutes: 7
+concepts:
+  - executor-map
+  - parallel
+theme: delivery
+title: "Boucle for séquentielle → `Executor.map`"
+short_description: "Serial sur I/O-bound = perte de temps. Parallélise."
+hints:
+  - "`with ThreadPoolExecutor(...) as ex: list(ex.map(fn, iter))`."
+  - "Ordre préservé. Sémantique inchangée."
+  - "Le test interdit un `for` non trivial dans `track_all`."
+reference_book: "Fluent Python ch 20 — From serial loop to Executor.map"
+pymistral_link: null
+tags:
+  - refactor
+  - executor-map
+  - parallel

@@ -1,0 +1,23 @@
+id: ch20-008-monitoring-add-done-callback
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - future
+  - add-done-callback
+  - hook
+theme: monitoring
+title: "`Future.add_done_callback` : hook sur la complétion"
+short_description: "Enregistre les résultats dans un compteur dès qu'ils arrivent."
+hints:
+  - "`fut.add_done_callback(cb)` exécute `cb(fut)` quand la future est done."
+  - "Le callback tourne dans le THREAD du worker (ou le thread principal si déjà done)."
+  - "Évite d'y faire des opérations qui peuvent bloquer."
+reference_book: "Fluent Python ch 20 — `Future.add_done_callback`"
+pymistral_link: null
+tags:
+  - future
+  - callback
+  - hook

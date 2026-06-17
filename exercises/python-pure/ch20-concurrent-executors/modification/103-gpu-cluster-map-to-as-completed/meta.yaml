@@ -1,0 +1,23 @@
+id: ch20-103-gpu-cluster-map-to-as-completed
+chapter: 20
+chapter_slug: concurrent-executors
+type: modification
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - executor-map
+  - as-completed
+  - ordering
+theme: gpu-cluster
+title: "`ex.map` → `submit + as_completed` quand on veut l'ordre d'arrivée"
+short_description: "Pour traiter au plus tôt, `as_completed` est mieux que `map`."
+hints:
+  - "`ex.map` bloque sur le prochain ATTENDU (ordre soumission), pas le prochain FINI."
+  - "`as_completed` rend chaque future dès qu'elle est done."
+  - "Renvoie une `list[tuple[int, int]]` : (job_id, runtime_ms) dans l'ordre de fin."
+reference_book: "Fluent Python ch 20 — `as_completed` over `map` for completion order"
+pymistral_link: null
+tags:
+  - refactor
+  - as-completed
+  - ordering

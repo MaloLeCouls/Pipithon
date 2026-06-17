@@ -1,0 +1,23 @@
+id: ch20-004-gpu-cluster-future-state
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - future
+  - done
+  - running
+theme: gpu-cluster
+title: "`Future.done()` / `running()` : poller l'état"
+short_description: "Soumets un job long, observe les états avant `result()`."
+hints:
+  - "`fut.running()` True quand le worker l'a pris en charge."
+  - "`fut.done()` True quand fini (succès ou exception)."
+  - "Avant submit : ni l'un ni l'autre. Après `.result()` : `done()` est True."
+reference_book: "Fluent Python ch 20 — Future states"
+pymistral_link: null
+tags:
+  - future
+  - state
+  - polling

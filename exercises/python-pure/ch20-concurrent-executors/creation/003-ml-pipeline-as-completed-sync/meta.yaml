@@ -1,0 +1,23 @@
+id: ch20-003-ml-pipeline-as-completed-sync
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 2
+estimated_minutes: 11
+concepts:
+  - as-completed
+  - future
+  - ordering
+theme: ml-pipeline
+title: "`as_completed` sync : ordre d'ARRIVÉE des shards"
+short_description: "N shards en parallèle, traités au fur et à mesure qu'ils finissent."
+hints:
+  - "Stocke `{future: index}` pour retrouver l'origine après coup."
+  - "`for fut in as_completed(futures):` itère dans l'ordre de FIN."
+  - "À l'intérieur : `index = futures[fut]`, `value = fut.result()`."
+reference_book: "Fluent Python ch 20 — `as_completed` (sync)"
+pymistral_link: null
+tags:
+  - as-completed
+  - future
+  - ordering

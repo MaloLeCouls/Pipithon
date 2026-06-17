@@ -1,0 +1,23 @@
+id: ch20-009-gpu-cluster-wait-first-completed
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 4
+estimated_minutes: 14
+concepts:
+  - wait
+  - first-completed
+  - racing
+theme: gpu-cluster
+title: "`wait(...FIRST_COMPLETED)` : race entre N replicas"
+short_description: "Tu interroges 3 replicas, tu prends la première réponse."
+hints:
+  - "`wait(futures, return_when=FIRST_COMPLETED)` bloque jusqu'à la première finie."
+  - "Renvoie `(done, not_done)` — ensembles."
+  - "Annule les `not_done` avec `.cancel()` (best-effort)."
+reference_book: "Fluent Python ch 20 — `wait` and FIRST_COMPLETED"
+pymistral_link: null
+tags:
+  - wait
+  - first-completed
+  - racing

@@ -114,12 +114,51 @@
   (TypeError à l'instanciation), `isinstance(str, Sequence)` True (piège
   classique — exclure str/bytes), `@runtime_checkable` qui accepte une
   signature pourrie puis crash à l'appel (mypy seul attrape ça au build).
-- Track active : `python-pure` (**230 exos validés** ; ch1 18, ch2 14,
-  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch13 18,
-  ch17 18, ch18 18, ch21 18 ; ch10-12, ch14-16, ch19-20, ch22-24 scaffold).
-  **Couverture du contrat : ~54 %.**
-- Prochaine action (atelier A reliquat) : M5 mode « refaire de mémoire »
-  côté webapp.
+- **C6 — sprint « bosse dur » 3 chapitres ML inference (2026-06-17).**
+  Carte blanche utilisateur : focus tiers S/A pour ML inference engineer.
+  54 nouveaux exos d'un coup (3 × 18), tous verts au validateur.
+  - **ch11 Pythonic Object (S)** : `__repr__`/`__eq__`/`__hash__` cohérents
+    (Book read-only), `__format__` mini-langage, classmethod alt
+    constructor polymorphique, `__slots__` (Sample memory critical),
+    `TokenKey` hashable+slotted+immutable (pattern KVCache vLLM),
+    classmethod vs staticmethod, class attr vs instance + name mangling.
+    Checkpoint = `Embedding2d` (Vector2d transposé llm-serving).
+    Modification : mutable class attr → instance, hash sans eq → eq,
+    ajoute slots/repr/str, classmethod inutile → staticmethod.
+    Debugging : hash drift, subclass sans __slots__ regaspille __dict__,
+    `__format__` qui s'appelle lui-même via `f"{self:spec}"` → RecursionError.
+  - **ch15 More Type Hints (A — critique vLLM)** : `@overload` (signatures
+    multiples), TypedDict + NotRequired, `Generic[T]`/`TypeVar(bound)`/
+    constrained TypeVar, `get_type_hints`, `typing.cast`, generic Protocol
+    `Cache[K, V]`. Checkpoint = `LRUCache[K, V]` Generic complet (pattern
+    prefix-caching vLLM via OrderedDict + move_to_end + popitem).
+    Modification : Any → TypeVar, dict[str,Any] → TypedDict, cast superflu
+    après isinstance, 2 fns duplicate → 1 fn + @overload, classe non
+    générique → Generic[T]. Debugging : @overload sur l'impl finale
+    (placeholder NotImplementedError), TypedDict NotRequired lu avec []
+    (KeyError), forward ref `List` non importée (NameError, fix = builtin `list`).
+  - **ch20 Concurrent Executors (A — sister sync de ch21)** :
+    ThreadPoolExecutor.submit/result, Executor.map, as_completed sync,
+    Future.done/running, Future.result(timeout=...) → FutTimeout,
+    Future.exception() pour triage sans re-raise, ProcessPoolExecutor
+    pour CPU-bound (GIL contourné), add_done_callback + lock,
+    wait(FIRST_COMPLETED) pour racing replicas.
+    Checkpoint = shard download 3 versions (sequential / threaded `ex.map`
+    / robust avec `as_completed + fut.exception()`) — direct flag_download
+    de Fluent Python. Modification : serial loop → ex.map, sans `with`
+    → with, ex.map → submit+as_completed (ordre fin), futures silencieuses
+    → check exception(), ThreadPool CPU-bound → ProcessPool. Debugging :
+    Future jamais lue (`PermissionError` masquée), `ex.submit(fn(arg))` au
+    lieu de `ex.submit(fn, arg)` (appel eager → TypeError sur l'int),
+    ProcessPool + closure → PicklingError (fix top-level fn + broadcast).
+- Track active : `python-pure` (**284 exos validés** ; ch1 18, ch2 14,
+  ch3 18, ch4 18, ch5 18, ch6 18, ch7 18, ch8 18, ch9 18, ch11 18,
+  ch13 18, ch15 18, ch17 18, ch18 18, ch20 18, ch21 18 ; ch10, ch12, ch14,
+  ch16, ch19, ch22-24 scaffold). **Couverture du contrat : ~67 %.**
+- Prochaine action : poursuivre la course aux tiers S/A — ch12 (sequences
+  protocols) + ch14 (inheritance) + ch19 (concurrency models) seraient
+  les prochains gros gains. M5 mode « refaire de mémoire » côté webapp
+  reste également dans le pipe.
   Ensuite ateliers B (type `review` + tracks code-reading/oss-onboarding /
   testing-discipline / métrique PR scopée) puis C (modes chrono +
   closed-book) puis D (concours bot-programming, parallèle).

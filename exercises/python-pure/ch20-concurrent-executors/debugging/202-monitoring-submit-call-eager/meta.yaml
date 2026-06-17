@@ -1,0 +1,23 @@
+id: ch20-202-monitoring-submit-call-eager
+chapter: 20
+chapter_slug: concurrent-executors
+type: debugging
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - executor-submit
+  - callable
+  - eager-vs-lazy
+theme: monitoring
+title: "`ex.submit(fn(x))` au lieu de `ex.submit(fn, x)` : appel eager"
+short_description: "Tout tourne dans le thread principal — le pool ne fait rien."
+hints:
+  - "`fn(x)` est évalué TOUT DE SUITE. On submit la VALEUR, pas la fn."
+  - "L'API attendue : `ex.submit(fn, *args, **kwargs)` — comme `functools.partial`."
+  - "Corrige en `ex.submit(probe, name)`."
+reference_book: "Fluent Python ch 20 — `Executor.submit` API"
+pymistral_link: null
+tags:
+  - bug
+  - submit
+  - api

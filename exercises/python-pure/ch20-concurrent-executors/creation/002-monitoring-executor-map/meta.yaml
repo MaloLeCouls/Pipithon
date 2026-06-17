@@ -1,0 +1,22 @@
+id: ch20-002-monitoring-executor-map
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - executor-map
+  - parallel
+theme: monitoring
+title: "`Executor.map` : map() parallèle qui préserve l'ordre"
+short_description: "Sonde N probes via `map`, comme un map() builtin mais en threads."
+hints:
+  - "`ex.map(fn, iterable)` rend un iterator des résultats DANS L'ORDRE."
+  - "Idéal quand tu veux le « map sync, mais en parallèle »."
+  - "`list(ex.map(probe, names))` matérialise tout."
+reference_book: "Fluent Python ch 20 — `Executor.map`"
+pymistral_link: null
+tags:
+  - executor
+  - map
+  - parallel

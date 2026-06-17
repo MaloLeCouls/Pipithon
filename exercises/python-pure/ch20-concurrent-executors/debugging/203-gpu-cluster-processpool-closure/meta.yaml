@@ -1,0 +1,24 @@
+id: ch20-203-gpu-cluster-processpool-closure
+chapter: 20
+chapter_slug: concurrent-executors
+type: debugging
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - processpoolexecutor
+  - pickling
+  - closure
+theme: gpu-cluster
+title: "`ProcessPool` + closure → PicklingError"
+short_description: "Le pool ne peut pas envoyer une fn locale au worker."
+hints:
+  - "ProcessPool envoie la fn au worker via pickle. Les closures/lambdas ne sont PAS picklables."
+  - "Refactore la fn locale en TOP-LEVEL : `def hash_with_factor(payload, factor): ...`."
+  - "Ou utilise `functools.partial(top_level_fn, factor)` (picklable)."
+reference_book: "Fluent Python ch 20 — ProcessPool requires picklable callables"
+pymistral_link: null
+tags:
+  - bug
+  - processpool
+  - pickle
+  - closure

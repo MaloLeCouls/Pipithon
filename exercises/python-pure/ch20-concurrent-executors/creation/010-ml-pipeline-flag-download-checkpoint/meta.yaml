@@ -1,0 +1,25 @@
+id: ch20-010-ml-pipeline-flag-download-checkpoint
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 5
+estimated_minutes: 28
+concepts:
+  - threadpoolexecutor
+  - as-completed
+  - error-handling
+  - sequential-vs-parallel
+theme: ml-pipeline
+title: "Checkpoint ch.20 — Shard download : sequential, threaded, robust"
+short_description: "Trois versions équivalentes, threaded gère les erreurs proprement."
+hints:
+  - "Sequential : boucle for ; threaded : `with ThreadPoolExecutor + ex.map`."
+  - "Robust : `as_completed` + `fut.exception()` pour ne pas planter le batch."
+  - "Toutes renvoient le MÊME `(success_count, failed_names)` pour des inputs sans erreur."
+reference_book: "Fluent Python ch 20 — Flag download (sequential vs threaded vs robust)"
+pymistral_link: null
+tags:
+  - checkpoint
+  - threadpool
+  - as-completed
+  - robust

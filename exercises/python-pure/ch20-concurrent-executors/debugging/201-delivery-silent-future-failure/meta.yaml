@@ -1,0 +1,23 @@
+id: ch20-201-delivery-silent-future-failure
+chapter: 20
+chapter_slug: concurrent-executors
+type: debugging
+difficulty: 3
+estimated_minutes: 10
+concepts:
+  - future
+  - silent-failure
+  - exception
+theme: delivery
+title: "Future jamais lue → exceptions silencieuses"
+short_description: "Pourtant la fn appelée plante — mais l'appelant ne le voit pas."
+hints:
+  - "Une `Future` capture l'exception. Sans `.result()` ni `.exception()`, elle dort dedans."
+  - "`with ... as ex:` attend la fin des Futures mais ne les LIT PAS."
+  - "Boucle sur les futures et appelle `.result()` → propage les erreurs."
+reference_book: "Fluent Python ch 20 — Don't ignore Future results"
+pymistral_link: null
+tags:
+  - bug
+  - future
+  - silent

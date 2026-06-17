@@ -1,0 +1,23 @@
+id: ch20-102-monitoring-add-with-block
+chapter: 20
+chapter_slug: concurrent-executors
+type: modification
+difficulty: 1
+estimated_minutes: 5
+concepts:
+  - executor
+  - context-manager
+  - cleanup
+theme: monitoring
+title: "Wrappe l'executor dans un `with`"
+short_description: "Sans `with`, le shutdown n'est pas garanti — threads zombies."
+hints:
+  - "`with ThreadPoolExecutor(...) as ex:` garantit `ex.shutdown(wait=True)` à la sortie."
+  - "Tous les futures doivent être consommés AVANT la sortie du with."
+  - "Comportement runtime identique tant que le code passe ; mais robustesse + nettoyage."
+reference_book: "Fluent Python ch 20 — Always use `with` block"
+pymistral_link: null
+tags:
+  - refactor
+  - executor
+  - cleanup

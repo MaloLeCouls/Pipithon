@@ -1,0 +1,23 @@
+id: ch20-006-delivery-future-exception
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 3
+estimated_minutes: 11
+concepts:
+  - future
+  - exception
+  - error-handling
+theme: delivery
+title: "`Future.exception()` : inspecter une erreur sans re-raise"
+short_description: "Sépare les colis livrés des colis en erreur (sans crash)."
+hints:
+  - "`fut.exception()` rend l'exception (ou None) — NE LA LÈVE PAS."
+  - "`fut.result()` au contraire LÈVE l'exception."
+  - "Boucle sur les futures et range chaque résultat selon `exception()`."
+reference_book: "Fluent Python ch 20 — `Future.exception()`"
+pymistral_link: null
+tags:
+  - future
+  - exception
+  - robust

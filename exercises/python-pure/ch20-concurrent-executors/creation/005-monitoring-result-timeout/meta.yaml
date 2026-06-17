@@ -1,0 +1,23 @@
+id: ch20-005-monitoring-result-timeout
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 2
+estimated_minutes: 9
+concepts:
+  - future
+  - timeout
+  - result
+theme: monitoring
+title: "`Future.result(timeout=...)` : couper court à un job"
+short_description: "Une probe trop lente lève `TimeoutError`."
+hints:
+  - "`fut.result(timeout=0.05)` lève `concurrent.futures.TimeoutError` si pas fini."
+  - "La tâche continue de tourner dans le worker — seul le wait est interrompu."
+  - "Capture l'exception et renvoie une valeur sentinelle (ex. -1)."
+reference_book: "Fluent Python ch 20 — Future timeouts"
+pymistral_link: null
+tags:
+  - future
+  - timeout
+  - basics

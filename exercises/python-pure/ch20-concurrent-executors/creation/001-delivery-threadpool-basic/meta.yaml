@@ -1,0 +1,23 @@
+id: ch20-001-delivery-threadpool-basic
+chapter: 20
+chapter_slug: concurrent-executors
+type: creation
+difficulty: 2
+estimated_minutes: 10
+concepts:
+  - threadpoolexecutor
+  - future
+  - submit
+theme: delivery
+title: "`ThreadPoolExecutor.submit` + `Future.result`"
+short_description: "Soumets un tracking-call, récupère le statut via Future."
+hints:
+  - "`with ThreadPoolExecutor(max_workers=4) as ex: ...`"
+  - "`fut = ex.submit(fn, arg)` rend une `Future`."
+  - "`fut.result()` bloque jusqu'à la fin et renvoie la valeur (ou re-raise)."
+reference_book: "Fluent Python ch 20 — ThreadPoolExecutor basics"
+pymistral_link: null
+tags:
+  - threadpool
+  - future
+  - basics

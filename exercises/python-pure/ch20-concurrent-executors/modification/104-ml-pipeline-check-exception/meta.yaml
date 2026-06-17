@@ -1,0 +1,23 @@
+id: ch20-104-ml-pipeline-check-exception
+chapter: 20
+chapter_slug: concurrent-executors
+type: modification
+difficulty: 2
+estimated_minutes: 8
+concepts:
+  - future
+  - exception
+  - silent-failure
+theme: ml-pipeline
+title: "Future silencieuse → vérifier `exception()`"
+short_description: "Les jobs plantent en silence — l'auteur ne lit jamais le résultat."
+hints:
+  - "`fut.exception()` inspecte sans lever ; ajoute le check avant d'incrémenter."
+  - "Sinon `success_count` inclut les jobs ratés (et tu ne sais rien des fails)."
+  - "Renvoie un tuple `(success, failed)` au lieu d'un compteur unique."
+reference_book: "Fluent Python ch 20 — Don't ignore Future exceptions"
+pymistral_link: null
+tags:
+  - refactor
+  - exception
+  - robust
